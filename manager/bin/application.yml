@@ -1,0 +1,10 @@
+spring:
+  datasource:
+      url: jdbc:mysql://localhost:3306/manager
+      data-username: root
+      data-password: 123456
+  jpa:
+      show-sql: true
+server:
+  context-path: /manager
+  port: 8081

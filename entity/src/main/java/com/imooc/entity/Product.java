@@ -1,5 +1,6 @@
 package com.imooc.entity;
 
+import com.imooc.entity.enums.ProductStatus;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import javax.persistence.Entity;
@@ -23,7 +24,7 @@ public class Product {
     //投资步长
     private BigDecimal stepAmount;
     //锁定期
-    private Integer lockTerm;
+    private Integer lockTerm;  //不能设置为int类型，int的默认值是0，不符合requirement 要求，Integer的默认值是null
     //收益率，因为要与其他数相乘，所以使用BigDecimal
     private BigDecimal rewardRate;
     private String memo;
