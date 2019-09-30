@@ -70,10 +70,17 @@ MyISAM 和InnoDB 讲解
 　　当然Innodb也不是绝对不用，用事务的项目就用Innodb的。另外，可能有人会说你MyISAM无法抗太多写操作，但是可以通过架构来弥补。
 
 # Restful API Design
-+ Add product
+1. Create product
 POST /products JpaRepository
-+ Query single product
+controller中是info级别的日志，实际生产过程中打印info级别，不打印debug级别的
+service中是debug级别的日志，实际生产过程中打印info级别，不打印debug级别的
+LockTerm锁定期时间，不能设置为int类型，int的默认值是0，不符合requirement 要求，Integer的默认值是null
+2. Query single product
 GET /products/{id} JpaRepository
-+ Query products by condition
+3. Query products by condition
 GET /products JpaSpecificationExecutor
 
+# Error Handling
++ User friendly error explaination
++ Unified handling, simplified bussiness login code
++ Error standardization

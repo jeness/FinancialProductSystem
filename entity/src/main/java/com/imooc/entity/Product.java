@@ -31,7 +31,7 @@ public class Product {
     private Date createAt;
     private Date updateAt;
     private String createUser;
-    private String updataUser;
+    private String updateUser;
 
     @Override
     public String toString() {
@@ -126,11 +126,11 @@ public class Product {
         this.createUser = createUser;
     }
 
-    public String getUpdataUser() {
-        return updataUser;
+    public String getUpdateUser() {
+        return updateUser;
     }
 
-    public void setUpdataUser(String updataUser) {
-        this.updataUser = updataUser;
+    public void setUpdateUser(String updateUser) {
+        this.updateUser = updateUser;
     }
 }

@@ -3,6 +3,8 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="financial.main" target="1.8" />
+      <module name="financial.saller.main" target="1.8" />
+      <module name="financial.saller.test" target="1.8" />
       <module name="financial.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>

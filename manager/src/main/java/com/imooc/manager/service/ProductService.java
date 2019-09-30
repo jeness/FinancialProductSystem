@@ -6,11 +6,17 @@ import com.imooc.manager.repositories.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import javax.persistence.criteria.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /*
 * product service class
@@ -25,7 +31,7 @@ public class ProductService {
 
 
     public Product addProduct(Product product){
-        LOG.debug("Create and add product, parameters:{}", product);//service中是debug级别的日志，实际生产过程中打印info级别，不打印debug级别的
+        LOG.debug("LOG: Create and add product, parameters:{}", product);//service中是debug级别的日志，实际生产过程中打印info级别，不打印debug级别的
         //data validation and check
         checkProduct(product);
 
@@ -33,7 +39,7 @@ public class ProductService {
         setDefault(product);
         Product result = repository.save(product);
 
-        LOG.debug("Create product, result: {}", result);
+        LOG.debug("LOG: Create product, result: {}", result);
         return result;
     }
 /*
@@ -68,8 +74,63 @@ public class ProductService {
     private void checkProduct(Product product) {
         Assert.notNull(product.getId(), "Product id can not be null.");
 
-        Assert.isTrue(BigDecimal.ZERO.compareTo(product.getRewardRate()) < 0 && BigDecimal.valueOf(30).compareTo(product.getRewardRate()) >= 30, "Reward rate is wrong.");
+        Assert.isTrue(BigDecimal.ZERO.compareTo(product.getRewardRate()) < 0 && BigDecimal.valueOf(30).compareTo(product.getRewardRate()) >= 0, "Reward rate is wrong.");
 
         Assert.isTrue(BigDecimal.valueOf(product.getStepAmount().longValue()).compareTo(product.getStepAmount()) == 0, "Investment amount should be integer");
+    }
+
+    /*
+    * Query for one single product
+    * @param id - product id
+    * @return return the product or null
+    * */
+    public Product findOne(String id){
+        Assert.notNull(id, "Need product id as param");
+        LOG.debug("LOG: Query one single product, id={}", id);
+        Product product = repository.findOne(id);
+        LOG.debug("LOG: Query one single product, result={}", product);
+        return product;
+    }
+
+    /**
+     * 分页查询paging query
+    * @Param: [idList, minRewardRate, maxRewardRate, statusList, pageable]
+    * @return: org.springframework.data.domain.Page<com.imooc.entity.Product>
+    */
+    public Page<Product> query(List<String> idList,
+                               BigDecimal minRewardRate, BigDecimal maxRewardRate,
+                               List<String> statusList,
+                               Pageable pageable){
+        LOG.debug("LOG: Query products, idList={}, minRewardRate={},maxRewardRate={},statusList={},pageable={}", idList,minRewardRate,maxRewardRate,statusList,pageable);
+
+        Specification<Product> specification = new Specification<Product>(){
+            @Override
+            public Predicate toPredicate(Root<Product> root, CriteriaQuery<?> query, CriteriaBuilder cb){
+                Expression<String> idCol = root.get("id");
+                Expression<BigDecimal> rewardRateCol = root.get("rewardRate");
+                Expression<String> statusCol = root.get("status");
+                List<Predicate> predicates = new ArrayList<>();
+                if(idList != null && idList.size() > 0){
+                    predicates.add(idCol.in(idList));
+                }
+                if(BigDecimal.ZERO.compareTo(minRewardRate) < 0){
+                    predicates.add(cb.ge(rewardRateCol, minRewardRate));  //great or equal to >=
+                }
+                if(BigDecimal.ZERO.compareTo(maxRewardRate) < 0){
+                    predicates.add(cb.le(rewardRateCol, maxRewardRate)); //less or equal to <=
+                }
+                if(statusList != null && statusList.size() > 0){
+                    predicates.add(statusCol.in(statusList));
+                }
+
+                query.where(predicates.toArray(new Predicate[0]));
+                return null;
+            }
+        };
+
+        Page<Product> page = repository.findAll(specification, pageable);
+        LOG.debug("LOG: Query products, result={}", page);
+        return page;
+
     }
 }
