@@ -2,6 +2,8 @@ package com.imooc.manager.controller;
 
 import com.imooc.entity.Product;
 import com.imooc.manager.service.ProductService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +20,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/products")
+@Api(tags = "product", description = "Controller about Products")
 public class ProductController{
     private static Logger LOG = LoggerFactory.getLogger(ProductController.class);
 
     @Autowired
     private ProductService service;
 
+    @ApiOperation(value = "Create Products", notes = "According to relative business logic to add products")
     @RequestMapping(value = "", method = RequestMethod.POST)
     public Product addProduct(@RequestBody Product product){
         LOG.info("LOG: Create and add product:{}", product); //controller中是info级别的日志，实际生产过程中打印info级别，不打印debug级别的

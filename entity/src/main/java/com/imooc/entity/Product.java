@@ -1,6 +1,8 @@
 package com.imooc.entity;
 
 import com.imooc.entity.enums.ProductStatus;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import javax.persistence.Entity;
@@ -11,6 +13,7 @@ import java.util.Date;
 * Product entity
 * */
 @Entity
+@ApiModel(value = "Products", description = "Model of products")
 public class Product {
     @Id
     private String id;
@@ -18,6 +21,7 @@ public class Product {
     /**
     * @see com.imooc.entity.enums.ProductStatus
     */
+    @ApiModelProperty(value = "Status of product", dataType = "com.imooc.entity.enums.ProductStatus")
     private String status;
     //起投金额
     private BigDecimal thresholdAmount;

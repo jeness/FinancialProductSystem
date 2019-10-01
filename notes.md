@@ -115,3 +115,18 @@ spring:
 - test coverage, edge case
 - execution sequence annotation: `@FixMethodOrder(MethodSorters.NAME_ASCENDING)` 按测试方法名字典序执行
 - Conditional query test case
+
+## Swagger: API Documentation
+Swagger is a the world's largest framework of API developer tools for the OpenAPI Specification(OAS). Swagger enables development across the entire API lifecycle, from design and documentation, to test and deployment. 
+`http://localhost:8081/manager/swagger-ui.html`
+### seperate frontend and backend
+Backend developer writes APIs for frontend developers to call. That needs documentation. 
+### Third party corperation
+Let others know how those API are used.
+### Config optimize
+- Selectively show interface
+- Detailed comment instruction
+- i18n change languages
+In swagger pakage, in resources folder, we can newly create a swagger-ui.html file to add script of:
+`the webjars/springfox-swagger-ui/lang/translator.js`, 
+`the webjars/springfox-swagger-ui/lang/zh-cn.js`

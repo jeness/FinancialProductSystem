@@ -114,10 +114,10 @@ public class ProductService {
                 if(idList != null && idList.size() > 0){
                     predicates.add(idCol.in(idList));
                 }
-                if(BigDecimal.ZERO.compareTo(minRewardRate) < 0){
+                if(minRewardRate != null && BigDecimal.ZERO.compareTo(minRewardRate) < 0){
                     predicates.add(cb.ge(rewardRateCol, minRewardRate));  //great or equal to >=
                 }
-                if(BigDecimal.ZERO.compareTo(maxRewardRate) < 0){
+                if(maxRewardRate != null && BigDecimal.ZERO.compareTo(maxRewardRate) < 0){
                     predicates.add(cb.le(rewardRateCol, maxRewardRate)); //less or equal to <=
                 }
                 if(statusList != null && statusList.size() > 0){
