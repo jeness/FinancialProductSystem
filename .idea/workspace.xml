@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68a8a196-bef1-42b7-9407-b01095dfe345" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/manager/bin/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/bin/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger/bin/com/imooc/swagger/EnableMySwagger.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/bin/com/imooc/swagger/EnableMySwagger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger/bin/com/imooc/swagger/SwaggerConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/bin/com/imooc/swagger/SwaggerConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger/bin/com/imooc/swagger/SwaggerInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/bin/com/imooc/swagger/SwaggerInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/EnableMySwagger.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/EnableMySwagger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerInfo.java" afterDir="false" />
-    </list>
+    <list default="true" id="68a8a196-bef1-42b7-9407-b01095dfe345" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -122,7 +113,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/EnableMySwagger.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="256">
@@ -134,7 +125,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manager/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -686,7 +677,7 @@
       <workItem from="1569350641903" duration="1191000" />
       <workItem from="1569430724346" duration="11623000" />
       <workItem from="1569501457591" duration="9175000" />
-      <workItem from="1569865579079" duration="29575000" />
+      <workItem from="1569865579079" duration="30171000" />
     </task>
     <servers />
   </component>
@@ -723,10 +714,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51564000" />
+    <option name="totallyTimeSpent" value="52160000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23624161" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1066,16 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/EnableMySwagger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -1124,6 +1106,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/EnableMySwagger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

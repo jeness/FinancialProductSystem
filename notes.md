@@ -136,5 +136,9 @@ Import `SwaggerConfiguration.class` into `EnableMySwagger` interface.
 Then add `@EnableMySwagger` to import my swagger configuration into Main function `ManagerApp.java`.
 ### Swagger Usages Summary 
 1. @Import, 组合注解
+- 使用Import注解把配置类导入到manager模块
+- 或者使用组合注解(@EnableSwagger2 放在自定义注解上，形成了一个组合注解，把多种功能的注解放到一个注解上面，使它拥有多个功能，那就可以对外提供一个更加简单的使用方式)，定义自己的注解
 2. spring.factories
+- 不写代码，把配置类放到spring.factories这个类下面，减少代码量，把dependency添加进来就可以生成swagger文档了
 3. @ConfigurationProperties
+- `@ConfigurationProperties(prefix = "swagger")`这个注解把整个对象的所有属性通过一个prefix属性就可以注入进来
