@@ -2,6 +2,7 @@ package com.imooc.manager.service;
 
 import com.imooc.entity.Product;
 import com.imooc.entity.enums.ProductStatus;
+import com.imooc.manager.error.ErrorEnum;
 import com.imooc.manager.repositories.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -72,11 +73,11 @@ public class ProductService {
     * @param product
     * */
     private void checkProduct(Product product) {
-        Assert.notNull(product.getId(), "Product id can not be null.");
+        Assert.notNull(product.getId(), ErrorEnum.ID_NOT_NULL.getMessage()); //msg: "ID can not be empty"
 
-        Assert.isTrue(BigDecimal.ZERO.compareTo(product.getRewardRate()) < 0 && BigDecimal.valueOf(30).compareTo(product.getRewardRate()) >= 0, "Reward rate is wrong.");
+        Assert.isTrue(BigDecimal.ZERO.compareTo(product.getRewardRate()) < 0 && BigDecimal.valueOf(30).compareTo(product.getRewardRate()) >= 0, ErrorEnum.REWARDRATE_IS_IN_WRONG_RANGE.getMessage());
 
-        Assert.isTrue(BigDecimal.valueOf(product.getStepAmount().longValue()).compareTo(product.getStepAmount()) == 0, "Investment amount should be integer");
+        Assert.isTrue(BigDecimal.valueOf(product.getStepAmount().longValue()).compareTo(product.getStepAmount()) == 0, ErrorEnum.INVESTMENT_NUMBER_IS_NOT_INTEGER.getMessage());
     }
 
     /*

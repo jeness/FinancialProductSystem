@@ -1,5 +1,6 @@
-Financial product system
-# Feature
+# Financial product system
+Financial Products trading platform, backend data transformation and interactivity iwth outer products provider.
+## Feature
 1. Agile: development, iteration
 + Sale & Management
 + JUnit to test function
@@ -16,7 +17,7 @@ Financial product system
 ![structure](notesimage/structure.png)
 Reconciliation 对账业务
 ![function](notesimage/function.png)
-# Modules
+## Modules
 ![modules](notesimage/modules.png)
 1. Util: utilities
 2. Quartz: timed task
@@ -35,14 +36,14 @@ Apache ActiveMQ is an open source message broker written in Java together with a
 + Automation test
 + Tyk: Tyk is an open source `API Gateway` that is fast, scalable and modern. Out of the box, Tyk offers an API Management Platform with an API Gateway, API Analytics, Developer Portal and API Management Dashboard. 
 + quartz: timed task
-# DB design
-## Management 
+## DB design
+### Manager 
 Product: 编号，名称，收益率，锁定期，状态，起投金额，投资步长，备注，创建时间，创建者，更新时间，更新者
 ![product table](notesimage/producttable.png)
-## Seller
+### Seller
 Order(订单)：订单编号，渠道编号，产品编号，用户编号，外部订单编号，类型，状态，金额，备注，创建时间，更新时间
 ![order table](notesimage/ordertable.png)
-### INNODB vs MyISAM?
+#### INNODB vs MyISAM?
 InnoDB 支持事务处理与外键和行级锁，MyISAM不支持
 MyISAM manages nontransactional tables. It provides high-speed storage and retrieval, as well as fulltext searching capabilities. Each MyISAM table is stored on disk in three files. The files have names that begin with the table name and have an extension to indicate the file type. An .frm file stores the table format. The data file has an .MYD (MYData) extension. The index file has an .MYI (MYIndex) extension. Each MyISAM table is stored in a separate file, which could be compressed then with myisamchk if needed.
 
@@ -69,7 +70,7 @@ MyISAM 和InnoDB 讲解
 　　7、如果是用MyISAM的话，merge引擎可以大大加快应用部门的开发速度，他们只要对这个merge表做一些select count(*)操作，非常适合大项目总量约几亿的rows某一类型(如日志，调查统计)的业务表。
 　　当然Innodb也不是绝对不用，用事务的项目就用Innodb的。另外，可能有人会说你MyISAM无法抗太多写操作，但是可以通过架构来弥补。
 
-# Restful API Design
+## Restful API Design
 1. Create product
 POST /products JpaRepository
 controller中是info级别的日志，实际生产过程中打印info级别，不打印debug级别的
@@ -80,7 +81,34 @@ GET /products/{id} JpaRepository
 3. Query products by condition
 GET /products JpaSpecificationExecutor
 
-# Error Handling
+## Error Handling
 + User friendly error explaination
 + Unified handling, simplified bussiness login code
 + Error standardization
+### How the error handling happens
+1. First approach
+In `spring-boot-autoconfigure` package, in the controller `BasicErrorController`, in `ErrorMvcAutoConfiguration` config class, user-defined error handling is registered.
+2. Second Approch
+ControllerAdvice is an enhancement of Controller. 
+ControllerAdvice is not only for enhancement of Controller.
+If Controller has error, then we will go to controllerAdvice. If controllerAdvice has error, then we will go to our self-defined MyErrorController.  
+## Time formatation
+```
+spring:
+    jackson:
+     date-format: yyyy-MM-dd HH:mm:ss
+     time-zone: GMT+8
+```
+## 测试
+1. Unit test: Junit
+```
+@BeforClass: 在需要测试的class之前执行，只会执行一次
+@Before：执行每个测试用例之前，需要执行的method, we can add variables needs to be initialzed in there 
+@Test：测试的, Assert, throws exception when error happens
+@After：执行每个测试用例之后，需要执行的method, we ca add variables needs to be excuated after testing
+@AfterClass:在需要测试的class之后执行，只会执行一次
+
+@RunWith: 提供runner，可以用于spring的测试
+```
+2. Automated test
+
