@@ -130,3 +130,7 @@ Let others know how those API are used.
 In swagger pakage, in resources folder, we can newly create a swagger-ui.html file to add script of:
 `the webjars/springfox-swagger-ui/lang/translator.js`, 
 `the webjars/springfox-swagger-ui/lang/zh-cn.js`
+### Combination annotation: Another way of config swagger
+把多个注解组合在一起，放在一个java文件中，然后在另一个文件中使用该java文件的注解导入这几个组合注解。
+Import `SwaggerConfiguration.class` into `EnableMySwagger` interface.
+Then add `@EnableMySwagger` to import my swagger configuration into Main function `ManagerApp.java`.
