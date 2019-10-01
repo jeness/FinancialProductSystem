@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68a8a196-bef1-42b7-9407-b01095dfe345" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/manager/bin/com/imooc/manager/ManagerApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/manager/bin/com/imooc/manager/ManagerApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/ManagerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/ManagerApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/bin/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/bin/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger/bin/com/imooc/swagger/EnableMySwagger.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/bin/com/imooc/swagger/EnableMySwagger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger/bin/com/imooc/swagger/SwaggerConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/bin/com/imooc/swagger/SwaggerConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger/bin/com/imooc/swagger/SwaggerInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/bin/com/imooc/swagger/SwaggerInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/EnableMySwagger.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/EnableMySwagger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerInfo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -122,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/EnableMySwagger.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="256">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,10 +135,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/manager/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swagger/src/main/resources/META-INF/resource/spring.factories">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="101" selection-start-column="101" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+            <state relative-caret-position="319">
+              <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,20 +189,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/src/main/java/com/imooc/util/RestUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+            <state relative-caret-position="128">
+              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#319#320#0" expanded="true" />
                 <element signature="e#351#352#0" expanded="true" />
                 <element signature="e#401#402#0" expanded="true" />
@@ -272,7 +286,6 @@
         <option value="$PROJECT_DIR$/dependencies.gradle" />
         <option value="$PROJECT_DIR$/manager/src/main/resources/public/error/5xx.html" />
         <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorConfiguration.java" />
-        <option value="$PROJECT_DIR$/manager/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorEnum.java" />
         <option value="$PROJECT_DIR$/util/src/main/java/com/imooc/util/RestUtil.java" />
         <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/MyErrorController.java" />
@@ -284,10 +297,12 @@
         <option value="$PROJECT_DIR$/entity/build.gradle" />
         <option value="$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/Product.java" />
         <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/controller/ProductController.java" />
-        <option value="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerInfo.java" />
         <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/ManagerApp.java" />
+        <option value="$PROJECT_DIR$/swagger/src/main/resources/META-INF/resource/spring.factories" />
         <option value="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/EnableMySwagger.java" />
         <option value="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerConfiguration.java" />
+        <option value="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerInfo.java" />
+        <option value="$PROJECT_DIR$/manager/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -434,6 +449,23 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="swagger" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="financial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="financial" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="swagger" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="financial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="financial" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="swagger" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="financial" type="b2602c69:ProjectViewProjectNode" />
@@ -654,7 +686,7 @@
       <workItem from="1569350641903" duration="1191000" />
       <workItem from="1569430724346" duration="11623000" />
       <workItem from="1569501457591" duration="9175000" />
-      <workItem from="1569865579079" duration="28862000" />
+      <workItem from="1569865579079" duration="29575000" />
     </task>
     <servers />
   </component>
@@ -691,11 +723,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50851000" />
+    <option name="totallyTimeSpent" value="51564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23624161" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -859,13 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manager/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -998,39 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
-          <folding>
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#865#866#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
-            <element signature="e#1025#1026#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
-            <element signature="e#1219#1220#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -1068,10 +1059,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/swagger/src/main/resources/META-INF/resource/spring.factories">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="101" selection-start-column="101" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/EnableMySwagger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1080,11 +1078,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+        <state relative-caret-position="319">
+          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#795#796#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1135#1136#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
         </state>
       </provider>
     </entry>

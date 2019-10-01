@@ -134,3 +134,7 @@ In swagger pakage, in resources folder, we can newly create a swagger-ui.html fi
 把多个注解组合在一起，放在一个java文件中，然后在另一个文件中使用该java文件的注解导入这几个组合注解。
 Import `SwaggerConfiguration.class` into `EnableMySwagger` interface.
 Then add `@EnableMySwagger` to import my swagger configuration into Main function `ManagerApp.java`.
+### Swagger Usages Summary 
+1. @Import, 组合注解
+2. spring.factories
+3. @ConfigurationProperties

@@ -1,11 +1,13 @@
 package com.imooc.swagger;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /*
 * Swagger config info
 * */
 @Component
+@ConfigurationProperties(prefix = "swagger")
 public class SwaggerInfo {
     private String groupName = "controller";
 

@@ -15,6 +15,6 @@ import java.lang.annotation.Target;
 @Target(value = { java.lang.annotation.ElementType.TYPE })
 @Documented
 @Import(SwaggerConfiguration.class)
-@EnableSwagger2
+
 public @interface EnableMySwagger {
 }
