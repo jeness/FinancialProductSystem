@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68a8a196-bef1-42b7-9407-b01095dfe345" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/bin/com/imooc/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/entity/bin/com/imooc/entity/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/bin/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/bin/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/bin/com/imooc/manager/service/ProductService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/manager/bin/com/imooc/manager/service/ProductService$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/bin/com/imooc/manager/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/manager/bin/com/imooc/manager/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/bin/com/imooc/manager/controller/ProductControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/manager/bin/com/imooc/manager/controller/ProductControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/src/test/java/com/imooc/manager/controller/ProductControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager/src/test/java/com/imooc/manager/controller/ProductControllerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -95,6 +89,13 @@
                 <item name="manager" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="financial" type="f1a62948:ProjectNode" />
+                <item name="manager" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -128,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manager/src/test/java/com/imooc/manager/controller/ProductControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="73" column="37" lean-forward="true" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+            <state relative-caret-position="1385">
+              <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,19 +151,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/MyErrorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="186">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -173,8 +165,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorControllerAdvice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="208">
+              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,8 +177,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+            <state relative-caret-position="176">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -255,10 +247,10 @@
         <option value="$PROJECT_DIR$/manager/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/service/ProductService.java" />
         <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorEnum.java" />
-        <option value="$PROJECT_DIR$/manager/src/test/java/com/imooc/manager/controller/ProductControllerTest.java" />
-        <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorControllerAdvice.java" />
         <option value="$PROJECT_DIR$/util/src/main/java/com/imooc/util/RestUtil.java" />
         <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/MyErrorController.java" />
+        <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorControllerAdvice.java" />
+        <option value="$PROJECT_DIR$/manager/src/test/java/com/imooc/manager/controller/ProductControllerTest.java" />
       </list>
     </option>
   </component>
@@ -516,7 +508,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ProductControllerTest.createException">
+  <component name="RunManager" selected="Gradle.financial:manager [build]">
     <configuration name="ManagerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.imooc.manager.ManagerApp" />
       <module name="financial.manager.main" />
@@ -570,6 +562,45 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="ProductControllerTest.findOne" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.imooc.manager.controller.ProductControllerTest.findOne&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":manager:cleanTest" />
+            <option value=":manager:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="financial:manager [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/manager" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ManagerApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="financial.manager.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.manager.ManagerApp" />
@@ -582,9 +613,13 @@
       <item itemvalue="Gradle.ProductControllerTest" />
       <item itemvalue="Gradle.ProductControllerTest.createException" />
       <item itemvalue="Spring Boot.ManagerApp" />
+      <item itemvalue="Gradle.ProductControllerTest.findOne" />
+      <item itemvalue="Gradle.financial:manager [build]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.financial:manager [build]" />
+        <item itemvalue="Gradle.ProductControllerTest.findOne" />
         <item itemvalue="Gradle.ProductControllerTest.createException" />
         <item itemvalue="Gradle.ProductControllerTest" />
         <item itemvalue="Application.ManagerApp" />
@@ -611,29 +646,11 @@
       <workItem from="1569350641903" duration="1191000" />
       <workItem from="1569430724346" duration="11623000" />
       <workItem from="1569501457591" duration="9175000" />
-      <workItem from="1569865579079" duration="22739000" />
+      <workItem from="1569865579079" duration="24686000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProductControllerTest_createException - 2019.10.01 at 10h 53m 01s.xml">
-      <configuration name="ProductControllerTest.createException" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="ProductControllerTest_createException - 2019.10.01 at 10h 53m 43s.xml">
-      <configuration name="ProductControllerTest.createException" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="ProductControllerTest_createException - 2019.10.01 at 10h 54m 49s.xml">
-      <configuration name="ProductControllerTest.createException" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="ProductControllerTest_createException - 2019.10.01 at 10h 57m 12s.xml">
-      <configuration name="ProductControllerTest.createException" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="ProductControllerTest_createException - 2019.10.01 at 11h 06m 17s.xml">
-      <configuration name="ProductControllerTest.createException" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="ProductControllerTest_createException - 2019.10.01 at 11h 24m 37s.xml">
-      <configuration name="ProductControllerTest.createException" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="ProductControllerTest_createException - 2019.10.01 at 11h 26m 44s.xml">
       <configuration name="ProductControllerTest.createException" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -646,15 +663,32 @@
     <history-entry file="ProductControllerTest_createException - 2019.10.01 at 11h 49m 42s.xml">
       <configuration name="ProductControllerTest.createException" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="ProductControllerTest_createException - 2019.10.01 at 12h 02m 31s.xml">
+      <configuration name="ProductControllerTest.createException" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="ProductControllerTest_createException - 2019.10.01 at 12h 02m 56s.xml">
+      <configuration name="ProductControllerTest.createException" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="ProductControllerTest_findOne - 2019.10.01 at 12h 23m 13s.xml">
+      <configuration name="ProductControllerTest.findOne" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="ProductControllerTest_findOne - 2019.10.01 at 12h 24m 38s.xml">
+      <configuration name="ProductControllerTest.findOne" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="ProductControllerTest_findOne - 2019.10.01 at 12h 27m 47s.xml">
+      <configuration name="ProductControllerTest.findOne" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="ProductControllerTest_findOne - 2019.10.01 at 12h 28m 34s.xml">
+      <configuration name="ProductControllerTest.findOne" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44728000" />
+    <option name="totallyTimeSpent" value="46675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23624161" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23624161" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -664,7 +698,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.04249292" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46458924" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -683,7 +717,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" weight="0.3295302" />
+      <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.3295302" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -913,16 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manager/src/test/java/com/imooc/manager/controller/ProductControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="73" column="37" lean-forward="true" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/src/main/java/com/imooc/util/RestUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -940,26 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorControllerAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -967,10 +971,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/ErrorControllerAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/error/MyErrorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="186">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/src/test/java/com/imooc/manager/controller/ProductControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1385">
+          <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

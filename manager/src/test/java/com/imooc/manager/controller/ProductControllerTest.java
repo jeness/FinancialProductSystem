@@ -4,8 +4,10 @@ import com.imooc.entity.Product;
 import com.imooc.entity.enums.ProductStatus;
 import com.imooc.util.RestUtil;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.client.ClientHttpResponse;
@@ -23,6 +25,7 @@ import java.util.Map;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ProductControllerTest {
 
     private static RestTemplate rest = new RestTemplate();
@@ -78,7 +81,7 @@ public class ProductControllerTest {
     public void create(){
         normals.forEach(product -> {
             Product result = RestUtil.postJSON(rest, baseUrl+"/products", product, Product.class);
-            Assert.notNull(result.getCreateAt(), "Insert fails!!!");
+            Assert.notNull(result.getCreateAt(), "TEST MSG: Insert fails!!!");
         });
     }
 
@@ -87,7 +90,20 @@ public class ProductControllerTest {
         exceptions.forEach(product -> {
             Map<String, String> result = RestUtil.postJSON(rest, baseUrl+"/products", product, HashMap.class);
 //            System.out.println(result);
-            Assert.isTrue(result.get("message").equals(product.getName()), "Insert successes - 插入成功!!!" + result.get("message"));
+            Assert.isTrue(result.get("message").equals(product.getName()), "TEST MSG: Insert successes - 插入成功!!!" + result.get("message"));
+        });
+    }
+
+    @Test
+    public void findOne(){
+        normals.forEach(product -> {
+            Product result = rest.getForObject(baseUrl+"/products/" + product.getId(), Product.class);
+            Assert.isTrue(result.getId().equals(product.getId()), "TEST MSG: Normals Query is FAILED!!!");
+                });
+        exceptions.forEach(product -> {
+            Product result = rest.getForObject(baseUrl+"/products/" + product.getId(), Product.class);
+//            System.out.println("RESULT IS " + result);
+            Assert.isNull(result, "TEST MSG: Exceptions Query is FAILED!!!");
         });
     }
 }

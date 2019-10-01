@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Unified error handling
+ * Unified error handling, using @ControllerAdvice
  */
 @ControllerAdvice(basePackages = {"com.imooc.manager.controller"})
 public class ErrorControllerAdvice {

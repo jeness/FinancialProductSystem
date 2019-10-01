@@ -111,4 +111,7 @@ spring:
 @RunWith: 提供runner，可以用于spring的测试
 ```
 2. Automated test
-
+在Intellij右边的Gradle tab中，点击Tasks —>build ->(双击)build，就可以运行所有tests，如果通过，那么是可以成功打包为JAR或者WAR的
+- test coverage, edge case
+- execution sequence annotation: `@FixMethodOrder(MethodSorters.NAME_ASCENDING)` 按测试方法名字典序执行
+- Conditional query test case
