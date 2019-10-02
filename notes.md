@@ -142,3 +142,20 @@ Then add `@EnableMySwagger` to import my swagger configuration into Main functio
 - 不写代码，把配置类放到spring.factories这个类下面，减少代码量，把dependency添加进来就可以生成swagger文档了
 3. @ConfigurationProperties
 - `@ConfigurationProperties(prefix = "swagger")`这个注解把整个对象的所有属性通过一个prefix属性就可以注入进来
+### Swagger tools
+1. swagger ui: render api description documentation
+直接用文件形式打开会出现跨域问题，可以把swagger ui deploy 到 server上，可以是nginx，node，apache的web server，或者直接用工程部署swagger ui
+![swagger-ui-cross-region](readmeimages\swagger-ui-cross-region.png)
+在`http://localhost:8081/manager/index.html` 中的搜索栏中，填入`http://localhost:8081/manager/v2/api-docs?group=manager`.
+![swagger-ui](readmeimages\swagger-ui.png)
+swagger ui是一个静态资源文件，用js的方式是解析我们的接口描述文件，然后显示出来。
+Swagger ui is a static resource file, use js to parse our interface description file and then render and show as web page.
+2. swagger editor: edit api description documentation
+在线ui editor，可以用json或者yaml作为输入，直接把`http://localhost:8081/manager/v2/api-docs?group=manager`内容粘贴到`https://editor.swagger.io/?_ga=2.150715381.259991160.1569957720-2129304803.1569957720`,可以得到在线的预览效果。
+3. swagger codegen: accoring to documentation, generate api code
+- Generate Server
+Generate server code from documentation. Sometimes it will be used in real project development. When we have documentation, we can generate a mock server, and directly response successful, there is no business logic inside the mock server. When response successfully, we can switch to real server.
+从文档生成server端的代码。有了文档之后，我们这边先生成一个mock的server端，直接响应成功，里面没有逻辑，当响应成功，我们再切换到实际的服务器。
+- Generate Client
+Client code generator is seldom to be used. Because we have the swagger ui, we can directly try out the spi fro mthe swagger ui, so we don't need the generator of client.
+client的代码generator很少用到，因为有文档，直接可以在swagger ui的文档上试一试效果，所以就用不到客户端client的generator

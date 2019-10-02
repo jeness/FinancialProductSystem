@@ -49,7 +49,7 @@ public class SwaggerConfiguration {
                 .title(swaggerInfo.getTitle())
                 .description(swaggerInfo.getDescription())
                 .termsOfServiceUrl("http://springfox.io")
-                .contact("imooc")
+                .contact("Amber")
                 .license(swaggerInfo.getLicense())
                 .licenseUrl("https://github.com/springfox/springfox/blob/master/LICENSE")
                 .version("2.0")
