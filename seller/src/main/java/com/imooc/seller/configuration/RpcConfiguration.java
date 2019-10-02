@@ -32,4 +32,10 @@ public class RpcConfiguration {
         creator.setScanPackage(ProductRpc.class.getPackage().getName());
         return creator;
     }
+
+    public static void main(String[] args) throws MalformedURLException{
+        URL baseUrl = new URL("http://localhost:8081/manager/"); //以斜杠结尾
+        String path = "rpc/products"; //不以斜杠开头
+        System.out.println(new URL(baseUrl, path).toString());
+    }
 }

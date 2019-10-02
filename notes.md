@@ -176,4 +176,22 @@ Seller is a gateway for interation with third party. In Seller, security access 
 - why not http? jsonrpc is easier to write than http. jsonrpc can use interface to call. http needs to create http request, http response, parse etc.
 - why not webservice? Webservice use xml as Datagram(报文) to send and receive messages wastes bandwidth
 - Why Thrift or grpc? Those two have good performance, but the way of write scripts is complicated. They needs to write specific format scripts and then complie to Java code.
-
+#### JSONRPC - client(seller module)
+- debug log
+Open debug log, in configuration (client/resource/application.yml):
+```
+logging:
+    level:
+        com.googlecode.jsonrpc4j: debug
+```
+- JSONRPC Client entrance (only entrance): AutoJsonRpcClientProxyCreator
+#### JSONRPC - server(manager module)
+- debug log
+Open debug log, in configuration (manager/resource/application.yml):
+```
+logging:
+    level:
+        com.googlecode.jsonrpc4j: debug
+```
+- JSON Client entrance (only entrance): AutoJsonRpcServiceImplExporter
+- 可以添加自定义的错误处理，自定义的监听器，可以注册追踪

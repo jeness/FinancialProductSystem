@@ -41,8 +41,25 @@ public class ProductRpcService {
         return result;
     }
 
+//    @PostConstruct
+//    public void testFindAll(){
+//        findAll();
+//    }
+
+    /**
+    * Query one single product
+    * @param id
+    * @return
+    * */
+    public Product findOne(String id){
+        LOG.info("LOG ==== rpc query one single product, request:{}", id);
+        Product result = productRpc.findOne(id);
+        LOG.info("LOG ==== rpc query one single product, result: {}", result);
+        return result;
+    }
+
     @PostConstruct
-    public void testFindAll(){
-        findAll();
+    public void init(){
+        findOne("001");
     }
 }

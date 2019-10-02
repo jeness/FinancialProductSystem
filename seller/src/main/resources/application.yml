@@ -3,3 +3,7 @@ server:
   port: 8082
 
 rpc.manager.url: http://localhost:8081/manager/
+
+logging:
+  level:
+    com.googlecode.jsonrpc4j: debug
