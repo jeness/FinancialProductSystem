@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="content-1" class="span9">
+        <div class="row-fluid">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">Scripting</span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <input type="text" id="scriptName" placeholder="Script Name"
+                                   style="margin-bottom: 1px;margin-right: 2px; height: 20px"/>
+                        </li>
+
+                        <li class="toolbar-link" style=" padding-right: 2px">
+
+                        </li>
+                        <li class="toolbar-link">
+                        </li>
+                        <li class="toolbar-link">
+                            <a onclick="saveScriptCheck()" id="saveScriptButton" ><i class="icon-cog"></i> Save</a>
+                        </li>
+                        <li class="toolbar-link">
+
+                            <a onclick="deleteScriptAction()" id="deleteScriptButton" ><i class="icon-trash"></i> Delete</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="box-content">
+                    <div id="scriptarea">
+
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                    <div class="box-header">
+                        <span class="title">Result</span>
+                    </div>
+                    <div class="box-content">
+                        <textarea id="scriptResult" rows="10" cols="100"
+                                  style="padding: 15px;
+                               background-color: whitesmoke; color: #636363;
+                               font-weight: bold; margin: 0px 0px 10px;
+                                width: 96%; height: 200px;resize: none;" ></textarea>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div th:fragment="content-2" class="span3">
+        <div class="row-fluid">
+            <div class="box">
+                <div class="box-header"><span class="title">Members</span></div>
+                <div class="box-content padded">
+                    <div id="memberCheckList">
+                    </div>
+                    <select id="radioscriptlanguage" class="uniform" style="margin-bottom:5px;">
+                        <option value="javascript" selected>Javascript</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="groovy">Groovy</option>
+                        <option value="python">Python</option>
+                    </select>
+                    <br/>
+                    <button id="executeScriptButton"  onclick="sendScript()" class="btn btn-success has-spinner"><i class="icon-chevron-right"></i> Execute
+                        <span class="spinner"><i class="icon-spin icon-refresh"></i></span>
+                    </button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-header"><span class="title">Saved Scripts</span></div>
+                <div class="box-content padded">
+                    <div id="savedScripts">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

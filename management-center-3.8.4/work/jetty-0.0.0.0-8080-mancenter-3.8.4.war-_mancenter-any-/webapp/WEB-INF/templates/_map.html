@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<body>
+<div th:fragment="content">
+    <div class="row-fluid">
+        <div class="span3">
+            <div class="box">
+                <div class="box-header"><span class="title" id="mapChart1Title"></span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#"
+                               onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['map']['mapChart1']);"><i
+                                    class="icon-resize-full"></i></a>
+                        </li>
+                        <li class="toolbar-link">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="setChartOption('mapChart1','map','i_Map_OwnedEntryCount')"> Size </a></li>
+                                <li><a onclick="setChartOption('mapChart1','map','o_Map_total')"> Throughput </a></li>
+                                <li><a onclick="setChartOption('mapChart1','map','i_Map_OwnedEntryMemoryCost')"> Memory</a></li>
+                                <li><a onclick="setChartOption('mapChart1','map','i_Map_BackupEntryCount')">Backup Size</a></li>
+                                <li><a onclick="setChartOption('mapChart1','map','i_Map_BackupEntryMemoryCost')">Backup Mem.</a></li>
+                                <li><a onclick="setChartOption('mapChart1','map','i_Map_Hits')">Hits</a></li>
+                                <li><a onclick="setChartOption('mapChart1','map','i_Map_LockedEntryCount')">Locked Entr.</a></li>
+                                <li><a onclick="setChartOption('mapChart1','map','o_Map_PutOperationCount')">Puts/s</a></li>
+                                <li><a onclick="setChartOption('mapChart1','map','o_Map_GetOperationCount')">Gets/s</a></li>
+                                <li><a onclick="setChartOption('mapChart1','map','o_Map_RemoveOperationCount')">Removes/s</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content padded">
+                    <div style="width: 100%; height: 100px" id="mapChart1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="span3">
+            <div class="box">
+                <div class="box-header"><span class="title" id="mapChart2Title"></span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#"
+                               onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['map']['mapChart2']);"><i
+                                    class="icon-resize-full"></i></a>
+                        </li>
+                        <li class="toolbar-link">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="setChartOption('mapChart2','map','i_Map_OwnedEntryCount')"> Size </a></li>
+                                <li><a onclick="setChartOption('mapChart2','map','o_Map_total')"> Throughput </a></li>
+                                <li><a onclick="setChartOption('mapChart2','map','i_Map_OwnedEntryMemoryCost')"> Memory</a></li>
+                                <li><a onclick="setChartOption('mapChart2','map','i_Map_BackupEntryCount')">Backup Size</a></li>
+                                <li><a onclick="setChartOption('mapChart2','map','i_Map_BackupEntryMemoryCost')">Backup Mem.</a></li>
+                                <li><a onclick="setChartOption('mapChart2','map','i_Map_Hits')">Hits</a></li>
+                                <li><a onclick="setChartOption('mapChart2','map','i_Map_LockedEntryCount')">Locked Entr.</a></li>
+                                <li><a onclick="setChartOption('mapChart2','map','o_Map_PutOperationCount')">Puts/s</a></li>
+                                <li><a onclick="setChartOption('mapChart2','map','o_Map_GetOperationCount')">Gets/s</a></li>
+                                <li><a onclick="setChartOption('mapChart2','map','o_Map_RemoveOperationCount')">Removes/s</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content padded">
+                    <div style="width: 100%; height: 100px" id="mapChart2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="span3">
+            <div class="box">
+                <div class="box-header"><span class="title" id="mapChart3Title"></span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#"
+                               onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['map']['mapChart3']);"><i
+                                    class="icon-resize-full"></i></a>
+                        </li>
+                        <li class="toolbar-link">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="setChartOption('mapChart3','map','i_Map_OwnedEntryCount')"> Size </a></li>
+                                <li><a onclick="setChartOption('mapChart3','map','o_Map_total')"> Throughput </a></li>
+                                <li><a onclick="setChartOption('mapChart3','map','i_Map_OwnedEntryMemoryCost')"> Memory</a></li>
+                                <li><a onclick="setChartOption('mapChart3','map','i_Map_BackupEntryCount')">Backup Size</a></li>
+                                <li><a onclick="setChartOption('mapChart3','map','i_Map_BackupEntryMemoryCost')">Backup Mem.</a></li>
+                                <li><a onclick="setChartOption('mapChart3','map','i_Map_Hits')">Hits</a></li>
+                                <li><a onclick="setChartOption('mapChart3','map','i_Map_LockedEntryCount')">Locked Entr.</a></li>
+                                <li><a onclick="setChartOption('mapChart3','map','o_Map_PutOperationCount')">Puts/s</a></li>
+                                <li><a onclick="setChartOption('mapChart3','map','o_Map_GetOperationCount')">Gets/s</a></li>
+                                <li><a onclick="setChartOption('mapChart3','map','o_Map_RemoveOperationCount')">Removes/s</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content padded">
+                    <div style="width: 100%; height: 100px" id="mapChart3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="span3">
+            <p style="margin:0 0 5px" sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_USER','ROLE_READONLY_USER')">
+                <button sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_USER','ROLE_READONLY_USER')"
+                        class="btn btn-default" onclick="mapBrowseModal()">
+                    <i class="icon-folder-open"></i> Map Browser
+                </button>
+                <button sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_USER')" class="btn btn-default" onclick="mapConfigModal()">
+                    <i class="icon-cog"></i> Map Config
+                </button>
+            </p>
+            <div class="box">
+                <div class="box-header"><span class="title" id="mapChart4Title"></span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#"
+                               onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['map']['mapChart4']);"><i
+                                    class="icon-resize-full"></i></a>
+                        </li>
+                        <li class="toolbar-link">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="setChartOption('mapChart4','map','i_Map_OwnedEntryCount')"> Size </a></li>
+                                <li><a onclick="setChartOption('mapChart4','map','o_Map_total')"> Throughput </a></li>
+                                <li><a onclick="setChartOption('mapChart4','map','i_Map_OwnedEntryMemoryCost')"> Memory</a></li>
+                                <li><a onclick="setChartOption('mapChart4','map','i_Map_BackupEntryCount')">Backup Size</a></li>
+                                <li><a onclick="setChartOption('mapChart4','map','i_Map_BackupEntryMemoryCost')">Backup Mem.</a></li>
+                                <li><a onclick="setChartOption('mapChart4','map','i_Map_Hits')">Hits</a></li>
+                                <li><a onclick="setChartOption('mapChart4','map','i_Map_LockedEntryCount')">Locked Entr.</a></li>
+                                <li><a onclick="setChartOption('mapChart4','map','o_Map_PutOperationCount')">Puts/s</a></li>
+                                <li><a onclick="setChartOption('mapChart4','map','o_Map_GetOperationCount')">Gets/s</a></li>
+                                <li><a onclick="setChartOption('mapChart4','map','o_Map_RemoveOperationCount')">Removes/s</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content padded">
+                    <div style="width: 100%; height: 65px" id="mapChart4"></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title" id="mapmemorydatatabletitle">Map Memory Data Table</span>
+                </div>
+                <div class="box-content">
+                    <table class="dTable responsive dataTable" id="mapmemorydatatable">
+                        <thead>
+                        <tr>
+                            <th class="sorting">
+                                <div><span>#&nbsp;&nbsp;</span></div>
+                            </th>
+                            <th class="sorting">
+                                <div>Members</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Entries</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Entry Memory</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Backups</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Backup Memory</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Events</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Hits</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Locks</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Dirty Entries</div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th><div>#</div></th>
+                                <th><div>TOTAL</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">Map Throughput Data Table</span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><span id="mapSelectedThrougputInterval">Last Minute</span><i class="icon-caret-down"></i></span>
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="changeThrougputInterval('map','0')"> Since Beginning </a></li>
+                                <li><a onclick="changeThrougputInterval('map','60000')"> Last Minute </a></li>
+                                <li><a onclick="changeThrougputInterval('map','600000')"> Last 10 Minute </a></li>
+                                <li><a onclick="changeThrougputInterval('map','3600000')"> Last 1 Hour </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content">
+                    <table class="dTable responsive dataTable" id="mapthroughputdatatable">
+                        <thead>
+                        <tr>
+                            <th class="sorting">
+                                <div><span>#&nbsp;&nbsp;</span></div>
+                            </th>
+                            <th class="sorting">
+                                <div>Members</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Puts/s&nbsp;&nbsp;</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Gets/s&nbsp;&nbsp;</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Removes/s</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Avg Put Lat.</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Avg Get Lat.</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Avg Remove Lat.</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Max Put Lat.</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Max Get Lat.</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Max Remove Lat.</div>
+                            </th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">Near Cache Data Table</span>
+                </div>
+                <div class="box-content">
+                    <table class="dTable responsive dataTable" id="nearcachedatatable">
+                        <thead>
+                        <tr>
+                            <th class="sorting">
+                                <div><span>#&nbsp;&nbsp;</span></div>
+                            </th>
+                            <th class="sorting">
+                                <div>Members</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Entries</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Entry Memory</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Hits</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Misses</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Ratio</div>
+                            </th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div th:replace="__mapBrowse :: content"/>
+    <div th:replace="__mapConfig :: content"/>
+</div>
+</body>
+</html>

@@ -7,6 +7,7 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 /*
@@ -14,7 +15,7 @@ import java.util.Date;
 * */
 @Entity
 @ApiModel(value = "Products", description = "Model of products")
-public class Product {
+public class Product implements Serializable {
     @Id
     private String id;
     private String name;

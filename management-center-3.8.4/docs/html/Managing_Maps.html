@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>          <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>Managing Maps - Hazelcast Management Center Manual</title>
+    <meta name="description" content="Hazelcast Management Center Manual" />
+    <meta name="author" content="Hazelcast">
+    <meta charset="UTF-8">
+    <link rel="icon" href="themes/daux/img/favicon-blue.png" type="image/x-icon">
+    <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+    <link href='themes/daux/css/theme-blue.min.css' rel='stylesheet' type='text/css'>
+            <!-- Tipue Search -->
+        <link href="tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="">
+    
+<header class="Navbar hidden-print">
+    <div>
+      <div class="sitebar"></div>
+        <div>  
+          <div style="float:left">
+            <a href="http://www.hazelcast.org"><img src="IMDG_orange_logo_full_RGB-light_200px.png" style="padding-top: 8px"/></a>
+          </div>
+          <div>
+            <a class="Navbar__branda" href="index.html">Management Center <span style="font-size:11px">3.9-EA</span></a>
+          </div>
+        </div>
+    <div class="Search">
+        <svg class="Search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451 451"><path d="M447.05 428l-109.6-109.6c29.4-33.8 47.2-77.9 47.2-126.1C384.65 86.2 298.35 0 192.35 0 86.25 0 .05 86.3.05 192.3s86.3 192.3 192.3 192.3c48.2 0 92.3-17.8 126.1-47.2L428.05 447c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.2-5.2 5.2-13.8 0-19zM26.95 192.3c0-91.2 74.2-165.3 165.3-165.3 91.2 0 165.3 74.2 165.3 165.3s-74.1 165.4-165.3 165.4c-91.1 0-165.3-74.2-165.3-165.4z"/></svg>
+        <input type="search" id="tipue_search_input" class="Search__field" placeholder="Search..." autocomplete="on" results=25 autosave=text_search>
+    </div>
+
+
+</div></header>
+<div class="Columns content">
+    <aside class="Columns__left Collapsible">
+        <div class="Collapsible__container">
+            <button type="button" class="Button Collapsible__trigger">
+                <span class="Collapsible__trigger--bar"></span>
+                <span class="Collapsible__trigger--bar"></span>
+                <span class="Collapsible__trigger--bar"></span>
+            </button>
+        </div>
+
+        <div class="Collapsible__content">
+            <!-- Navigation -->
+            <ul class='Nav'><li class='Nav__item '><a href="Deploying_and_Starting.html">Deploying and Starting</a></li><li class='Nav__item '><a href="Getting_Started.html">Getting Started</a></li><li class='Nav__item '><a href="Using_Management_Center_with_TLS-SSL_Only.html">Using Management Center with TLS-SSL Only</a></li><li class='Nav__item '><a href="Active_Directory_Authentication.html">Active Directory Authentication</a></li><li class='Nav__item '><a href="JAAS_Authentication.html">JAAS Authentication</a></li><li class='Nav__item '><a href="LDAP_Authentication.html">LDAP Authentication</a></li><li class='Nav__item '><a href="User_Interface_Overview.html">User Interface Overview</a></li><li class='Nav__item '><a href="Home_Page.html">Home Page</a></li><li class='Nav__item '><a href="Monitoring_Caches.html">Monitoring Caches</a></li><li class='Nav__item Nav__item--active'><a href="Managing_Maps.html">Managing Maps</a></li><li class='Nav__item '><a href="Monitoring_Replicated_Maps.html">Monitoring Replicated Maps</a></li><li class='Nav__item '><a href="Monitoring_Queues.html">Monitoring Queues</a></li><li class='Nav__item '><a href="Monitoring_Topics.html">Monitoring Topics</a></li><li class='Nav__item '><a href="Monitoring_Reliable_Topics.html">Monitoring Reliable Topics</a></li><li class='Nav__item '><a href="Monitoring_MultiMaps.html">Monitoring MultiMaps</a></li><li class='Nav__item '><a href="Monitoring_Executors.html">Monitoring Executors</a></li><li class='Nav__item '><a href="Monitoring_WAN_Replication.html">Monitoring WAN Replication</a></li><li class='Nav__item '><a href="Monitoring_Members.html">Monitoring Members</a></li><li class='Nav__item '><a href="Scripting.html">Scripting</a></li><li class='Nav__item '><a href="Executing_Console_Commands.html">Executing Console Commands</a></li><li class='Nav__item '><a href="Creating_Alerts.html">Creating Alerts</a></li><li class='Nav__item '><a href="Administering_Management_Center.html">Administering Management Center</a></li><li class='Nav__item '><a href="Cluster_State.html">Cluster State</a></li><li class='Nav__item '><a href="Hot_Restart.html">Hot Restart</a></li><li class='Nav__item '><a href="Checking_Past_Status_with_Time_Travel.html">Checking Past Status with Time Travel</a></li><li class='Nav__item '><a href="Management_Center_Documentation.html">Management Center Documentation</a></li><li class='Nav__item '><a href="Suggested_Heap_Size.html">Suggested Heap Size</a></li></ul>
+
+            <div class="Links">
+                                    <hr/>
+                                            <a href="http://hazelcast.org/documentation" target="_blank">Go to hazelcast.org/documentation</a>
+                        <br />
+                                    
+                                    <div class="CodeToggler">
+                        <hr/>
+                                                    <a class="CodeToggler__button CodeToggler__button--main" href="#">Show Code Blocks Inline</a><br>
+                                            </div>
+                
+                            </div>
+        </div>
+    </aside>
+    <div class="Columns__right ">
+        <div class="Columns__right__content">
+            <div class="doc_content">
+                <article class="Page">
+
+    <div class="Page__header">
+        <h1><a href="Managing_Maps.html">Managing Maps</a></h1>
+                    </div>
+
+
+    <div class="s-content">
+        <p>Map instances are listed under the <strong>Maps</strong> menu item on the left. When you click on a map, a new tab for monitoring that map instance opens on the right, as shown below. In this tab, you can monitor metrics and also re-configure the selected map.</p>
+<p><img src="images/MonitoringMaps.png" alt="Monitoring Maps" /></p>
+<p>The below subsections explain the portions of this window.</p>
+<h4 id="page_Map+Browser">Map Browser</h4>
+<p>Use the Map Browser tool to retrieve properties of the entries stored in the selected map. To open the Map Browser tool, click on the <strong>Map Browser</strong> button, located at the top right of the window. Once opened, the tool appears as a dialog, as shown below.</p>
+<p><img src="images/MapBrowser.jpg" alt="Map Browser" /></p>
+<p>Once the key and the key's type are specified and the <strong>Browse</strong> button is clicked, the key's properties along with its value are listed.</p>
+<h4 id="page_Map+Config">Map Config</h4>
+<p>Use the Map Config tool to set the selected map's attributes, such as the backup count, TTL, and eviction policy. To open the Map Config tool, click on the <strong>Map Config</strong> button, located at the top right of the window. Once opened, the tool appears as a dialog, as shown below.</p>
+<p><img src="images/MapConfig.jpg" alt="Map Config Tool" /></p>
+<p>You can change any attribute and click the <strong>Update</strong> button to save your changes.</p>
+<h4 id="page_Map+Monitoring">Map Monitoring</h4>
+<p>Besides the Map Browser and Map Config tools, the map monitoring page has monitoring options that are explained below. All of these options perform real-time monitoring.</p>
+<p>On top of the page, small charts monitor the size, throughput, memory usage, backup size, etc. of the selected map in real-time. The X-axis of all the charts show the current system time. You can select other small monitoring charts using the <img src="images/ChangeWindowIcon.jpg" alt="" /> button at the top right of each chart. When you click the button, the monitoring options are listed, as shown below.</p>
+<p><img src="images/MonitoringOptionsMap.jpg" alt="Monitoring Options for Map" /></p>
+<p>When you click on a desired monitoring, the chart is loaded with the selected option. To open a chart as a separate dialog, click on the <img src="images/MaximizeChart.jpg" alt="" /> button placed at the top right of each chart. The monitoring charts below are available:</p>
+<ul>
+<li>
+<strong>Size</strong>: Monitors the size of the map. Y-axis is the entry count (should be multiplied by 1000).</li>
+<li>
+<strong>Throughput</strong>: Monitors get, put and remove operations performed on the map. Y-axis is the operation count.</li>
+<li>
+<strong>Memory</strong>: Monitors the memory usage on the map. Y-axis is the memory count.</li>
+<li>
+<strong>Backups</strong>: Chart loaded when &quot;Backup Size&quot; is selected. Monitors the size of the backups in the map. Y-axis is the backup entry count (should be multiplied by 1000).</li>
+<li>
+<strong>Backup Memory</strong>: Chart loaded when &quot;Backup Mem.&quot; is selected. Monitors the memory usage of the backups. Y-axis is the memory count.</li>
+<li>
+<strong>Hits</strong>: Monitors the hit count of the map.</li>
+<li>
+<strong>Puts/s, Gets/s, Removes/s</strong>: These three charts monitor the put, get and remove operations (per second) performed on the selected map.</li>
+</ul>
+<p>Under these charts are <strong>Map Memory</strong> and <strong>Map Throughput</strong> data tables. The Map Memory data table provides memory metrics distributed over members, as shown below.</p>
+<p><img src="images/MemoryDataTable.png" alt="Map Memory Data Table" /></p>
+<p>From left to right, this table lists the IP address and port, entry counts, memory used by entries, backup entry counts, memory used by backup entries, events, hits, locks and dirty entries (in the cases where <em>MapStore</em> is enabled, these are the entries that are put to/removed from the map but not written to/removed from a database yet) of each entry in the map. You can navigate through the pages using the buttons at the bottom right of the table (<strong>First, Previous, Next, Last</strong>). You can ascend or descend the order of the listings by clicking on the column headings.</p>
+<p>Map Throughput data table provides information about the operations (get, put, remove) performed on each member in the map, as shown below.</p>
+<p><img src="images/MapThroughputDataTable.jpg" alt="Map Throughput Data Table" /></p>
+<p>From left to right, this table lists:</p>
+<ul>
+<li>the IP address and port of each member,</li>
+<li>the put, get and remove operations on each member,</li>
+<li>the average put, get, remove latencies,</li>
+<li>and the maximum put, get, remove latencies on each member.</li>
+</ul>
+<p>You can select the period in the combo box placed at the top right corner of the window, for which the table data will be shown. Available values are <strong>Since Beginning</strong>, <strong>Last Minute</strong>, <strong>Last 10 Minutes</strong> and <strong>Last 1 Hour</strong>.</p>
+<p>You can navigate through the pages using the buttons placed at the bottom right of the table (<strong>First, Previous, Next, Last</strong>). To ascend or descent the order of the listings, click on the column headings.</p>
+    </div>
+
+        <nav>
+        <ul class="Pager">
+            <li class=Pager--prev><a href="Monitoring_Caches.html">Previous</a></li>            <li class=Pager--next><a href="Monitoring_Replicated_Maps.html">Next</a></li>        </ul>
+    </nav>
+    </article>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-12653604-10', '');
+    ga('send', 'pageview');
+</script>
+
+    <!-- jQuery -->
+    <script src="themes/daux/js/jquery-1.11.3.min.js"></script>
+
+    <!-- hightlight.js -->
+    <script src="themes/daux/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- JS -->
+    
+    <script src="themes/daux/js/daux.js"></script>
+
+            <!-- Tipue Search -->
+        <script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+
+        <script>
+            window.onunload = function(){}; // force $(document).ready to be called on back/forward navigation in firefox
+            $(function() {
+                tipuesearch({
+                    'base_url': ''
+                });
+            });
+        </script>
+        
+                 <script>
+        $(function(){
+        $(".Columns__left").scrollTop($('.Nav__item--active').offset().top);
+        });
+        </script>
+        
+    
+</body>
+</html>

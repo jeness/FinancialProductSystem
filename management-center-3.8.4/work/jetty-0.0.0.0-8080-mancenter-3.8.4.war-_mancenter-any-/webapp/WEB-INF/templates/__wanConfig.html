@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="content" id="wanConfigDialog" title="Add Wan Replication Configuration">
+    <div id="formAlert" class="alert hide">
+        <a class="close">x</a>
+        <strong>Warning!</strong> Make sure Config Name, Publisher Group Name-Password and Endpoints are filled and try again.
+    </div>
+    <form id="wanConfigForm" class="form-inline" action="" style="margin-bottom: 0px;">
+        <table class="table table-striped" style="word-wrap: break-word;">
+            <tr>
+                <td class="infoLabel">
+                    Config Name:
+                </td>
+                <td>
+                    <input class="wanconfiginfo input-xlarge" type="text" placeholder="my-wan-cluster" title="configName"/>
+                </td>
+                <td class="infoLabel">
+                    Class Name:
+                </td>
+                <td>
+                    <input class="wanconfiginfo input-xlarge" readonly="readonly" type="text" value="com.hazelcast.enterprise.wan.replication.WanBatchReplication" title="className"
+                           style="background-color: #d3d3d3;"/>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="infoLabel">
+                    Target Group Name:
+                </td>
+                <td>
+                    <input class="wanconfiginfo input-xlarge" type="text" placeholder="nyc" title="publisherName"/>
+                </td>
+                <td class="infoLabel">
+                    Group Password:
+                </td>
+                <td>
+                    <input class="wanconfiginfo input-xlarge" type="text" placeholder="nyc-pass" title="groupPassword"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="infoLabel">
+                    Queue Capacity:
+                </td>
+                <td>
+                    <input class="wanconfiginfo input-medium" type="text" placeholder="10000" title="queueCapacity"/>
+                </td>
+                <td class="infoLabel">
+                    Endpoints:
+                </td>
+                <td>
+                    <input class="wanconfiginfo input-xlarge" type="text" placeholder="10.3.5.1:5701,10.3.5.2:5701" title="endpoints"/>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td class="infoLabel">
+                    Batch Max Delay(ms):
+                </td>
+                <td>
+                    <input class="wanconfiginfo input-medium" type="text" placeholder="2000" title="batchMaxDelay"/>
+                </td>
+                <td class="infoLabel">
+                    Batch Size:
+                </td>
+                <td>
+                    <input class="wanconfiginfo input-medium" type="text" placeholder="500" title="batchSize"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="infoLabel">
+                    Response Timeout(ms):
+                </td>
+                <td>
+                    <input class="wanconfiginfo input-medium" type="text" placeholder="60000" title="responseTimeout"/>
+                </td>
+                <td class="infoLabel">
+                    Acknowledge Type:
+                </td>
+                <td>
+                    <select title="ackType" class="wanconfiginfo input-xlarge">
+                        <option value="ACK_ON_RECEIPT">ACK_ON_RECEIPT</option>
+                        <option value="ACK_ON_OPERATION_COMPLETE">ACK_ON_OPERATION_COMPLETE</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="infoLabel">
+                    Full Queue Behavior:
+                </td>
+                <td colspan="4">
+                    <select title="queueFullBehaviour" class="wanconfiginfo input-large">
+                        <option value="DISCARD_AFTER_MUTATION">DISCARD_AFTER_MUTATION</option>
+                        <option value="THROW_EXCEPTION">THROW_EXCEPTION</option>
+                        <option value="THROW_EXCEPTION_ONLY_IF_REPLICATION_ACTIVE">THROW_EXCEPTION_ONLY_IF_REPLICATION_ACTIVE</option>
+                    </select>
+                </td>
+                <!--
+                <td class="infoLabel">
+                    Snapshot Enabled:
+                </td>
+                <td>
+                    <select title="snapshotEnabled" class="wanconfiginfo input-small">
+                        <option value="0">true</option>
+                        <option value="1">false</option>
+                    </select>
+                </td>
+                //-->
+            </tr>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right; padding-top: 10px;">
+                    <button class="btn btn-default btn-large" type="button" onclick="addWanConfig()" id="wanConfigButton"> <span><i class="icon-plus"></i></span> Add Configuration</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

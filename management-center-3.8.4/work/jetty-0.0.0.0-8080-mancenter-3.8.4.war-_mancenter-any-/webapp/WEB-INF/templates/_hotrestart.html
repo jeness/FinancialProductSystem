@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="content" class="span12">
+        <div style="height: 385px;">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">Hot Restart</span>
+                </div>
+                <div class="box-content padded span12">
+                    <div class="row">
+                        <div class="span2"><h5>Cluster Name :</h5></div>
+                        <div class="span10"><h5 id="clusterNameContainer"></h5></div>
+                    </div>
+                    <div class="row">
+                        <div class="span2"><h5>Force-Start Cluster :</h5></div>
+                        <div class="span2">
+                            <button id="openForceStartDialogButton" onclick="openForceStartDialog()" type="button"
+                                    class="btn btn-primary"><i class="icon-play-circle"></i> Force Start</button>
+                        </div>
+                        <div class="span2"><h5>Remaining Data Load Time :</h5></div>
+                        <div class="span2"><h5 id="remainingDataLoadTimeContainer"></h5></div>
+                    </div>
+                    <div class="row">
+                        <div class="span2"><h5>Partial-Start Cluster :</h5></div>
+                        <div class="span2">
+                            <button id="openPartialStartDialogButton" onclick="openPartialStartDialog()" type="button"
+                                    class="btn btn-primary"><i class="icon-play-circle"></i> Partial Start</button>
+                        </div>
+                        <div class="span2"><h5>Remaining Validation Time :</h5></div>
+                        <div class="span2"><h5 id="remainingValidationTimeContainer"></h5></div>
+                    </div>
+                    <div class="row">
+                        <div class="span2"><h5>Hot Restart Backup:</h5></div>
+                        <div id="hrBackupButtonContainer" class="span2">
+                            <!-- this part is updated by enableInterruptHRBackup & enableTriggerHRBackup methods at hotrestart.js  -->
+                            <button id="openHRBackupDialogButton" onclick="openHRBackupDialog()" type="button"
+                                    class="btn btn-primary"><i class="icon-repeat"></i> Hot Restart Backup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">Members' Hot Restart Status</span>
+                </div>
+                <div class="box-content padded">
+                    <table id="memberHRStatusTable" class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Member</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody id="memberHRStatusTableBody">
+                        <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div id="memberHRBackupStatusTableBox" class="box">
+                <div class="box-header">
+                    <span class="title">Members' Hot Restart Backup Status</span>
+                </div>
+                <div class="box-content padded">
+                    <table id="memberHRBackupStatusTable" class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Member</th>
+                            <th>Status</th>
+                            <th>Progress</th>
+                        </tr>
+                        </thead>
+                        <tbody id="memberHRBackupStatusTableBody">
+                        <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

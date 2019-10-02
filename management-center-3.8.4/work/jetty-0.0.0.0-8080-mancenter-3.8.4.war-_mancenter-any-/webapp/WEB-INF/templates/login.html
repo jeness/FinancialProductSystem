@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="head :: common_header(~{::title})">
+    <title>Hazelcast Management Center</title>
+</head>
+
+<body style="padding: 0px; margin: 0px; overflow-x: hidden; overflow-y: scroll; height: 100%; ">
+<div class="navbar navbar-top navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#" onclick="tabs.newTab('Home','home','icon-home')"><img style="padding-top: 10px;width: 180px" src="images/logo.png"></a>
+            <div class="nav-collapse collapse" id="reloadSecurityConfigButtonContainer">
+                <ul class="nav pull-right">
+                    <li class="active pull-right"><a href="#" onclick="reloadSecurityConfig()" style="background-color: #0b2a35;">Reload Security Config</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="span4 offset4">
+        <div class="padded">
+            <div class="login box" style="margin-top: 80px;">
+
+                <div class="box-header">
+                    <span class="title">Management Center Login</span>
+                </div>
+
+                <div class="box-content padded">
+                    <form class="separate-sections" action="login" method="POST">
+                        <div class="input-prepend">
+                              <span class="add-on" href="#">
+                                <i class="icon-user"></i>
+                              </span>
+                            <input type="text" placeholder="username"  name="username"  autocomplete="off" >
+                        </div>
+
+                        <div class="input-prepend">
+                          <span class="add-on" href="#">
+                            <i class="icon-key"></i>
+                          </span>
+                            <input type="password" placeholder="password"  name="password" autocomplete="off" >
+                        </div>
+                        <div>
+                            <button class="btn btn-blue btn-block" type="submit">
+                                Login <i class="icon-signin"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="javascripts/app/login-only.js"></script>
+</body>
+<div th:include="_modals :: content" th:remove="tag"></div>
+</html>

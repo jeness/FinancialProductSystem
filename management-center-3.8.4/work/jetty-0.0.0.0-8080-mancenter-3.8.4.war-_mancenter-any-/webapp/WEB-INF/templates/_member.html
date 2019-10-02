@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<body>
+<div th:fragment="content">
+    <div class="row" style="padding-bottom:7px">
+
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <button sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_USER')" class="btn btn-default has-spinner" onclick="sendGC()" id="runGcButton"><i class="icon-cog"></i> Run
+                GC
+                <span class="spinner"><i class="icon-spin icon-refresh"></i></span>
+            </button>
+            <button sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_USER')" class="btn btn-default has-spinner" onclick="getThreadDump()" id="threadDumpButton"><i
+                    class="icon-search"></i> Thread Dump
+                <span class="spinner"><i class="icon-spin icon-refresh"></i></span>
+            </button>
+            <button sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_USER')" class="btn btn-default has-spinner" onclick="memberShutdownAction()" id="shutdownNodeButton"><i
+                    class="icon-off"></i> Shutdown Member
+                <span class="spinner"><i class="icon-spin icon-refresh"></i></span>
+            </button>
+            <div class="alert alert-info" style="display: inline; margin-left: 0.5%">
+                <strong>Number of Owned Partitions : </strong> <span id="memberPartitions"></span>
+            </div>
+            <div class="alert alert-info" style="display: inline; margin-left: 0.5%">
+                <strong>Member Version : </strong> <span id="memberCurrVersion"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid" style="margin-top:0.5%">
+        <div class="span4">
+            <div class="box">
+                <div class="box-header"><span class="title" id="memberCPUChartTitle"></span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#"
+                               onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['member']['memberCPUChart']);"><i
+                                    class="icon-resize-full"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content padded">
+                    <div style="width: 100%; height: 140px" id="memberCPUChart"></div>
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <div class="box">
+                <div class="box-header"><span class="title" id="memberMemoryChartTitle"></span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#"
+                               onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['member']['memberMemoryChart']);"><i
+                                    class="icon-resize-full"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content padded">
+                    <div style="width: 100%; height: 140px" id="memberMemoryChart"></div>
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <div class="box">
+                <div class="box-header"><span class="title" id="memberNativeMemoryChartTitle"></span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#"
+                               onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['member']['memberNativeMemoryChart']);"><i
+                                    class="icon-resize-full"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content padded">
+                    <div style="width: 100%; height: 140px" id="memberNativeMemoryChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="box">
+                <div class="box-header">
+                    <ul class="nav nav-tabs nav-tabs-left" data-tabs="tabs" id="memberInfoTabs">
+                        <li class=""><a href="#runtime" data-toggle="tab" style="line-height: 14px">Runtime</a></li>
+                        <li class=""><a href="#properties" data-toggle="tab" style="line-height: 14px">Properties</a></li>
+                    </ul>
+                </div>
+                <div class="box-content scrollable" style="height: 272px; overflow-y: auto">
+                    <div class="tab-content">
+                        <div class="tab-pane" id="runtime">
+                            <table id="memberRuntime" class="table" style="padding:2px">
+                                <tbody>
+                                <tr>
+                                    <td><strong>Number of Processors:</strong></td>
+                                    <td id="availableProcessors" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Start Time:</strong></td>
+                                    <td id="startTime" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Up Time:</strong></td>
+                                    <td id="upTime" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Maximum Memory:</strong></td>
+                                    <td id="maxMemory" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total Memory:</strong></td>
+                                    <td id="totalMemory" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Free Memory:</strong></td>
+                                    <td id="freeMemory" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Used Heap Memory:</strong></td>
+                                    <td id="heapMemoryUsed" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Max Heap Memory:</strong></td>
+                                    <td id="heapMemoryMax" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Used Non-Heap Memory:</strong></td>
+                                    <td id="nonHeapMemoryUsed" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Max Non-Heap Memory:</strong></td>
+                                    <td id="nonHeapMemoryMax" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total Loaded Classes:</strong></td>
+                                    <td id="totalLoadedClassCount" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Current Loaded Classes:</strong></td>
+                                    <td id="loadedClassCount" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total Unloaded Classes:</strong></td>
+                                    <td id="unloadedClassCount" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total Thread Count:</strong></td>
+                                    <td id="totalStartedThreadCount" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Active Thread Count:</strong></td>
+                                    <td id="threadCount" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Peak Thread Count:</strong></td>
+                                    <td id="peakThreadCount" class="valueTd"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Daemon Thread Count:</strong></td>
+                                    <td id="daemonThreadCount" class="valueTd"></td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>OS: Free Physical Memory:</strong></td>
+                                    <td id="freePhysicalMemory" class="freePhysicalMemory"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>OS: Committed Virtual Memory:</strong></td>
+                                    <td id="committedVirtualMemory" class="committedVirtualMemory"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>OS: Total Physical Memory:</strong></td>
+                                    <td id="totalPhysicalMemory" class="totalPhysicalMemory"></td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>OS: Free Swap Space:</strong></td>
+                                    <td id="freeSwapSpace" class="freeSwapSpace"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>OS: Total Swap Space:</strong></td>
+                                    <td id="totalSwapSpace" class="totalSwapSpace"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>OS: Maximum File Descriptor Count:</strong></td>
+                                    <td id="maxFileDescriptorCount" class="maxFileDescriptorCount"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>OS: Open File Descriptor Count:</strong></td>
+                                    <td id="openFileDescriptorCount" class="openFileDescriptorCount"></td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>OS: Process CPU Time:</strong></td>
+                                    <td id="processCpuTime" class="processCpuTime"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>OS: Process CPU Load:</strong></td>
+                                    <td id="processCpuLoad" class="processCpuLoad"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>OS: System Load Average:</strong></td>
+                                    <td id="systemLoadAverage" class="systemLoadAverage"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>OS: System CPU Load:</strong></td>
+                                    <td id="systemCpuLoad" class="systemCpuLoad"></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane" id="properties" style="padding: 5px">
+                            <table id="memberProps" class="table">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span8">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title"> Member Configuration</span>
+                </div>
+                <div class="box-content scrollable" style="height: 272px; overflow-y: auto" id="memberConfig">
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="box">
+                    <div class="box-header">
+                        <span class="title">List of Slow Operations</span>
+                    </div>
+                    <div id="slowOperationPlaceholder" style="padding: 5px">
+                        No slow operations detected on this member.
+                    </div>
+                    <div id="slowOperationList" class="box-content scrollable" style="overflow-y: auto; display: none;">
+                        <table class="table table-striped" id="slowOperationsTable">
+                            <thead>
+                            <tr>
+                                <th class="sorting">
+                                    <div><span>&nbsp;&nbsp;</span>Operation</div>
+                                </th>
+                                <th class="sorting">
+                                    <div><span>&nbsp;&nbsp;</span>Stacktrace</div>
+                                </th>
+                                <th class="sorting">
+                                    <div><span>&nbsp;&nbsp;</span>Number of Invocations</div>
+                                </th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

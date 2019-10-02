@@ -278,3 +278,33 @@ When the cluster has more members, then Hazelcast moves some of the primary and 
 #### Management center
 In cmd, use `startManCenter.bat` to run on port 8080. Or add port to change the default port. 
 To enter management center ui, use in browser: `localhost:8080/mancenter/login.html`
+初次登陆需要设置密码：root，Root123123
+![mancenter](notesimage\hazelcast-console.png)
+- About HazelcastMapTest  
+为什么test不写在test下面？因为test执行完了就直接关闭了，我们再hazelcast management center里看不到这个node run的状况
+#### hazelcast caching
+1. add annotation `@EnableCaching` to enable cache function
+2. Add dependencies and Configuration
+3. @Cachable/@CachePut/@CacheEvict: 读取缓存，放入缓存，清除缓存
+4. Seller初始化时，就`findAll`，`readAllCache`把所有product数据从数据库中pull出来放入缓存中
+5. `readCache`是根据一个id，先去缓存中找，缓存中如果没有的话，就去数据库中`findOne`
+#### cache 中用到的Spring 注解
+1. `@Cacheable`
+- value属性与cacheNames属性等价
+- condition：指定对应的条件，满足条件才能放入缓存，支持spring expression language(SpEL)
+- key：
+```
+// key的默认策略：
+如果方法没有参数，则使用0作为key。
+如果只有一个参数的话，则使用该参数作为key。
+如果参数多于一个的话，则使用所有参数的hashCode作为key。
+// key的自定义策略（在`@CachePut`的时候使用了）：
+#参数名 #product.id
+#p参数index #p0.id
+```
+2. `@CachePut`
+- 用于update cache data. No matter there is data in cache or not, new data will put into cache anyway.
+3. `@CacheEvict`
+- 用于清空缓存。
+- allEntries：if set to true, then all cache will be clear.
+- beforeInvocation: before excuate the method, cache will be clear.

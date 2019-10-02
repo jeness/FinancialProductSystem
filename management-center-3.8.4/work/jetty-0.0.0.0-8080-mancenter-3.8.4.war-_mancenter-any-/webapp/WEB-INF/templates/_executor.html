@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="content">
+    <div class="row-fluid">
+      <div class="span3">
+        <div class="box">
+          <div class="box-header"><span class="title" id="executorChart1Title"></span>
+            <ul class="box-toolbar">
+                <li class="toolbar-link">
+                <a href="#" onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['executor']['executorChart1']);"><i class="icon-resize-full"></i></a>
+                </li>
+                <li class="toolbar-link">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="setChartOption('executorChart1','executor','o_Executor_PendingTaskCount')"> Pending </a></li>
+                        <li><a onclick="setChartOption('executorChart1','executor','o_Executor_StartedTaskCount')"> Started </a></li>
+                        <li><a onclick="setChartOption('executorChart1','executor','o_Executor_TotalStartLatency')"> Start Lat.(msec)</a></li>
+                        <li><a onclick="setChartOption('executorChart1','executor','o_Executor_CompletedTaskCount')"> Completed</a></li>
+                        <li><a onclick="setChartOption('executorChart1','executor','o_Executor_CancelledTaskCount')"> Cancelled</a></li>
+                        <li><a onclick="setChartOption('executorChart1','executor','o_Executor_TotalExecutionLatency')"> Comp. Time(msec)</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
+            <div class="box-content padded">
+            <div style="width: 100%; height: 100px" id="executorChart1"></div>
+          </div>
+        </div>
+      </div>
+      <div class="span3">
+        <div class="box">
+          <div class="box-header"><span class="title" id="executorChart2Title"></span>
+            <ul class="box-toolbar">
+                <li class="toolbar-link">
+                <a href="#" onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['executor']['executorChart2']);"><i class="icon-resize-full"></i></a>
+                </li>
+                <li class="toolbar-link">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="setChartOption('executorChart2','executor','o_Executor_PendingTaskCount')"> Pending </a></li>
+                        <li><a onclick="setChartOption('executorChart2','executor','o_Executor_StartedTaskCount')"> Started </a></li>
+                        <li><a onclick="setChartOption('executorChart2','executor','o_Executor_TotalStartLatency')"> Start Lat.(msec)</a></li>
+                        <li><a onclick="setChartOption('executorChart2','executor','o_Executor_CompletedTaskCount')"> Completed</a></li>
+                        <li><a onclick="setChartOption('executorChart2','executor','o_Executor_CancelledTaskCount')"> Cancelled</a></li>
+                        <li><a onclick="setChartOption('executorChart2','executor','o_Executor_TotalExecutionLatency')"> Comp. Time(msec)</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
+            <div class="box-content padded">
+            <div style="width: 100%; height: 100px" id="executorChart2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="span3">
+        <div class="box">
+          <div class="box-header"><span class="title" id="executorChart3Title"></span>
+            <ul class="box-toolbar">
+                <li class="toolbar-link">
+                <a href="#" onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['executor']['executorChart3']);"><i class="icon-resize-full"></i></a>
+                </li>
+                <li class="toolbar-link">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="setChartOption('executorChart3','executor','o_Executor_PendingTaskCount')"> Pending </a></li>
+                        <li><a onclick="setChartOption('executorChart3','executor','o_Executor_StartedTaskCount')"> Started </a></li>
+                        <li><a onclick="setChartOption('executorChart3','executor','o_Executor_TotalStartLatency')"> Start Lat.(msec)</a></li>
+                        <li><a onclick="setChartOption('executorChart3','executor','o_Executor_CompletedTaskCount')"> Completed</a></li>
+                        <li><a onclick="setChartOption('executorChart3','executor','o_Executor_CancelledTaskCount')"> Cancelled</a></li>
+                        <li><a onclick="setChartOption('executorChart3','executor','o_Executor_TotalExecutionLatency')"> Comp. Time(msec)</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
+            <div class="box-content padded">
+            <div style="width: 100%; height: 100px" id="executorChart3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="span3">
+        <div class="box">
+          <div class="box-header"><span class="title" id="executorChart4Title"></span>
+            <ul class="box-toolbar">
+                <li class="toolbar-link">
+                <a href="#" onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['executor']['executorChart4']);"><i class="icon-resize-full"></i></a>
+                </li>
+                <li class="toolbar-link">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="setChartOption('executorChart4','executor','o_Executor_PendingTaskCount')"> Pending </a></li>
+                        <li><a onclick="setChartOption('executorChart4','executor','o_Executor_StartedTaskCount')"> Started </a></li>
+                        <li><a onclick="setChartOption('executorChart4','executor','o_Executor_TotalStartLatency')"> Start Lat.(msec)</a></li>
+                        <li><a onclick="setChartOption('executorChart4','executor','o_Executor_CompletedTaskCount')"> Completed</a></li>
+                        <li><a onclick="setChartOption('executorChart4','executor','o_Executor_CancelledTaskCount')"> Cancelled</a></li>
+                        <li><a onclick="setChartOption('executorChart4','executor','o_Executor_TotalExecutionLatency')"> Comp. Time(msec)</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
+            <div class="box-content padded">
+            <div style="width: 100%; height: 100px" id="executorChart4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="span12">
+       <div class="box">
+            <div class="box-header">
+            <span class="title">Executor Operation Statistics</span>
+            <ul class="box-toolbar">
+                <li class="toolbar-link">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                        <span><i class="icon-cog"></i><span id="executorSelectedThrougputInterval">Last Minute</span><i class="icon-caret-down"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="changeThrougputInterval('executor','0')"> Since Beginning </a></li>
+                        <li><a onclick="changeThrougputInterval('executor','60000')"> Last Minute </a></li>
+                        <li><a onclick="changeThrougputInterval('executor','600000')"> Last 10 Minute </a></li>
+                        <li><a onclick="changeThrougputInterval('executor','3600000')"> Last 1 Hour </a></li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+            <div class="box-content">
+            <table class="dTable responsive dataTable" id="executoropstats">
+                <thead>
+                    <tr>
+                        <th class="sorting"><div><span>#&nbsp;&nbsp;&nbsp;</span></div></th>
+                        <th class="sorting"><div>Member</div></th>
+                        <th class="sorting"><div>Pending</div></th>
+                        <th class="sorting"><div>Started/s</div></th>
+                        <th class="sorting"><div>Completed/s</div></th>
+                        <th class="sorting"><div>Cancelled/s</div></th>
+                        <th class="sorting"><div>Execution Time</div></th>
+                        <th class="sorting"><div>Avg Start Latency</div></th>
+                    </tr>
+                </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 server:
   context-path: /seller
-  port: 8083
+  port: 8082
 
 #rpc.manager.url: http://localhost:8081/manager/
 
@@ -12,3 +12,7 @@ rpc:
   client:
     url: http://localhost:8081/manager
     basePackage: com.imooc.api
+
+spring:
+  cache:
+    type: hazelcast

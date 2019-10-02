@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="content" id="mapConfigDialog" title="Map Config">
+        <form class="form-inline" action="">
+            <table class="table" style="margin-bottom: 0px;">
+                <tr>
+                    <td class="infoLabel">
+                        Name:
+                    </td>
+                    <td>
+                        <input title="name" style="background-color: #d3d3d3;"
+                               class="mapconfiginfo input-small"
+                               readonly="readonly"/>
+                    </td>
+                    <td class="infoLabel">
+                        Max Size:
+                    </td>
+                    <td>
+                        <input disabled class="mapconfiginfo input-small" type="text" title="maxSize"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="infoLabel">
+                        Backup Count:
+                    </td>
+                    <td>
+                        <select title="backupCount" class="mapconfiginfo input-small">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </td>
+
+                    <td class="infoLabel">
+                        Async Backup Count:
+                    </td>
+                    <td>
+                        <select title="asyncBackupCount" class="mapconfiginfo input-small">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="infoLabel">
+                        Max Idle(seconds):
+                    </td>
+                    <td>
+                        <input class="mapconfiginfo input-small" type="text"
+                               title="maxIdle"/>
+                    </td>
+                    <td class="infoLabel">
+                        TTL (seconds):
+                    </td>
+                    <td>
+                        <input class="mapconfiginfo input-small" type="text"
+                               title="ttl"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="infoLabel">
+                        Eviction Policy:
+                    </td>
+                    <td>
+                        <select title="evictionPolicy" class="mapconfiginfo input-small">
+                            <option value="NONE">None</option>
+                            <option value="LRU">LRU</option>
+                            <option value="LFU">LFU</option>
+                        </select>
+                    </td>
+
+                    <td class="infoLabel">
+                        Eviction Percentage (%):
+                    </td>
+                    <td>
+                        <select title="evictionPercentage" class="mapconfiginfo input-small">
+                            <option th:each="i : ${#numbers.sequence( 0, 101, 5)}" th:value="${i}">
+                                <span th:text="${ i }" th:remove="tag"></span>
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="infoLabel">
+                        Read Backup Data:
+                    </td>
+                    <td>
+                        <select title="readBackupData" class="mapconfiginfo input-small">
+                            <option value="true">True</option>
+                            <option value="false">False</option>
+                        </select>
+                    </td>
+                    <td class="infoLabel">
+                        In-Memory Storage Format:
+                    </td>
+                    <td>
+                        <label id="inMemoryStorageFormat"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center; padding-top: 5px; color: red;"
+                        id="updateConfigMessageTd">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: right; padding-top: 10px;">
+                        <button class="btn btn-default has-spinner " type="button" onclick="mapConfigUpdate()"
+                                id="mapConfigButton">
+                            Update
+                            <span class="spinner"><i class="icon-spin icon-refresh"></i></span>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+
+

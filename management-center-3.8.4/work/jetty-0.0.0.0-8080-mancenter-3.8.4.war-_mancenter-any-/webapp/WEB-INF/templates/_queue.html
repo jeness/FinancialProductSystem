@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="content-1" class="row-fluid">
+      <div class="span4">
+        <div class="box">
+          <div class="box-header"><span class="title" id="queueChart1Title"></span>
+            <ul class="box-toolbar">
+                <li class="toolbar-link">
+                <a href="#" onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['queue']['queueChart1']);"><i class="icon-resize-full"></i></a>
+                </li>
+                <li class="toolbar-link">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="setChartOption('queueChart1','queue','i_Queue_OwnedItemCount')">Size </a></li>
+                        <li><a onclick="setChartOption('queueChart1','queue','o_Queue_OfferOperationCount')">Offers/s</a></li>
+                        <li><a onclick="setChartOption('queueChart1','queue','o_Queue_PollOperationCount')">Polls/s</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
+            <div class="box-content padded">
+            <div style="width: 100%; height: 100px" id="queueChart1"></div>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="box">
+          <div class="box-header"><span class="title" id="queueChart2Title"></span>
+            <ul class="box-toolbar">
+                <li class="toolbar-link">
+                <a href="#" onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['queue']['queueChart2']);"><i class="icon-resize-full"></i></a>
+                </li>
+                <li class="toolbar-link">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="setChartOption('queueChart2','queue','i_Queue_OwnedItemCount')">Size </a></li>
+                        <li><a onclick="setChartOption('queueChart2','queue','o_Queue_OfferOperationCount')">Offers/s</a></li>
+                        <li><a onclick="setChartOption('queueChart2','queue','o_Queue_PollOperationCount')">Polls/s</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
+            <div class="box-content padded">
+            <div style="width: 100%; height: 100px" id="queueChart2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="box">
+          <div class="box-header"><span class="title" id="queueChart3Title"></span>
+            <ul class="box-toolbar">
+                <li class="toolbar-link">
+                <a href="#" onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['queue']['queueChart3']);"><i class="icon-resize-full"></i></a>
+                </li>
+                <li class="toolbar-link">
+                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="setChartOption('queueChart3','queue','i_Queue_OwnedItemCount')">Size </a></li>
+                        <li><a onclick="setChartOption('queueChart3','queue','o_Queue_OfferOperationCount')">Offers/s</a></li>
+                        <li><a onclick="setChartOption('queueChart3','queue','o_Queue_PollOperationCount')">Polls/s</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
+            <div class="box-content padded">
+            <div style="width: 100%; height: 100px" id="queueChart3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div th:fragment="content-2" class="row-fluid">
+      <div class="span12">
+       <div class="box">
+            <div class="box-header">
+            <span class="title">Queue Statistics</span>
+            </div>
+            <div class="box-content">
+            <table class="dTable responsive dataTable" id="queuestats">
+              <thead>
+              <tr>
+                <th class="sorting"><div><span>#&nbsp;&nbsp;&nbsp;</span></div></th>
+                <th class="sorting"><div>Members</div></th>
+                <th class="sorting"><div>Items</div></th>
+                <th class="sorting"><div>Backups</div></th>
+                <th class="sorting"><div>Max Age</div></th>
+                <th class="sorting"><div>Min Age</div></th>
+                <th class="sorting"><div>Average Age</div></th>
+              </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div th:fragment="content-3" class="row-fluid">
+        <div class="span12">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">Queue Operation Statistics</span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                                <span><i class="icon-cog"></i><span id="queueSelectedThrougputInterval">Last Minute</span><i class="icon-caret-down"></i></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="changeThrougputInterval('queue','0')"> Since Beginning </a></li>
+                                <li><a onclick="changeThrougputInterval('queue','60000')"> Last Minute </a></li>
+                                <li><a onclick="changeThrougputInterval('queue','600000')"> Last 10 Minute </a></li>
+                                <li><a onclick="changeThrougputInterval('queue','3600000')"> Last 1 Hour </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content">
+                    <table class="dTable responsive dataTable" id="queueopstats">
+                        <thead>
+                        <tr>
+                            <th class="sorting"><div><span>#&nbsp;&nbsp;&nbsp;</span></div></th>
+                            <th class="sorting"><div>Member</div></th>
+                            <th class="sorting"><div>Offers/s</div></th>
+                            <th class="sorting"><div>Rejected Offers</div></th>
+                            <th class="sorting"><div>Polls/s</div></th>
+                            <th class="sorting"><div>Poll Misses</div></th>
+                            <th class="sorting"><div>Others</div></th>
+                            <th class="sorting"><div>Events</div></th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

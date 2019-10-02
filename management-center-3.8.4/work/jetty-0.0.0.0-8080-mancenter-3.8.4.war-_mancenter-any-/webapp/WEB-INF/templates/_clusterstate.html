@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="content" class="span12">
+    <div style="height: 385px;">
+        <div class="box">
+            <div class="box-header">
+                <span class="title">Cluster State</span>
+            </div>
+            <div class="box-content padded span12">
+                <div class="row">
+                    <div class="span2"><h5>Cluster Name :</h5></div>
+                    <div class="span10"><h5 id="clusterState_clusterNameContainer"></h5></div>
+                </div>
+                <div class="row">
+                    <div class="span2"><h5>Current Cluster State :</h5></div>
+                    <div class="span10"><span id="clusterState"></span></div>
+                </div>
+                <div class="row">
+                    <div class="span2"><h5>Change Cluster State :</h5></div>
+                    <div class="span2"><span id="clusterChangeState"></span>
+                        <div class="dropdown" style="display:inline">
+                            <button id="stateChangeButton" class="btn btn-primary dropdown-toggle" type="button"
+                                    data-toggle="dropdown">Change State
+                                <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a id="activeStateDrop" href="#">Active</a></li>
+                                <li><a id="frozenStateDrop" href="#">Frozen</a></li>
+                                <li><a id="passiveStateDrop" href="#">Passive</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span2"><h5>Shutdown Cluster :</h5></div>
+                    <div class="span2">
+                        <button id="openClusterShutdownButton" onclick="openClusterShutdownDialog()" type="button"
+                                class="btn btn-danger"><i class="icon-off"></i> Shutdown</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+You can also see the Management Center Release Notes document at http://docs.hazelcast.org/docs/management-center/rn.
+
+Release 3.9-EA
+
+- Added feature to notify user on incompatible member version.
+- Introduced TLS mutual authentication.
+- Added option to promote lite members to data members.
+- Updated javascript files' line endings from CRLF to LF.
+- Added cache browser.
+- Introduced Authentication SPI & JAAS Authentication.
+
+Release 3.8.4
+
+- Added support for monitoring Reliable Topic data structures.
+- JMX host name is now configurable.
+
+Release 3.8.3
+
+- Added an option to exclude specific TLS protocols.
+- Eliminated a security bug on the initial authentication configuration.
+- Prevented multiple notifications when changing cluster states.
+- Moved the cluster state controls to its own tab.
+- Version display is fixed so that it shows the full Management Center version.
+

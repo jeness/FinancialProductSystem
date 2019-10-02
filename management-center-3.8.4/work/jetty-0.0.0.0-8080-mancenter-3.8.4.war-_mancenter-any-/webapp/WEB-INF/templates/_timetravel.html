@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="content" class="row-fluid timetravel padded" style="display:none">
+    <div style="float:left;">
+        <span  id="backTimeButton" style="cursor: pointer;"><i class="icon-chevron-left icon-3x"></i></span>
+    </div>
+    <div style="float:left;">
+        <div class="ui-slider ui-slider-horizontal" id="slider" style="margin-left:15px;width:500px"></div>
+        <img  src="images/timeruler.png" alt="">
+    </div>
+    <div style="float:left;">
+        <span id="forwardTimeButton" style="cursor: pointer;"><i class="icon-chevron-right icon-3x"></i></span>
+    </div>
+    <div style="float:left;padding-left:10px">
+        <span id="continueOperationButton" style="cursor: pointer;"><i class="icon-play-circle icon-3x"></i></span>
+    </div>
+
+    <div class="span3">
+            <label id="timeLabel" class="label label-inverse" style="margin-left:15px;padding-bottom:3px;font-weight:300;line-height:30px;vertical-align:middle;margin-bottom:0px" ></label>
+            <div class="input-append" style="width:120px;margin-bottom:0px">
+            Date: <input type="text" id="datepicker" style="margin-bottom:0px">
+            <span class="add-on"  id="datepickerButton"><i class="icon-calendar"></i></span>
+            </div>
+            <div id="timeTravelSwitch" class="make-switch" data-on="success" data-off="warning">
+                <input type="checkbox">
+            </div>
+
+    </div>
+
+</div>
+</body>
+</html>

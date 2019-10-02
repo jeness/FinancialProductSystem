@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="content" class="row-fluid">
+        <div class="span2">
+            <div class="box">
+                 <div class="box-header">
+                     <span class="title">Filters</span>
+                 </div>
+                 <div class="box-content padded">
+                     <table id="filterListDiv" class="table">
+
+                     </table>
+                 </div>
+            </div>
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">SMTP Configuration</span>
+                </div>
+                <div class="box-content padded">
+                    <table id="smtpDiv" class="table">
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="span10">
+            <div class="box">
+                 <div class="box-header">
+                     <span class="title" id="alertBoxContentTitle">Create New Filter</span>
+                 </div>
+                 <div class="box-content padded">
+                 <div id="alertHistoryGridAccordion" style="display:none;">
+                     <div style="vertical-align:middle;padding-bottom:5px">
+                         <h5 id="filterNameHeader"></h5>
+                         <span id="clearFilterHistoryButtonHolder"></span>
+                         <button onclick="getAlertHistoryAction()" id="refreshHistoryButton" style="display:none;" class="btn btn-default">Reload</button>
+                     </div>
+                     <div id="alertHistoryGrid">
+                     </div>
+                 </div>
+                 <div id="alertTypes" style="display:none;">
+                     <div style="height: 300px;">
+                         <h4>To create an automated alert , choose what you want to check. </h4>
+                         <div>
+                             <label class="radio">
+                                 <input type="radio" class="btn btn-large btn-default" name="alertTypesRadio"  onclick="fillAlertFiltersAction('memberFilter')"   id='memberFilterButton' >Member Alerts
+                                 -- Alerts about memory and thread count of your members.
+                             </label>
+                         </div>
+                         <br>
+                         <div>
+                             <label class="radio">
+                                 <input type="radio" class="btn btn-large btn-default" name="alertTypesRadio"  onclick="fillAlertFiltersAction('dataTypeFilter')"   id='dataTypeFilterButton' >Data Type Alerts
+                                 -- Alerts for data types (map, queue, multimap, executor).
+                             </label>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div id="alertFilters" style="width:100%;display:none;">
+                 <div id="memberFilterAccordion" class="content padded" style="display:none;">
+                     <div id="memberFilter">
+
+
+                     </div>
+
+                 </div>
+                 <div id="memberSpecificAccordion" class="content padded" style="display:none;" >
+                     <h5>Alert Criteria</h5>
+                     <div id="memberSpecific">
+                         <table>
+                             <tbody>
+                             <tr><td><label class="checkbox"><input type="checkbox" name="memberDetails" id="checkbox_freeMemory" onclick="$('#member_freeMemory').attr('disabled' ,!$(this).is(':checked') )"/>Free Memory is less than </label></td><td><input type="text" id="member_freeMemory" disabled="disabled" /> MB</td></tr>
+                             <tr><td><label class="checkbox"><input type="checkbox" name="memberDetails" id="checkbox_usedMemory" onclick="$('#member_usedMemory').attr('disabled' ,!$(this).is(':checked')  )"/>Used Heap Memory is larger than </label></td><td><input type="text" id="member_usedMemory" disabled="disabled" /> MB</td></tr>
+                             <tr><td><label class="checkbox"><input type="checkbox" name="memberDetails" id="checkbox_activeThreads" onclick="$('#member_activeThreads').attr('disabled' ,!$(this).is(':checked') )"/># of Active Threads are less than </label></td><td><input type="text" id="member_activeThreads" disabled="disabled" /></td></tr>
+                             <tr><td><label class="checkbox"><input type="checkbox" name="memberDetails" id="checkbox_daemonThreads" onclick="$('#member_daemonThreads').attr('disabled' ,!$(this).is(':checked') )"/># of Daemon Threads are larger than </label></td><td><input type="text" id="member_daemonThreads" disabled="disabled" /></td></tr>
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>
+                 <div id="dataTypeFilterAccordion" class="content padded" style="display:none;">
+                     <h5>Which data type do you want to see on alert ?</h5>
+                     <div id="dataTypeFilter">
+                         <label for="dataType_Map" class="radio"><input type="radio" name="dataTypeFilterRadio" class="dataTypeFilterRadio" onclick="fillDataTypeAction('Map')"  id="dataType_Map" >Maps</label>
+                         <label for="dataType_Queue" class="radio"><input type="radio" name="dataTypeFilterRadio" class="dataTypeFilterRadio" onclick="fillDataTypeAction('Queue')" id="dataType_Queue"  >Queues</label>
+                         <!--- <input type="radio" name="dataTypeFilterRadio" class="dataTypeFilterRadio" onclick="fillDataTypeAction('Topic')" id="dataType_Topic"  ><label for="dataType_Topic">Topics</label>---->
+                         <label for="dataType_MultiMap" class="radio"><input type="radio" name="dataTypeFilterRadio" class="dataTypeFilterRadio" onclick="fillDataTypeAction('MultiMap')" id="dataType_MultiMap"  >Multimaps</label>
+                         <label for="dataType_Executor" class="radio"><input type="radio" name="dataTypeFilterRadio" class="dataTypeFilterRadio" onclick="fillDataTypeAction('Executor')" id="dataType_Executor"  >Executors</label>
+                     </div>
+                 </div>
+                 <div id="dataTypeSpecific" style="display:none;">
+
+                     <div id = "nameFilterAccordion">
+                         <h5>Name Filter</h5>
+                         <div id="nameFilter">
+                             <h5>The names of the <span id="dataType" ></span>s that you want to check </h5>
+                             <div id="nameFilterList">
+
+                             </div>
+                         </div>
+                         <button onclick="createFilter()" class='btn btn-default' id='cancelFilterButton'  >Cancel</button>
+                         <button onclick="dataNameIsChosen()" class='btn btn-info'  id="dataNameChooseButton"  >Next</button>
+                     </div>
+
+                     <div id="memberFilterForDataTypeAccordion" class="AlertFilterAccordion" style="display:none;">
+                         <h5>Members</h5>
+                         <div id="memberFilterForDataType">
+
+                         </div>
+                     </div>
+                     <div id="MapAlertFilterAccordion" class="AlertFilterAccordion" style="display:none;">
+                         <h5>Data Type Settings</h5>
+                         <div id="MapAlertFilter">
+                             <h5>You will be alerted, when : </h5>
+                             <table id="MapFilterTable">
+                                 <tbody>
+                                 <tr>
+                                     <td>
+                                         <select id="MapKey" style="width:200px;">
+                                             <option value="OwnedEntryCount" selected="selected"># of Entries</option>
+                                             <option value="OwnedEntryMemoryCost" >Entry Memory(MB)</option>
+                                             <option value="BackupEntryCount"># of Backup Entries</option>
+                                             <option value="BackupEntryMemoryCost">Backup Memory(MB)</option>
+                                             <option value="DirtyEntryCount"># of Dirty Entries</option>
+                                             <option value="LockedEntryCount"># of Locks</option>
+                                             <option value="GetOperationCount"># of Gets (per second)</option>
+                                             <option value="TotalGetLatency">Average Get Latency (ms)</option>
+                                             <option value="PutOperationCount"># of Puts (per second)</option>
+                                             <option value="TotalPutLatency">Average Put Latency (ms)</option>
+                                             <option value="RemoveOperationCount"># of Removes (per second)</option>
+                                             <option value="TotalRemoveLatency">Average Remove Latency (ms)</option>
+                                             <option value="EventOperationCount"># of Events (per second)</option>
+                                         </select>
+                                     </td>
+                                     <td>
+                                         <select id="MapOperation"  style="width:50px;">
+                                             <option value="greater" selected="selected" >&gt;</option>
+                                             <option value="equal">=</option>
+                                             <option value="less">&lt;</option>
+                                         </select>
+                                     </td>
+                                     <td>
+                                         <input type="text" id="MapValue" style="height:20px; width:40px;">
+                                     </td>
+                                     <td style="vertical-align:top">
+                                         <button onclick="addDataTypeFilter('Map')" class="btn btn-default btn-mini">Add</button>
+                                     </td>
+                                 </tr>
+                                 </tbody>
+                             </table>
+                         </div>
+                     </div>
+                     <div id="MultiMapAlertFilterAccordion" class="AlertFilterAccordion" style="display:none;">
+                         <h5>Data Type Settings</h5>
+                         <div id="MultiMapAlertFilter">
+                             <h5>You will be alerted, when : </h5>
+                             <table id="MultiMapFilterTable">
+                                 <tbody>
+                                 <tr>
+                                     <td>
+                                         <select id="MultiMapKey" style="width:200px;">
+                                             <option value="OwnedEntryCount" selected="selected"># of Entries</option>
+                                             <option value="OwnedEntryMemoryCost" >Entry Memory(MB)</option>
+                                             <option value="BackupEntryCount"># of Backup Entries</option>
+                                             <option value="BackupEntryMemoryCost">Backup Memory(MB)</option>
+                                             <option value="DirtyEntryCount"># of Dirty Entries</option>
+                                             <option value="LockedEntryCount"># of Locks</option>
+                                             <option value="GetOperationCount"># of Gets (per second)</option>
+                                             <option value="TotalGetLatency">Average Get Latency (ms)</option>
+                                             <option value="PutOperationCount"># of Puts (per second)</option>
+                                             <option value="TotalPutLatency">Average Put Latency (ms)</option>
+                                             <option value="RemoveOperationCount"># of Removes (per second)</option>
+                                             <option value="TotalRemoveLatency">Average Remove Latency (ms)</option>
+                                             <option value="EventOperationCount"># of Events (per second)</option>
+                                         </select>
+                                     </td>
+                                     <td>
+                                         <select id="MultiMapOperation"  style="width:50px;">
+                                             <option value="greater" selected="selected" >&gt;</option>
+                                             <option value="equal">=</option>
+                                             <option value="less">&lt;</option>
+                                         </select>
+                                     </td>
+                                     <td>
+                                         <input type="text" id="MultiMapValue" style="height:20px; width:40px;">
+                                     </td>
+                                     <td style="vertical-align:top">
+                                         <button onclick="addDataTypeFilter('MultiMap')" class="btn btn-default btn-mini">Add</button>
+                                     </td>
+                                 </tr>
+                                 </tbody>
+                             </table>
+                         </div>
+                     </div>
+                     <div id="QueueAlertFilterAccordion" class="AlertFilterAccordion" style="display:none;">
+                         <h5>Data Type Settings</h5>
+                         <div id="QueueAlertFilter">
+                             <h5>You will be alerted, when : </h5>
+                             <table id="QueueFilterTable">
+                                 <tbody>
+                                 <tr>
+                                     <td>
+                                         <select id="QueueKey" style="width:300px;">
+                                             <option value="OwnedItemCount" selected="selected"># of Items</option>
+                                             <option value="BackupItemCount" ># of Backup Items</option>
+                                             <option value="MaxAge">Maximum Age(ms)</option>
+                                             <option value="MinAge">Minimum Age(ms)</option>
+                                             <option value="AvgAge">Average Age(ms)</option>
+                                             <option value="OfferOperationCount"># of Offers(per second)</option>
+                                             <option value="PollOperationCount" ># of Polls(per second)</option>
+                                         </select>
+                                     </td>
+                                     <td>
+                                         <select id="QueueOperation"  style="width:50px;">
+                                             <option value="greater" selected="selected" >&gt;</option>
+                                             <option value="equal">=</option>
+                                             <option value="less">&lt;</option>
+                                         </select>
+                                     </td>
+                                     <td>
+                                         <input type="text"  id="QueueValue" style="height:20px; width:40px;">
+                                     </td>
+                                     <td style="vertical-align:top">
+                                         <button onclick="addDataTypeFilter('Queue')" class="btn btn-default btn-mini">Add</button>
+                                     </td>
+                                 </tr>
+                                 </tbody>
+                             </table>
+                         </div>
+                     </div>
+                     <div id="ExecutorAlertFilterAccordion" class="AlertFilterAccordion" style="display:none;">
+                         <h5>Data Type Settings</h5>
+                         <div id="ExecutorAlertFilter">
+                             <h5>You will be alerted, when : </h5>
+                             <table id="ExecutorFilterTable">
+                                 <tbody>
+                                 <tr>
+                                     <td>
+                                         <select id="ExecutorKey" style="width:300px;">
+                                             <option value="PendingTaskCount" selected="selected"># of Pending Tasks</option>
+                                             <option value="StartedTaskCount" ># of Started Tasks</option>
+                                             <option value="CompletedTaskCount"># of Completed Tasks</option>
+                                             <option value="TotalStartLatency">Average Remove Latency</option>
+                                             <option value="TotalExecutionLatency">Average Execution Latency</option>
+                                         </select>
+                                     </td>
+                                     <td>
+                                         <select id="ExecutorOperation"  style="width:50px;">
+                                             <option value="greater" selected="selected" >&gt;</option>
+                                             <option value="equal">=</option>
+                                             <option value="less">&lt;</option>
+                                         </select>
+                                     </td>
+                                     <td>
+                                         <input type="text"  id="ExecutorValue" style="height:20px; width:40px;">
+                                     </td>
+                                     <td style="vertical-align:top">
+                                         <button onclick="addDataTypeFilter('Executor')" class="btn btn-default btn-mini">Add</button>
+                                     </td>
+                                 </tr>
+                                 </tbody>
+                             </table>
+                         </div>
+                     </div>
+                 </div>
+                 <button onclick="createFilter()" class='btn btn-default'  style="display:none;" id='cancelFilterButtonC' >Cancel</button>
+                 <button onclick="nextAction()"  class='btn btn-info' id='nextButton' style="display:none;" >Next</button>
+                 </div>
+                 <div id="alertActions" style="width:100%; display:none;">
+                     <div id="alertPeriodAccordion">
+                         <h5>Alert Check Frequency</h5>
+                         <div>
+                             <label for="periodHour" class="select pull-left">
+                                 <select id="periodHour">
+                                     <option value="0" selected="selected">0</option>
+                                     <option value="1">1</option>
+                                     <option value="6">6</option>
+                                     <option value="12">12</option>
+                                     <option value="24">24</option>
+                                </select>
+                             hour
+                             </label>
+                             <label for="periodMin" class="select pull-left">
+                                 <select id="periodMin">
+                                     <option value="1">1</option>
+                                     <option value="5" selected="selected">5</option>
+                                     <option value="10">10</option>
+                                     <option value="30">30</option>
+                                 </select>
+                             min
+                             </label>
+                             <br><br>
+                             <hr>
+                         </div>
+                     </div>
+                     <div id="alertActionsAccordion">
+                         <h5>Alert Actions</h5>
+
+                         <div>
+                             <a>Filter Name: </a><input type="text" id="filterName"/>
+                             <br> <br>
+                             <label for="email" class="checkbox">
+                                 Send Email Alert
+                                 <input type="checkbox" id="email"
+                                        onclick="toggleEmailFields()"/>
+                             </label>
+                             <a>Email Addresses (comma separated list) : </a>
+                             <input type="text" id="alertEmailAddresses" disabled="disabled"/>
+                             <br> <br>
+                             <a>Email Interval (secs) : </a>
+                             <input type="text" id="intervalSec" disabled="disabled"/>
+                             <label for="persist" class="checkbox">
+                                 Persist data on disk
+                                 <input type="checkbox" id="persist"/>
+                             </label>
+                             <br> <br>
+                             <button onclick="createFilter()" class='btn btn-default'>Cancel</button>
+                             <button onclick="saveFilterCheckName()" class='btn btn-info' id='saveFilterButton'>Save
+                             </button>
+                         </div>
+                     </div>
+                 </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

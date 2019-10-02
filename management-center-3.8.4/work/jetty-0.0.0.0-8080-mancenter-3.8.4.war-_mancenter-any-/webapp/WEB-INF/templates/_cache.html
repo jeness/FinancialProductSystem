@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<body>
+<div th:fragment="content">
+    <div class="row-fluid">
+        <div class="span3">
+            <div class="box">
+                <div class="box-header"><span class="title" id="cacheChart1Title"></span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#"
+                               onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['cache']['cacheChart1']);"><i
+                                    class="icon-resize-full"></i></a>
+                        </li>
+                        <li class="toolbar-link">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="setChartOption('cacheChart1','cache','i_Cache_CacheGets')"> Gets </a></li>
+                                <li><a onclick="setChartOption('cacheChart1','cache','i_Cache_CachePuts')"> Puts </a></li>
+                                <li><a onclick="setChartOption('cacheChart1','cache','i_Cache_CacheRemovals')"> Removals</a></li>
+                                <li><a onclick="setChartOption('cacheChart1','cache','i_Cache_CacheEvictions')">Evictions</a></li>
+                                <li><a onclick="setChartOption('cacheChart1','cache','i_Cache_CacheHits')">Hits</a></li>
+                                <li><a onclick="setChartOption('cacheChart1','cache','i_Cache_CacheMisses')">Misses</a></li>
+                                <li><a onclick="setChartOption('cacheChart1','cache','i_Cache_AverageGetTime')">Avg Get Time</a></li>
+                                <li><a onclick="setChartOption('cacheChart1','cache','i_Cache_AveragePutTime')">Avg Put Time</a></li>
+                                <li><a onclick="setChartOption('cacheChart1','cache','i_Cache_AverageRemoveTime')">Avg Remove Time</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content padded">
+                    <div style="width: 100%; height: 100px" id="cacheChart1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="span3">
+            <div class="box">
+                <div class="box-header"><span class="title" id="cacheChart2Title"></span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#"
+                               onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['cache']['cacheChart2']);"><i
+                                    class="icon-resize-full"></i></a>
+                        </li>
+                        <li class="toolbar-link">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="setChartOption('cacheChart2','cache','i_Cache_CacheGets')"> Gets </a></li>
+                                <li><a onclick="setChartOption('cacheChart2','cache','i_Cache_CachePuts')"> Puts </a></li>
+                                <li><a onclick="setChartOption('cacheChart2','cache','i_Cache_CacheRemovals')"> Removals</a></li>
+                                <li><a onclick="setChartOption('cacheChart2','cache','i_Cache_CacheEvictions')">Evictions</a></li>
+                                <li><a onclick="setChartOption('cacheChart2','cache','i_Cache_CacheHits')">Hits</a></li>
+                                <li><a onclick="setChartOption('cacheChart2','cache','i_Cache_CacheMisses')">Misses</a></li>
+                                <li><a onclick="setChartOption('cacheChart2','cache','i_Cache_AverageGetTime')">Avg Get Time</a></li>
+                                <li><a onclick="setChartOption('cacheChart2','cache','i_Cache_AveragePutTime')">Avg Put Time</a></li>
+                                <li><a onclick="setChartOption('cacheChart2','cache','i_Cache_AverageRemoveTime')">Avg Remove Time</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content padded">
+                    <div style="width: 100%; height: 100px" id="cacheChart2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="span3">
+            <div class="box">
+                <div class="box-header"><span class="title" id="cacheChart3Title"></span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#"
+                               onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['cache']['cacheChart3']);"><i
+                                    class="icon-resize-full"></i></a>
+                        </li>
+                        <li class="toolbar-link">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="setChartOption('cacheChart3','cache','i_Cache_CacheGets')"> Gets </a></li>
+                                <li><a onclick="setChartOption('cacheChart3','cache','i_Cache_CachePuts')"> Puts </a></li>
+                                <li><a onclick="setChartOption('cacheChart3','cache','i_Cache_CacheRemovals')"> Removals</a></li>
+                                <li><a onclick="setChartOption('cacheChart3','cache','i_Cache_CacheEvictions')">Evictions</a></li>
+                                <li><a onclick="setChartOption('cacheChart3','cache','i_Cache_CacheHits')">Hits</a></li>
+                                <li><a onclick="setChartOption('cacheChart3','cache','i_Cache_CacheMisses')">Misses</a></li>
+                                <li><a onclick="setChartOption('cacheChart3','cache','i_Cache_AverageGetTime')">Avg Get Time</a></li>
+                                <li><a onclick="setChartOption('cacheChart3','cache','i_Cache_AveragePutTime')">Avg Put Time</a></li>
+                                <li><a onclick="setChartOption('cacheChart3','cache','i_Cache_AverageRemoveTime')">Avg Remove Time</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content padded">
+                    <div style="width: 100%; height: 100px" id="cacheChart3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="span3">
+            <p style="margin:0 0 5px" sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_USER','ROLE_READONLY_USER')">
+                <button class="btn btn-default" onclick="cacheBrowseModal()"><i
+                        class="icon-folder-open"></i> Cache Browser
+                </button>
+            </p>
+            <div class="box">
+                <div class="box-header"><span class="title" id="cacheChart4Title"></span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#"
+                               onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['cache']['cacheChart4']);"><i
+                                    class="icon-resize-full"></i></a>
+                        </li>
+                        <li class="toolbar-link">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="setChartOption('cacheChart4','cache','i_Cache_CacheGets')"> Gets </a></li>
+                                <li><a onclick="setChartOption('cacheChart4','cache','i_Cache_CachePuts')"> Puts </a></li>
+                                <li><a onclick="setChartOption('cacheChart4','cache','i_Cache_CacheRemovals')"> Removals</a></li>
+                                <li><a onclick="setChartOption('cacheChart4','cache','i_Cache_CacheEvictions')">Evictions</a></li>
+                                <li><a onclick="setChartOption('cacheChart4','cache','i_Cache_CacheHits')">Hits</a></li>
+                                <li><a onclick="setChartOption('cacheChart4','cache','i_Cache_CacheMisses')">Misses</a></li>
+                                <li><a onclick="setChartOption('cacheChart4','cache','i_Cache_AverageGetTime')">Avg Get Time</a></li>
+                                <li><a onclick="setChartOption('cacheChart4','cache','i_Cache_AveragePutTime')">Avg Put Time</a></li>
+                                <li><a onclick="setChartOption('cacheChart4','cache','i_Cache_AverageRemoveTime')">Avg Remove Time</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content padded">
+                    <div style="width: 100%; height: 65px" id="cacheChart4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">Cache Statistics Data Table</span>
+                </div>
+                <div class="box-content">
+                    <table class="dTable responsive dataTable" id="cachedatatable">
+                        <thead>
+                        <tr>
+                            <th class="sorting">
+                                <div><span>#&nbsp;&nbsp;</span></div>
+                            </th>
+                            <th class="sorting">
+                                <div>Members</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Entries</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Gets&nbsp;&nbsp;</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Puts&nbsp;&nbsp;</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Removals</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Evictions</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Hits&nbsp;&nbsp;</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Misses</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Avg Get Time (&micro;s)</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Avg Put Time (&micro;s)</div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th><div>#</div></th>
+                                <th><div>TOTAL</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                                <th style="text-align:left"><div>-</div></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">Cache Throughput Data Table</span>
+                    <ul class="box-toolbar">
+                        <li class="toolbar-link">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                              <span>
+                                 <span><i class="icon-cog"></i><span id="cacheSelectedThrougputInterval">Last Minute</span><i class="icon-caret-down"></i></span>
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="changeThrougputInterval('cache','0')"> Since Beginning </a></li>
+                                <li><a onclick="changeThrougputInterval('cache','60000')"> Last Minute </a></li>
+                                <li><a onclick="changeThrougputInterval('cache','600000')"> Last 10 Minute </a></li>
+                                <li><a onclick="changeThrougputInterval('cache','3600000')"> Last 1 Hour </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-content">
+                    <table class="dTable responsive dataTable" id="cachethroughputdatatable">
+                        <thead>
+                        <tr>
+                            <th class="sorting">
+                                <div><span>#&nbsp;&nbsp;</span></div>
+                            </th>
+                            <th class="sorting">
+                                <div>Members</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Puts/s&nbsp;&nbsp;</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Gets/s&nbsp;&nbsp;</div>
+                            </th>
+                            <th class="sorting">
+                                <div>Removes/s</div>
+                            </th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div th:replace="__cacheBrowse :: content"/>
+</div>
+</body>
+</html>

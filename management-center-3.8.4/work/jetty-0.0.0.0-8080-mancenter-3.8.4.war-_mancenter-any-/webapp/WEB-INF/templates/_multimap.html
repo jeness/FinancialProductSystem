@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="content-1" class="row-fluid">
+  <div class="span3">
+    <div class="box">
+      <div class="box-header"><span class="title" id="multimapChart1Title"></span>
+        <ul class="box-toolbar">
+            <li class="toolbar-link">
+            <a href="#" onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['multimap']['multimapChart1']);"><i class="icon-resize-full"></i></a>
+            </li>
+            <li class="toolbar-link">
+                <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                          <span>
+                             <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                          </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a onclick="setChartOption('multimapChart1','multimap','i_MultiMap_OwnedEntryCount')"> Size </a></li>
+                    <li><a onclick="setChartOption('multimapChart1','multimap','o_MultiMap_total')"> Throughput </a></li>
+                    <li><a onclick="setChartOption('multimapChart1','multimap','i_MultiMap_OwnedEntryMemoryCost')"> Memory</a></li>
+                    <li><a onclick="setChartOption('multimapChart1','multimap','i_MultiMap_BackupEntryCount')">Backup Size</a></li>
+                    <li><a onclick="setChartOption('multimapChart1','multimap','i_MultiMap_BackupEntryMemoryCost')">Backup Mem.</a></li>
+                    <li><a onclick="setChartOption('multimapChart1','multimap','i_MultiMap_Hits')">Hits</a></li>
+                    <li><a onclick="setChartOption('multimapChart1','multimap','i_MultiMap_LockedEntryCount')">Locked Entr.</a></li>
+                    <li><a onclick="setChartOption('multimapChart1','multimap','o_MultiMap_PutOperationCount')">Puts/s</a></li>
+                    <li><a onclick="setChartOption('multimapChart1','multimap','o_MultiMap_GetOperationCount')">Gets/s</a></li>
+                    <li><a onclick="setChartOption('multimapChart1','multimap','o_MultiMap_RemoveOperationCount')">Removes/s</a></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+        <div class="box-content padded">
+        <div style="width: 100%; height: 100px" id="multimapChart1"></div>
+      </div>
+    </div>
+  </div>
+  <div class="span3">
+    <div class="box">
+      <div class="box-header"><span class="title" id="multimapChart2Title"></span>
+        <ul class="box-toolbar">
+            <li class="toolbar-link">
+            <a href="#" onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['multimap']['multimapChart2']);"><i class="icon-resize-full"></i></a>
+            </li>
+            <li class="toolbar-link">
+                <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                          <span>
+                             <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                          </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a onclick="setChartOption('multimapChart2','multimap','i_MultiMap_OwnedEntryCount')"> Size </a></li>
+                    <li><a onclick="setChartOption('multimapChart2','multimap','o_MultiMap_total')"> Throughput </a></li>
+                    <li><a onclick="setChartOption('multimapChart2','multimap','i_MultiMap_OwnedEntryMemoryCost')"> Memory</a></li>
+                    <li><a onclick="setChartOption('multimapChart2','multimap','i_MultiMap_BackupEntryCount')">Backup Size</a></li>
+                    <li><a onclick="setChartOption('multimapChart2','multimap','i_MultiMap_BackupEntryMemoryCost')">Backup Mem.</a></li>
+                    <li><a onclick="setChartOption('multimapChart2','multimap','i_MultiMap_Hits')">Hits</a></li>
+                    <li><a onclick="setChartOption('multimapChart2','multimap','i_MultiMap_LockedEntryCount')">Locked Entr.</a></li>
+                    <li><a onclick="setChartOption('multimapChart2','multimap','o_MultiMap_PutOperationCount')">Puts/s</a></li>
+                    <li><a onclick="setChartOption('multimapChart2','multimap','o_MultiMap_GetOperationCount')">Gets/s</a></li>
+                    <li><a onclick="setChartOption('multimapChart2','multimap','o_MultiMap_RemoveOperationCount')">Removes/s</a></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+      <div class="box-content padded">
+
+        <div style="width: 100%; height: 100px" id="multimapChart2"></div>
+      </div>
+    </div>
+  </div>
+   <div class="span3">
+    <div class="box">
+      <div class="box-header"><span class="title" id="multimapChart3Title"></span>
+        <ul class="box-toolbar">
+            <li class="toolbar-link">
+            <a href="#" onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['multimap']['multimapChart3']);"><i class="icon-resize-full"></i></a>
+            </li>
+            <li class="toolbar-link">
+                <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                          <span>
+                             <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                          </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a onclick="setChartOption('multimapChart3','multimap','i_MultiMap_OwnedEntryCount')"> Size </a></li>
+                    <li><a onclick="setChartOption('multimapChart3','multimap','o_MultiMap_total')"> Throughput </a></li>
+                    <li><a onclick="setChartOption('multimapChart3','multimap','i_MultiMap_OwnedEntryMemoryCost')"> Memory</a></li>
+                    <li><a onclick="setChartOption('multimapChart3','multimap','i_MultiMap_BackupEntryCount')">Backup Size</a></li>
+                    <li><a onclick="setChartOption('multimapChart3','multimap','i_MultiMap_BackupEntryMemoryCost')">Backup Mem.</a></li>
+                    <li><a onclick="setChartOption('multimapChart3','multimap','i_MultiMap_Hits')">Hits</a></li>
+                    <li><a onclick="setChartOption('multimapChart3','multimap','i_MultiMap_LockedEntryCount')">Locked Entr.</a></li>
+                    <li><a onclick="setChartOption('multimapChart3','multimap','o_MultiMap_PutOperationCount')">Puts/s</a></li>
+                    <li><a onclick="setChartOption('multimapChart3','multimap','o_MultiMap_GetOperationCount')">Gets/s</a></li>
+                    <li><a onclick="setChartOption('multimapChart3','multimap','o_MultiMap_RemoveOperationCount')">Removes/s</a></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+        <div class="box-content padded">
+
+        <div style="width: 100%; height: 100px" id="multimapChart3"></div>
+      </div>
+    </div>
+  </div>
+  <div class="span3">
+    <div class="box">
+      <div class="box-header"><span class="title" id="multimapChart4Title"></span>
+        <ul class="box-toolbar">
+            <li class="toolbar-link">
+            <a href="#" onclick="openChartWindow(''+ activeCluster +'',''+ activeView  +'',''+ activeObject +'','' + chartOptions['multimap']['multimapChart4']);"><i class="icon-resize-full"></i></a>
+            </li>
+            <li class="toolbar-link">
+                <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                          <span>
+                             <span><i class="icon-cog"></i><i class="icon-caret-down"></i></span>
+                          </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a onclick="setChartOption('multimapChart4','multimap','i_MultiMap_OwnedEntryCount')"> Size </a></li>
+                    <li><a onclick="setChartOption('multimapChart4','multimap','o_MultiMap_total')"> Throughput </a></li>
+                    <li><a onclick="setChartOption('multimapChart4','multimap','i_MultiMap_OwnedEntryMemoryCost')"> Memory</a></li>
+                    <li><a onclick="setChartOption('multimapChart4','multimap','i_MultiMap_BackupEntryCount')">Backup Size</a></li>
+                    <li><a onclick="setChartOption('multimapChart4','multimap','i_MultiMap_BackupEntryMemoryCost')">Backup Mem.</a></li>
+                    <li><a onclick="setChartOption('multimapChart4','multimap','i_MultiMap_Hits')">Hits</a></li>
+                    <li><a onclick="setChartOption('multimapChart4','multimap','i_MultiMap_LockedEntryCount')">Locked Entr.</a></li>
+                    <li><a onclick="setChartOption('multimapChart4','multimap','o_MultiMap_PutOperationCount')">Puts/s</a></li>
+                    <li><a onclick="setChartOption('multimapChart4','multimap','o_MultiMap_GetOperationCount')">Gets/s</a></li>
+                    <li><a onclick="setChartOption('multimapChart4','multimap','o_MultiMap_RemoveOperationCount')">Removes/s</a></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+        <div class="box-content padded">
+
+        <div style="width: 100%; height: 100px" id="multimapChart4"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div th:fragment="content-2" class="row-fluid">
+  <div class="span12">
+   <div class="box">
+        <div class="box-header">
+        <span class="title">MultiMap Memory Data Table</span>
+        </div>
+        <div class="box-content">
+        <table class="dTable responsive dataTable" id="multimapmemorydatatable">
+          <thead>
+          <tr>
+            <th class="sorting"><div><span>#&nbsp;&nbsp;</span></div></th>
+            <th class="sorting"><div>Members</div></th>
+            <th class="sorting"><div>Entries</div></th>
+            <th class="sorting"><div>Entry Memory</div></th>
+            <th class="sorting"><div>Backups</div></th>
+            <th class="sorting"><div>Backup Memory</div></th>
+            <th class="sorting"><div>Events</div></th>
+            <th class="sorting"><div>Hits</div></th>
+            <th class="sorting"><div>Locks</div></th>
+            <th class="sorting"><div>Dirty Entries</div></th>
+          </tr>
+          </thead>
+          <tfoot>
+              <tr>
+                  <th><div>#</div></th>
+                  <th><div>TOTAL</div></th>
+                  <th style="text-align:left"><div>-</div></th>
+                  <th style="text-align:left"><div>-</div></th>
+                  <th style="text-align:left"><div>-</div></th>
+                  <th style="text-align:left"><div>-</div></th>
+                  <th style="text-align:left"><div>-</div></th>
+                  <th style="text-align:left"><div>-</div></th>
+                  <th style="text-align:left"><div>-</div></th>
+                  <th style="text-align:left"><div>-</div></th>
+              </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div th:fragment="content-3" class="row-fluid">
+  <div class="span12">
+   <div class="box">
+        <div class="box-header">
+        <span class="title">MultiMap Throughput Data Table</span>
+        <ul class="box-toolbar">
+            <li class="toolbar-link">
+                <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="10">
+                    <span><i class="icon-cog"></i><span id="multimapSelectedThrougputInterval">Last Minute</span><i class="icon-caret-down"></i></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a onclick="changeThrougputInterval('multimap','0')"> Since Beginning </a></li>
+                    <li><a onclick="changeThrougputInterval('multimap','60000')"> Last Minute </a></li>
+                    <li><a onclick="changeThrougputInterval('multimap','600000')"> Last 10 Minute </a></li>
+                    <li><a onclick="changeThrougputInterval('multimap','3600000')"> Last 1 Hour </a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        <div class="box-content">
+        <table class="dTable responsive dataTable" id="multimapthroughputdatatable">
+          <thead>
+          <tr>
+            <th class="sorting"><div><span>#&nbsp;&nbsp;</span></div></th>
+            <th class="sorting"><div>Members</div></th>
+            <th class="sorting"><div>Puts/s&nbsp;&nbsp;</div></th>
+            <th class="sorting"><div>Gets/s&nbsp;&nbsp;</div></th>
+            <th class="sorting"><div>Removes/s</div></th>
+            <th class="sorting"><div>Avg Put Lat.</div></th>
+            <th class="sorting"><div>Avg Get Lat.</div></th>
+            <th class="sorting"><div>Avg Remove Lat.</div></th>
+            <th class="sorting"><div>Max Put Lat.</div></th>
+            <th class="sorting"><div>Max Get Lat.</div></th>
+            <th class="sorting"><div>Max Remove Lat.</div></th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+
+In this Release Notes document, you will find the new features, enhancements and fixes of the Hazelcast Management Center 3.8.x releases.
+The numbers in the square brackets refer to the issue number in Hazelcast Management Center’s GitHub repository.
+
+
+--------------------------------------------------------------------------------------------------------------------
+***Hazelcast Management Center 3.8.4***
+
+1. New Features
+
+- Monitoring of Reliable Topic: Now it is possible to monitor your Reliable Topic data structures through Hazelcast Management Center.
+
+2. Enhancements
+
+- JMX host name is now configurable.
+
+3. Fixes
+
+- WAN sync looks for incorrect map when there is more than one map in the dropdown list. [#494],[#495]
+- Inconsistent list of data structures: When there are more than two Hazelcast members, Management Center cannot show the full data structure lists every time since the members' states are updated but instance objects are not. [#488]
+
+--------------------------------------------------------------------------------------------------------------------
+***Hazelcast Management Center 3.8.3***
+
+
+1. New Features
+
+- TLS Protocol Exclusions: Added an option to exclude specific TLS protocols.
+
+
+2. Enhancements
+
+- Eliminated a security bug on the initial authentication configuration. [#459]
+- Prevented multiple notifications when changing cluster states. [#452]
+- Moved the cluster state controls to its own tab. [#451]
+
+3. Fixes
+
+- Version display is fixed so that it shows the full Management Center version including the patch release number. [#454]
+- The label of the button "Shutdown Node" in Management Center should be changed to "Shutdown Members" due to naming conventions. [#450]
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="content" class="span12">
+        <div class="row-fluid">
+            <div class="box">
+                <div class="box-header">
+                    <span class="title">Console</span>
+                    <ul class="box-toolbar">
+                        <!--<li class="toolbar-link">-->
+                            <!--<a onclick="popoutConsole()"><i class="icon-resize-full"></i></a>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+                <div class="box-content padded">
+                    <textarea id="commandOutput" readonly="true"
+                              style=" width: 100%; background-color: #000000; color: #ffffff;" rows="20" cols="120"
+                            >&gt; Type help for command list&#10;&#13; If you'd like to connect specific member on the cluster please enter the command 'connect ip:port'.
+    </textarea>
+
+                    <br/>
+                    <input type="text" id="commandInput" placeholder="Type your command here, type 'help' to see list of commands."  style="width: 100%"  onkeydown="if (event.keyCode == 13){ sendCommand();return false;}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>          <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>Monitoring Members - Hazelcast Management Center Manual</title>
+    <meta name="description" content="Hazelcast Management Center Manual" />
+    <meta name="author" content="Hazelcast">
+    <meta charset="UTF-8">
+    <link rel="icon" href="themes/daux/img/favicon-blue.png" type="image/x-icon">
+    <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+    <link href='themes/daux/css/theme-blue.min.css' rel='stylesheet' type='text/css'>
+            <!-- Tipue Search -->
+        <link href="tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="">
+    
+<header class="Navbar hidden-print">
+    <div>
+      <div class="sitebar"></div>
+        <div>  
+          <div style="float:left">
+            <a href="http://www.hazelcast.org"><img src="IMDG_orange_logo_full_RGB-light_200px.png" style="padding-top: 8px"/></a>
+          </div>
+          <div>
+            <a class="Navbar__branda" href="index.html">Management Center <span style="font-size:11px">3.9-EA</span></a>
+          </div>
+        </div>
+    <div class="Search">
+        <svg class="Search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451 451"><path d="M447.05 428l-109.6-109.6c29.4-33.8 47.2-77.9 47.2-126.1C384.65 86.2 298.35 0 192.35 0 86.25 0 .05 86.3.05 192.3s86.3 192.3 192.3 192.3c48.2 0 92.3-17.8 126.1-47.2L428.05 447c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.2-5.2 5.2-13.8 0-19zM26.95 192.3c0-91.2 74.2-165.3 165.3-165.3 91.2 0 165.3 74.2 165.3 165.3s-74.1 165.4-165.3 165.4c-91.1 0-165.3-74.2-165.3-165.4z"/></svg>
+        <input type="search" id="tipue_search_input" class="Search__field" placeholder="Search..." autocomplete="on" results=25 autosave=text_search>
+    </div>
+
+
+</div></header>
+<div class="Columns content">
+    <aside class="Columns__left Collapsible">
+        <div class="Collapsible__container">
+            <button type="button" class="Button Collapsible__trigger">
+                <span class="Collapsible__trigger--bar"></span>
+                <span class="Collapsible__trigger--bar"></span>
+                <span class="Collapsible__trigger--bar"></span>
+            </button>
+        </div>
+
+        <div class="Collapsible__content">
+            <!-- Navigation -->
+            <ul class='Nav'><li class='Nav__item '><a href="Deploying_and_Starting.html">Deploying and Starting</a></li><li class='Nav__item '><a href="Getting_Started.html">Getting Started</a></li><li class='Nav__item '><a href="Using_Management_Center_with_TLS-SSL_Only.html">Using Management Center with TLS-SSL Only</a></li><li class='Nav__item '><a href="Active_Directory_Authentication.html">Active Directory Authentication</a></li><li class='Nav__item '><a href="JAAS_Authentication.html">JAAS Authentication</a></li><li class='Nav__item '><a href="LDAP_Authentication.html">LDAP Authentication</a></li><li class='Nav__item '><a href="User_Interface_Overview.html">User Interface Overview</a></li><li class='Nav__item '><a href="Home_Page.html">Home Page</a></li><li class='Nav__item '><a href="Monitoring_Caches.html">Monitoring Caches</a></li><li class='Nav__item '><a href="Managing_Maps.html">Managing Maps</a></li><li class='Nav__item '><a href="Monitoring_Replicated_Maps.html">Monitoring Replicated Maps</a></li><li class='Nav__item '><a href="Monitoring_Queues.html">Monitoring Queues</a></li><li class='Nav__item '><a href="Monitoring_Topics.html">Monitoring Topics</a></li><li class='Nav__item '><a href="Monitoring_Reliable_Topics.html">Monitoring Reliable Topics</a></li><li class='Nav__item '><a href="Monitoring_MultiMaps.html">Monitoring MultiMaps</a></li><li class='Nav__item '><a href="Monitoring_Executors.html">Monitoring Executors</a></li><li class='Nav__item '><a href="Monitoring_WAN_Replication.html">Monitoring WAN Replication</a></li><li class='Nav__item Nav__item--active'><a href="Monitoring_Members.html">Monitoring Members</a></li><li class='Nav__item '><a href="Scripting.html">Scripting</a></li><li class='Nav__item '><a href="Executing_Console_Commands.html">Executing Console Commands</a></li><li class='Nav__item '><a href="Creating_Alerts.html">Creating Alerts</a></li><li class='Nav__item '><a href="Administering_Management_Center.html">Administering Management Center</a></li><li class='Nav__item '><a href="Cluster_State.html">Cluster State</a></li><li class='Nav__item '><a href="Hot_Restart.html">Hot Restart</a></li><li class='Nav__item '><a href="Checking_Past_Status_with_Time_Travel.html">Checking Past Status with Time Travel</a></li><li class='Nav__item '><a href="Management_Center_Documentation.html">Management Center Documentation</a></li><li class='Nav__item '><a href="Suggested_Heap_Size.html">Suggested Heap Size</a></li></ul>
+
+            <div class="Links">
+                                    <hr/>
+                                            <a href="http://hazelcast.org/documentation" target="_blank">Go to hazelcast.org/documentation</a>
+                        <br />
+                                    
+                                    <div class="CodeToggler">
+                        <hr/>
+                                                    <a class="CodeToggler__button CodeToggler__button--main" href="#">Show Code Blocks Inline</a><br>
+                                            </div>
+                
+                            </div>
+        </div>
+    </aside>
+    <div class="Columns__right ">
+        <div class="Columns__right__content">
+            <div class="doc_content">
+                <article class="Page">
+
+    <div class="Page__header">
+        <h1><a href="Monitoring_Members.html">Monitoring Members</a></h1>
+                    </div>
+
+
+    <div class="s-content">
+        <p>Use this menu item to monitor each cluster member and perform operations like running garbage collection (GC) and taking a thread dump. Once you select a member from the menu, a new tab for monitoring that member opens on the right, as shown below.</p>
+<p><img src="images/MonitoringMembers.png" alt="Monitoring Members" /></p>
+<p>The <strong>CPU Utilization</strong> chart shows the percentage of CPU usage on the selected member. The <strong>Memory Utilization</strong> chart shows the memory usage on the selected member with three different metrics (maximum, used and total memory). You can open both of these charts as separate windows using the <img src="images/ChangeWindowIcon.jpg" alt="" /> button placed at top right of each chart; this gives you a clearer view of the chart.</p>
+<p>The window titled <strong>Partitions</strong> shows which partitions are assigned to the selected member. <strong>Runtime</strong> is a dynamically updated window tab showing the processor number, the start and up times, and the maximum, total and free memory sizes of the selected member. These values are collected from the default MXBeans provided by the Java Virtual Machine (JVM). Descriptions from the Javadocs and some explanations are below:</p>
+<ul>
+<li>
+<p><strong>Number of Processors</strong>: Number of processors available to the member (JVM).</p>
+</li>
+<li>
+<p><strong>Start Time</strong>: Start time of the member (JVM) in milliseconds.</p>
+</li>
+<li>
+<p><strong>Up Time</strong>: Uptime of the member (JVM) in milliseconds</p>
+</li>
+<li>
+<p><strong>Maximum Memory</strong>: Maximum amount of memory that the member (JVM) will attempt to use.</p>
+</li>
+<li>
+<p><strong>Free Memory</strong>: Amount of free memory in the member (JVM).</p>
+</li>
+<li>
+<p><strong>Used Heap Memory</strong>: Amount of used memory in bytes.</p>
+</li>
+<li>
+<p><strong>Max Heap Memory</strong>: Maximum amount of memory in bytes that can be used for memory management.</p>
+</li>
+<li>
+<p><strong>Used Non-Heap Memory</strong>: Amount of used memory in bytes.</p>
+</li>
+<li>
+<p><strong>Max Non-Heap Memory</strong>: Maximum amount of memory in bytes that can be used for memory management.</p>
+</li>
+<li>
+<p><strong>Total Loaded Classes</strong>: Total number of classes that have been loaded since the member (JVM) has started execution.</p>
+</li>
+<li>
+<p><strong>Current Loaded Classes</strong>: Number of classes that are currently loaded in the member (JVM).</p>
+</li>
+<li>
+<p><strong>Total Unloaded Classes</strong>: Total number of classes unloaded since the member (JVM) has started execution.</p>
+</li>
+<li>
+<p><strong>Total Thread Count</strong>: Total number of threads created and also started since the member (JVM) started.</p>
+</li>
+<li>
+<p><strong>Active Thread Count</strong>: Current number of live threads including both daemon and non-daemon threads.</p>
+</li>
+<li>
+<p><strong>Peak Thread Count</strong>: Peak live thread count since the member (JVM) started or peak was reset.</p>
+</li>
+<li>
+<p><strong>Daemon Thread Count</strong>: Current number of live daemon threads.</p>
+</li>
+<li>
+<p><strong>OS: Free Physical Memory</strong>: Amount of free physical memory in bytes.</p>
+</li>
+<li>
+<p><strong>OS: Committed Virtual Memory</strong>: Amount of virtual memory that is guaranteed to be available to the running process in bytes.</p>
+</li>
+<li>
+<p><strong>OS: Total Physical Memory</strong>: Total amount of physical memory in bytes.</p>
+</li>
+<li>
+<p><strong>OS: Free Swap Space</strong>: Amount of free swap space in bytes. Swap space is used when the amount of physical memory (RAM) is full. If the system needs more memory resources and the RAM is full, inactive pages in memory are moved to the swap space.</p>
+</li>
+<li>
+<p><strong>OS: Total Swap Space</strong>: Total amount of swap space in bytes.</p>
+</li>
+<li>
+<p><strong>OS: Maximum File Descriptor Count</strong>: Maximum number of file descriptors. File descriptor is an integer number that uniquely represents an opened file in the operating system.</p>
+</li>
+<li>
+<p><strong>OS: Open File Descriptor Count</strong>: Number of open file descriptors.</p>
+</li>
+<li>
+<p><strong>OS: Process CPU Time</strong>: CPU time used by the process on which the member (JVM) is running in nanoseconds.</p>
+</li>
+<li>
+<p><strong>OS: Process CPU Load</strong>: Recent CPU usage for the member (JVM) process. This is a double with a value from 0.0 to 1.0. A value of 0.0 means that none of the CPUs were running threads from the member (JVM) process during the recent period of time observed, while a value of 1.0 means that all CPUs were actively running threads from the member (JVM) 100% of the time during the recent period being observed. Threads from the member (JVM) include the application threads as well as the member (JVM) internal threads.</p>
+</li>
+<li>
+<p><strong>OS: System Load Average</strong>: System load average for the last minute. The system load average is the average over a period of time of this sum: (the number of runnable entities queued to the available processors) + (the number of runnable entities running on the available processors). The way in which the load average is calculated is operating system specific but it is typically a damped time-dependent average.</p>
+</li>
+<li>
+<p><strong>OS: System CPU Load</strong>:
+Recent CPU usage for the whole system. This is a double with a value from 0.0 to 1.0. A value of 0.0 means that all CPUs were idle during the recent period of time observed, while a value of 1.0 means that all CPUs were actively running 100% of the time during the recent period being observed.</p>
+</li>
+</ul>
+<p><img src="images/NoteSmall.jpg" alt="image" /> <strong><em>NOTE:</em></strong> <em>These descriptions may vary according to the JVM version or vendor.</em></p>
+<p>Next to the <strong>Runtime</strong> tab, the <strong>Properties</strong> tab shows the system properties. The <strong>Member Configuration</strong> window shows the XML configuration of the connected Hazelcast cluster.</p>
+<p>The <strong>List of Slow Operations</strong> gives an overview of detected slow operations which occurred on that member. The data is collected by the <a href="http://docs.hazelcast.org/docs/latest-development/manual/html/Performance/Slow_Operation_Detector.html" class="external">SlowOperationDetector</a>.</p>
+<p><img src="images/ListOfSlowOperations.png" alt="List of Slow Operations" /></p>
+<p>Click on an entry to open a dialog which shows the stacktrace and detailed information about each slow invocation of this operation.</p>
+<p><img src="images/SlowOperationDetail.png" alt="Slow Operations Details" /></p>
+<p>Besides the aforementioned monitoring charts and windows, you can also perform operations on the selected member through this page. The operation buttons are located at the top right of the page, as explained below:</p>
+<ul>
+<li>
+<strong>Run GC</strong>: Press this button to execute garbage collection on the selected member. A notification stating that the GC execution was successful will be shown.</li>
+<li>
+<strong>Thread Dump</strong>: Press this button to take a thread dump of the selected member and show it as a separate dialog to the user.</li>
+<li>
+<strong>Shutdown Node</strong>: Press this button to shutdown the selected member.</li>
+</ul>
+    </div>
+
+        <nav>
+        <ul class="Pager">
+            <li class=Pager--prev><a href="Monitoring_WAN_Replication.html">Previous</a></li>            <li class=Pager--next><a href="Scripting.html">Next</a></li>        </ul>
+    </nav>
+    </article>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-12653604-10', '');
+    ga('send', 'pageview');
+</script>
+
+    <!-- jQuery -->
+    <script src="themes/daux/js/jquery-1.11.3.min.js"></script>
+
+    <!-- hightlight.js -->
+    <script src="themes/daux/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- JS -->
+    
+    <script src="themes/daux/js/daux.js"></script>
+
+            <!-- Tipue Search -->
+        <script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+
+        <script>
+            window.onunload = function(){}; // force $(document).ready to be called on back/forward navigation in firefox
+            $(function() {
+                tipuesearch({
+                    'base_url': ''
+                });
+            });
+        </script>
+        
+                 <script>
+        $(function(){
+        $(".Columns__left").scrollTop($('.Nav__item--active').offset().top);
+        });
+        </script>
+        
+    
+</body>
+</html>
