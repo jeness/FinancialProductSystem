@@ -70,7 +70,7 @@ MyISAM 和InnoDB 讲解
 　　7、如果是用MyISAM的话，merge引擎可以大大加快应用部门的开发速度，他们只要对这个merge表做一些select count(*)操作，非常适合大项目总量约几亿的rows某一类型(如日志，调查统计)的业务表。
 　　当然Innodb也不是绝对不用，用事务的项目就用Innodb的。另外，可能有人会说你MyISAM无法抗太多写操作，但是可以通过架构来弥补。
 
-## Restful API Design
+### Restful API Design - Manager
 1. Create product
 POST /products JpaRepository
 controller中是info级别的日志，实际生产过程中打印info级别，不打印debug级别的
@@ -81,11 +81,11 @@ GET /products/{id} JpaRepository
 3. Query products by condition
 GET /products JpaSpecificationExecutor
 
-## Error Handling
+### Error Handling
 + User friendly error explaination
 + Unified handling, simplified bussiness login code
 + Error standardization
-### How the error handling happens
+#### How the error handling happens
 1. First approach
 In `spring-boot-autoconfigure` package, in the controller `BasicErrorController`, in `ErrorMvcAutoConfiguration` config class, user-defined error handling is registered.
 2. Second Approch
@@ -99,7 +99,7 @@ spring:
      date-format: yyyy-MM-dd HH:mm:ss
      time-zone: GMT+8
 ```
-## 测试
+### 测试
 1. Unit test: Junit
 ```
 @BeforClass: 在需要测试的class之前执行，只会执行一次
@@ -116,25 +116,25 @@ spring:
 - execution sequence annotation: `@FixMethodOrder(MethodSorters.NAME_ASCENDING)` 按测试方法名字典序执行
 - Conditional query test case
 
-## Swagger: API Documentation
+### Swagger: API Documentation
 Swagger is a the world's largest framework of API developer tools for the OpenAPI Specification(OAS). Swagger enables development across the entire API lifecycle, from design and documentation, to test and deployment. 
 `http://localhost:8081/manager/swagger-ui.html`
-### seperate frontend and backend
+#### seperate frontend and backend
 Backend developer writes APIs for frontend developers to call. That needs documentation. 
 ### Third party corperation
 Let others know how those API are used.
-### Config optimize
+#### Config optimize
 - Selectively show interface
 - Detailed comment instruction
 - i18n change languages
 In swagger pakage, in resources folder, we can newly create a swagger-ui.html file to add script of:
 `the webjars/springfox-swagger-ui/lang/translator.js`, 
 `the webjars/springfox-swagger-ui/lang/zh-cn.js`
-### Combination annotation: Another way of config swagger
+#### Combination annotation: Another way of config swagger
 把多个注解组合在一起，放在一个java文件中，然后在另一个文件中使用该java文件的注解导入这几个组合注解。
 Import `SwaggerConfiguration.class` into `EnableMySwagger` interface.
 Then add `@EnableMySwagger` to import my swagger configuration into Main function `ManagerApp.java`.
-### Swagger Usages Summary 
+#### Swagger Usages Summary 
 1. @Import, 组合注解
 - 使用Import注解把配置类导入到manager模块
 - 或者使用组合注解(@EnableSwagger2 放在自定义注解上，形成了一个组合注解，把多种功能的注解放到一个注解上面，使它拥有多个功能，那就可以对外提供一个更加简单的使用方式)，定义自己的注解
@@ -142,12 +142,12 @@ Then add `@EnableMySwagger` to import my swagger configuration into Main functio
 - 不写代码，把配置类放到spring.factories这个类下面，减少代码量，把dependency添加进来就可以生成swagger文档了
 3. @ConfigurationProperties
 - `@ConfigurationProperties(prefix = "swagger")`这个注解把整个对象的所有属性通过一个prefix属性就可以注入进来
-### Swagger tools
+#### Swagger tools
 1. swagger ui: render api description documentation
 直接用文件形式打开会出现跨域问题，可以把swagger ui deploy 到 server上，可以是nginx，node，apache的web server，或者直接用工程部署swagger ui
-![swagger-ui-cross-region](readmeimages\swagger-ui-cross-region.png)
+![swagger-ui-cross-region](notesimages\swagger-ui-cross-region.png)
 在`http://localhost:8081/manager/index.html` 中的搜索栏中，填入`http://localhost:8081/manager/v2/api-docs?group=manager`.
-![swagger-ui](readmeimages\swagger-ui.png)
+![swagger-ui](notesimages\swagger-ui.png)
 swagger ui是一个静态资源文件，用js的方式是解析我们的接口描述文件，然后显示出来。
 Swagger ui is a static resource file, use js to parse our interface description file and then render and show as web page.
 2. swagger editor: edit api description documentation
@@ -159,3 +159,21 @@ Generate server code from documentation. Sometimes it will be used in real proje
 - Generate Client
 Client code generator is seldom to be used. Because we have the swagger ui, we can directly try out the spi fro mthe swagger ui, so we don't need the generator of client.
 client的代码generator很少用到，因为有文档，直接可以在swagger ui的文档上试一试效果，所以就用不到客户端client的generator
+
+## Seller 
+Seller is a gateway for interation with third party. In Seller, security access control, throughput traffic statistics. The main usage of Seller is Integrate internal resources, provide interfaces for external use, and sales management for completed products.
+用于与第三方交互的门户网关，进行安全控制，流量统计等。整合内部资源，对外提供相应的接口，已完成产品的销售管理
+### Function of Seller
+#### Func1: Query product
+#### Func2: purchasing, redeeming financial products 申购、赎回
+#### Func3: Reconciliation 对账
+### Documentation
+- Swagger write api documentation
+- For now, use existed code to generate interface documentation.
+### JSONRPC
+1. use `jsonrpc` to internal systems (of seller) interact with each other
+2. why jsonrpc? 
+- why not http? jsonrpc is easier to write than http. jsonrpc can use interface to call. http needs to create http request, http response, parse etc.
+- why not webservice? Webservice use xml as Datagram(报文) to send and receive messages wastes bandwidth
+- Why Thrift or grpc? Those two have good performance, but the way of write scripts is complicated. They needs to write specific format scripts and then complie to Java code.
+

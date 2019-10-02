@@ -32,7 +32,7 @@ public class ProductService {
 
 
     public Product addProduct(Product product){
-        LOG.debug("LOG: Create and add product, parameters:{}", product);//service中是debug级别的日志，实际生产过程中打印info级别，不打印debug级别的
+        LOG.debug("LOG ==== Create and add product, parameters:{}", product);//service中是debug级别的日志，实际生产过程中打印info级别，不打印debug级别的
         //data validation and check
         checkProduct(product);
 
@@ -40,7 +40,7 @@ public class ProductService {
         setDefault(product);
         Product result = repository.save(product);
 
-        LOG.debug("LOG: Create product, result: {}", result);
+        LOG.debug("LOG ==== Create product, result: {}", result);
         return result;
     }
 /*
@@ -87,9 +87,9 @@ public class ProductService {
     * */
     public Product findOne(String id){
         Assert.notNull(id, "Need product id as param");
-        LOG.debug("LOG: Query one single product, id={}", id);
+        LOG.debug("LOG ==== Query one single product, id={}", id);
         Product product = repository.findOne(id);
-        LOG.debug("LOG: Query one single product, result={}", product);
+        LOG.debug("LOG ==== Query one single product, result={}", product);
         return product;
     }
 
@@ -130,7 +130,7 @@ public class ProductService {
         };
 
         Page<Product> page = repository.findAll(specification, pageable);
-        LOG.debug("LOG: Query products, result={}", page);
+        LOG.debug("LOG ==== Query products, result={}", page);
         return page;
 
     }
