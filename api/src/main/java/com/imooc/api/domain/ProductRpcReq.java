@@ -16,10 +16,7 @@ public class ProductRpcReq {
     private BigDecimal maxRewardRate;
     private List<String> statusList;
 
-    private int page;
-    private int pageSize;
-    private Sort.Direction direction;
-    private String orderBy;
+
 //    private Pageable pageable;
 
     @Override
@@ -59,35 +56,5 @@ public class ProductRpcReq {
         this.statusList = statusList;
     }
 
-    public int getPage() {
-        return page;
-    }
 
-    public void setPage(int page) {
-        this.page = page;
-    }
-
-    public int getPageSize() {
-        return pageSize;
-    }
-
-    public void setPageSize(int pageSize) {
-        this.pageSize = pageSize;
-    }
-
-    public Sort.Direction getDirection() {
-        return direction;
-    }
-
-    public void setDirection(Sort.Direction direction) {
-        this.direction = direction;
-    }
-
-    public String getOrderBy() {
-        return orderBy;
-    }
-
-    public void setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
-    }
 }

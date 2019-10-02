@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,7 +31,8 @@ public class ProductRpcImpl implements ProductRpc {
     @Override
     public List<Product> query(ProductRpcReq req) {
         LOG.info("LOG ===== Query for multiple products, request: {}", req);
-        Pageable pageable = new PageRequest(req.getPage(),req.getPageSize(), req.getDirection(), req.getOrderBy());
+
+        Pageable pageable = new PageRequest(0,1000, Sort.Direction.DESC, "rewardRate");
         Page<Product> result = productService.query(req.getIdList(), req.getMinRewardRate(), req.getMaxRewardRate(), req.getStatusList(), pageable);
         LOG.info("LOG ===== Query for multiple products, result: {}", result);
         return result.getContent();

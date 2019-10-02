@@ -34,14 +34,11 @@ public class ProductRpcService {
         Pageable pageable = new PageRequest(0, 1000, Sort.Direction.DESC, "rewardRate");
         req.setStatusList(status);
 //        req.setPageable(pageable);
-        req.setPage(0);
-        req.setPageSize(1000);
-        req.setDirection(Sort.Direction.DESC);
-        req.setOrderBy("rewardRate");
+
         LOG.info("LOG ==== rpc query all products, request: {}", req);
-        Page<Product> result = productRpc.query(req);
+        List<Product> result = productRpc.query(req);
         LOG.info("LOG ==== rpc query all products, result: {}", result);
-        return result.getContent();
+        return result;
     }
 
     @PostConstruct
