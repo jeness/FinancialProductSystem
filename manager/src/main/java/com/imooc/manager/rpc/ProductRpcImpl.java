@@ -3,6 +3,7 @@ package com.imooc.manager.rpc;
 
 import com.googlecode.jsonrpc4j.spring.AutoJsonRpcServiceImpl;
 import com.imooc.api.ProductRpc;
+import com.imooc.api.domain.ParamInf;
 import com.imooc.api.domain.ProductRpcReq;
 import com.imooc.entity.Product;
 import com.imooc.manager.service.ProductService;
@@ -29,7 +30,7 @@ public class ProductRpcImpl implements ProductRpc {
     private ProductService productService;
 
     @Override
-    public List<Product> query(ProductRpcReq req) {
+    public List<Product> query(ParamInf req) {
         LOG.info("LOG ===== Query for multiple products, request: {}", req);
 
         Pageable pageable = new PageRequest(0,1000, Sort.Direction.DESC, "rewardRate");

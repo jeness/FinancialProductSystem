@@ -1,0 +1,3 @@
+dependencies{
+    compile files("$rootDir/util/libs/jsonrpc4j-1.5.1.jar")
+}

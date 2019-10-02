@@ -253,5 +253,28 @@ POST http://localhost:8081/manager/rpc/products?Content-Type=application/json
 ```
 #### JSONRPC的简化、封装
 - Use class name as the url path to simplify the configuration
+修改jsonrpc4j的源码,在5-7中有演示
 - Change source code of JSONRPC, to break the limitations on url path and parameter to implement our own JSONRPC service
+修改jsonrpc4j的源码，在5-7中有演示
 - Encapsulate to auto configuration, like swagger, which puts the framework package to class path
+使用jackson在当前module中做修改，反序列化，在5-7中有演示
+## Cache - in seller
+- memcache
+earliest, only key value structure
+- redis
+support list or colleciton as data structure, persistance
+- Hazelcast √
+Hazelcast IMDG is an open source in-memory data grid based on Java. 内存数据网格
+More data structures supported. Good to use with cluster, user-friendly management ui. Easy to integrate with spring.
+Hazelcast is a clustering and highly scalable data distribution platform.
+With its various distributed data structures, distributed caching capabilities, elastic nature, memcache support, integration with Spring and Hibernate and more importantly with so many happy users, Hazelcast is feature-rich, enterprise-ready and developer-friendly in-memory data grid solution.
+### Hazelcast
+#### Data partitioning
+By default, Hazelcast offers 271 partitions in one node.
+If we have two nodes, both have 271 partitions in one node by default, then hazelcast will use half of partitions to save the copy of another, to prevent one node fails, data can be recovered by another node to make the rebust and reliability.
+When the cluster has more members, then Hazelcast moves some of the primary and replica partitions to the new members one by one, makeing all members equal and redundant.
+#### hazelcast.xml
+- For new nodes to join cluster, can configure as multicast/ tcp-ip for new nodes to join.
+#### Management center
+In cmd, use `startManCenter.bat` to run on port 8080. Or add port to change the default port. 
+To enter management center ui, use in browser: `localhost:8080/mancenter/login.html`

@@ -61,5 +61,6 @@ public class ProductRpcService {
     @PostConstruct
     public void init(){
         findOne("001");
+//        findAll();
     }
 }

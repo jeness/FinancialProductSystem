@@ -1,6 +1,7 @@
 package com.imooc.api;
 
 import com.googlecode.jsonrpc4j.JsonRpcService;
+import com.imooc.api.domain.ParamInf;
 import com.imooc.api.domain.ProductRpcReq;
 import com.imooc.entity.Product;
 import org.springframework.context.annotation.ComponentScan;
@@ -19,7 +20,7 @@ public interface ProductRpc {
     * @param req
     * @return
     */
-    List<Product> query(ProductRpcReq req);
+    List<Product> query(ParamInf req);
 
     /**
     * Query for single product

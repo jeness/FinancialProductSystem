@@ -10,8 +10,5 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RpcConfiguration {
 
-    @Bean
-    public AutoJsonRpcServiceImplExporter rpcServiceImplExporter() {
-        return new AutoJsonRpcServiceImplExporter();
-    }
+
 }

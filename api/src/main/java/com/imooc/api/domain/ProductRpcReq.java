@@ -10,7 +10,7 @@ import org.springframework.data.domain.Sort;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class ProductRpcReq {
+public class ProductRpcReq implements ParamInf{
     private List<String> idList;
     private BigDecimal minRewardRate;
     private BigDecimal maxRewardRate;
