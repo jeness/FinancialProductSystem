@@ -195,3 +195,51 @@ logging:
 ```
 - JSON Client entrance (only entrance): AutoJsonRpcServiceImplExporter
 - 可以添加自定义的错误处理，自定义的监听器，可以注册追踪
+- Use postman to send a POST request to RPC
+1. Normal:
+```
+POST http://localhost:8081/manager/rpc/products?Content-Type=application/json
+{"id":"346445485","jsonrpc":"2.0","method":"findOne","params":["001"]}
+//Will have the response:
+{
+    "jsonrpc": "2.0",
+    "id": "346445485",
+    "result": {
+        "id": "001",
+        "name": "fin no.1",
+        "status": "AUDITING",
+        "thresholdAmount": 1E+1,
+        "stepAmount": 1,
+        "lockTerm": 0,
+        "rewardRate": 3.86,
+        "memo": null,
+        "createAt": "2019-09-30T14:17:23.000",
+        "updateAt": "2019-09-30T14:17:23.000",
+        "createUser": null,
+        "updateUser": null
+    }
+}
+```
+2. If the request result is a null, Response will be null
+```
+{"id":"346445485","jsonrpc":"2.0","method":"findOne","params":["002"]}
+//Response will be null
+{
+    "jsonrpc": "2.0",
+    "id": "346445485",
+    "result": null
+}
+```
+3. If the request parameter is wrong, response back an error, not result
+```
+{"id":"346445485","jsonrpc":"2.0","method":"findOne","params":[]}
+//Response back an error, not result
+{
+    "jsonrpc": "2.0",
+    "id": "346445485",
+    "error": {
+        "code": -32602,
+        "message": "method parameters invalid"
+    }
+}
+```
