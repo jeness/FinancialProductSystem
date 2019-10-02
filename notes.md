@@ -176,7 +176,14 @@ Seller is a gateway for interation with third party. In Seller, security access 
 - why not http? jsonrpc is easier to write than http. jsonrpc can use interface to call. http needs to create http request, http response, parse etc.
 - why not webservice? Webservice use xml as Datagram(报文) to send and receive messages wastes bandwidth
 - Why Thrift or grpc? Those two have good performance, but the way of write scripts is complicated. They needs to write specific format scripts and then complie to Java code.
+#### JSONPRC 运行原理和关键类
 ![jsonrpc](notesimage/jsonrpc.png)
+1. 配置客户端client：
+- 配置一个客户端的创建类，导入到spring container中，配置base url让client知道server在哪，设置rpc接口所在的package，让spring scan，帮我们创建哪些rpc服务
+- 客户端client运行原理：In JsonProxyFactoryBean，objectMapper帮我们把request转换成json字符串，JsonRpcHttpClient invoke就使得request到达了server端
+2. 配置服务端server：
+- 服务端server只导出一个对象AutoJsonRpcServiceImplExporter，这个对象会帮我们scan spring container中的包含了rpc的实现object
+- 这个对象AutoJsonRpcServiceImplExporter内部是一个JsonServiceExporter对象，it implements HttpRequestHandler这个接口interface，and then put into spring container, spring helps us to map to a url映射到一个路径上, so that server will have a rpc service address服务端就有了一个rpc 服务的地址, and then client can call the implementation from server客户端就可以从服务端调用到对应的方法的实现(implementaion)了.
 #### JSONRPC - client(seller module)
 - debug log
 Open debug log, in configuration (client/resource/application.yml):
@@ -244,3 +251,7 @@ POST http://localhost:8081/manager/rpc/products?Content-Type=application/json
     }
 }
 ```
+#### JSONRPC的简化、封装
+- Use class name as the url path to simplify the configuration
+- Change source code of JSONRPC, to break the limitations on url path and parameter to implement our own JSONRPC service
+- Encapsulate to auto configuration, like swagger, which puts the framework package to class path
