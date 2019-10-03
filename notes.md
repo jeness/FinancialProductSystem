@@ -384,4 +384,28 @@ In intellij console, it shows `java.lang.IllegalArgumentException: Validation fa
 ![validation success2](notesimage\validation-sign-success1.PNG)
 ## Reconciliation - account checking 
 ### 主要内容：对账和定时任务
-+ Shell company/third party payment company: paypal
++ Shell company/third party payment company: paypal, alipay
++ Fund flow
+![fund-flow](notesimage\how-money-goes.png)
+In bank, there are three types of accounts: User A, shell company, financial company. The accounts of shell company and financial company are supervised by bank, which is regulated by law.
++ Reconsiliation对账：
+Compare to two parties'(shell company and financial company) record, 确保shell company和financial company 的 A buy $100 products记录一致。在互联网金融行业或者电商行业中，对账其实就是确认在固定周期内核支付提供方（银行和第三方支付）的交易、资金的正确性，保证双方的交易、资金一致正确。
+![Reconsiliation-operation](notesimage\duizhang-operation.png)
+Account system is used to record user account's updates.
+Business system is used to record user's purchase request and redemption request.
+图里有箭头就要对账。
++ Settlement Netting轧差
+To decide: Shell company owns financial company money. Or financial company owns shell company money. And then make the payment happen.
++ 轧账和平账
+轧账就是确保各个参与方的记录相对吻合，for each party, we need to compare the records to make sure security of fund.
+平账就是把有差异的记录make it right.
++ 长款和漏单
+Financial company的长款就是shell company的漏单。我们的漏单就是对方的长款。长款是很常见的，一方记录下操作的时间是23点59分59秒，另一方第二天收到，那么就会出现漏单，一方是今天的交易，另一方是明天的交易。解决方案是：以某一方的时间为准，把请求时间传递过去。漏单是很少出现的，一般都需要人工处理。
+![Reconsiliation-process](notesimage\duizhang-process.png)
++ 对账流程是定时执行的，一般三次，防止因为网络原因对账失败。如果第一次成功了，那么第二次就不会再执行了。用定时任务的framework进行执行。
+### Account Reconsiliation File
++ txt /opt/verification/{yyyy-MM-dd-chanId}.txt
++ native sql
++ verification_order 
+
+
