@@ -9,10 +9,15 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
       show-sql: true
+  activemq:
+    broker-url: tcp://localhost:61616
+  jms:
+    pub-sub-domain: true
 
 server:
   context-path: /manager
   port: 8081
+#  port: 8087
 swagger:
   groupName: manager
   basePackage: com.imooc.manager.controller

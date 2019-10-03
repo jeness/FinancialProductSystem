@@ -308,3 +308,32 @@ To enter management center ui, use in browser: `localhost:8080/mancenter/login.h
 - 用于清空缓存。
 - allEntries：if set to true, then all cache will be clear.
 - beforeInvocation: before excuate the method, cache will be clear.
+#### Maintain Cache 
+data update, data delete needs to notify cache. Message system has following models:
++ Topic 发布订阅模式
+有producer and consumer, 每个消费者都会收到所有的消息。在当前系统中，多个销售端seller，那么就有多个消费者，那么一个update事件会多次使用，对更新缓存来说是不必要的，只需要update一次就可以了。
+![topic](notesimage\jms-topic-msg.jpg)
++ Queue 队列模式
+一个消息只会对一个消费者使用。如果还有另外的一个应用要使用到我们的product的update事件，这个另外的应用也是多节点部署的，那么就是seller消费一次product update事件，另外一个应用（另外一个消费者）消费一次product update事件。那么queue就不够用了。
+![queue](notesimage\JMS-queue-msg.jpg)
++ 消费者分组
+把所有seller分为一组，这个分组中只要有一个销售端seller（消费者）消费了update事件就可以了。另外一组（另外的应用）也只要有一个消费者消费了这个update事件就可以了。这是一种topic和queue组合在一起使用的模式。
+#### Frameworks to maintain cache
++ Hazelcast: can not satisfy the requirement, can not integrate with spring well.
++ kafka: a little bit complicated
++ activemq: install and usage is simple.
+#### Use activemq
+activemq安装：https://blog.csdn.net/clj198606061111/article/details/38145597
+- Manager send message
+- Seller consume message
+- Activemq admin console: `http://localhost:8161/admin/`
+- Username: admin Password: admin
+- In manager console, we can see the manager sent a new message for 001 product, its status changes to FINISHED.
+```
+2019-10-02 23:47:23.820  INFO 32488 --- [           main] c.i.m.service.ProductStatusManager       : ACTIVEMQ LOGGING: send message:com.imooc.api.events.ProductStatusEvent@36dafa24[id=001,status=FINISHED]
+```
+- In seller console, we can see the seller receive the message for 001 product, so that the seller knows 001's status changes to FINISHed.
+```
+2019-10-02 23:47:24.021  INFO 34292 --- [enerContainer-1] c.i.seller.service.ProductRpcService     : receive event:com.imooc.api.events.ProductStatusEvent@54765260[id=001,status=FINISHED]
+```
+

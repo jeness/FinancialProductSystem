@@ -15,9 +15,9 @@ public class HazelcastMapTest {
     @Autowired
     private HazelcastInstance hazelcastInstance;
 
-    @PostConstruct
+//    @PostConstruct
     public void put() {
-        Map map = hazelcastInstance.getMap("imooc"); //distributed used map, run on multiple nodes
+        Map map = hazelcastInstance.getMap("bank_friend"); //distributed used map, run on multiple nodes
         map.put("name", "bank_friend");
 
     }

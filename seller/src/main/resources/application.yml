@@ -16,3 +16,7 @@ rpc:
 spring:
   cache:
     type: hazelcast
+  activemq:
+    broker-url: tcp://localhost:61616
+    packages:
+      trust-all: true
