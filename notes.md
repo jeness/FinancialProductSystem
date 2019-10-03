@@ -343,7 +343,7 @@ RSA：是一个非对称加密算法，非对称是指该算法需要一堆密�
 加密传递的时候是全密文的，签名包含明文和印章（签名）
 ### Usage
 1. 调用放在请求头中传递authId, sign
-2. 使用AOP在执行实际方法前根据authId获取到公钥，进行验签
+2. 使用Spring AOP在执行实际方法前根据authId获取到公钥，进行验签
 3. 验签通过就继续执行
 ## Add an order to Seller - 下单操作
 See in swagger `http://localhost:8082/seller/swagger-ui.html`, remember to add `@EnableMySwagger` annotation to SellerApp entrance. 
@@ -374,3 +374,14 @@ See in swagger `http://localhost:8082/seller/swagger-ui.html`, remember to add `
   "updateAt": "2019-10-03"
 }
 ```
++ Java8 new feature: use default keyword to implement interface  
++ When validation fails, the swagger ui shows `Validation failure` error, which is from our AOP.
+![validation failure1](notesimage\validation-sign-failure1.PNG)
+![validation failure2](notesimage\validation-sign-failure2.PNG)
+In intellij console, it shows `java.lang.IllegalArgumentException: Validation failure`
++ Use the RSAUtilTest.java in utils to generate the signature for the request.
+![validation success1](notesimage\validation-sign-success1.PNG)
+![validation success2](notesimage\validation-sign-success1.PNG)
+## Reconciliation - account checking 
+### 主要内容：对账和定时任务
++ Shell company/third party payment company: paypal
