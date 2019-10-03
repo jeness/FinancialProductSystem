@@ -1,6 +1,9 @@
 package com.imooc.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModelProperty;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -31,7 +34,17 @@ public class Order {
      */
     private String orderStatus;
     private String memo;
+
+
+    @ApiModelProperty(required = true,example = "2018-10-01")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date createAt;
+
+
+    @ApiModelProperty(required = true,example = "2018-10-01")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date updateAt;
 
     @Override

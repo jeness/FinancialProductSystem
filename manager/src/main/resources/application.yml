@@ -1,6 +1,9 @@
 spring:
+  mvc:
+    date-format: yyyy-MM-dd
   jackson:
-    date-format: yyyy-MM-dd'T'HH:mm:ss.SSS
+    date-format: yyyy-MM-dd
+#    date-format: yyyy-MM-dd HH:mm:ss.SSS
     time-zone: GMT-4
   datasource:
     username: root
@@ -13,7 +16,6 @@ spring:
     broker-url: tcp://localhost:61616
   jms:
     pub-sub-domain: true
-
 server:
   context-path: /manager
   port: 8081

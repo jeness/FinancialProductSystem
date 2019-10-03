@@ -1,5 +1,6 @@
 package com.imooc.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.imooc.entity.enums.ProductStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -33,8 +34,13 @@ public class Product implements Serializable {
     //收益率，因为要与其他数相乘，所以使用BigDecimal
     private BigDecimal rewardRate;
     private String memo;
+
+
     private Date createAt;
+
+
     private Date updateAt;
+
     private String createUser;
     private String updateUser;
 

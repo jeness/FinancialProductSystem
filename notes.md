@@ -322,7 +322,7 @@ data update, data delete needs to notify cache. Message system has following mod
 + Hazelcast: can not satisfy the requirement, can not integrate with spring well.
 + kafka: a little bit complicated
 + activemq: install and usage is simple.
-#### Use activemq
+#### Use activemq to maintain cache
 activemq安装：https://blog.csdn.net/clj198606061111/article/details/38145597
 - Manager send message
 - Seller consume message
@@ -336,4 +336,41 @@ activemq安装：https://blog.csdn.net/clj198606061111/article/details/38145597
 ```
 2019-10-02 23:47:24.021  INFO 34292 --- [enerContainer-1] c.i.seller.service.ProductRpcService     : receive event:com.imooc.api.events.ProductStatusEvent@54765260[id=001,status=FINISHED]
 ```
-
+## RSA algo for security
+### Concept
+RSA：是一个非对称加密算法，非对称是指该算法需要一堆密钥，使用其中一个加密，则需要用另一个才能解密。密钥分为公钥和私钥，私钥是自己保存，公钥提供给对方。
+加密使用的是对方的公钥，签名使用的是自己的私钥。
+加密传递的时候是全密文的，签名包含明文和印章（签名）
+### Usage
+1. 调用放在请求头中传递authId, sign
+2. 使用AOP在执行实际方法前根据authId获取到公钥，进行验签
+3. 验签通过就继续执行
+## Add an order to Seller - 下单操作
+See in swagger `http://localhost:8082/seller/swagger-ui.html`, remember to add `@EnableMySwagger` annotation to SellerApp entrance. 
+```
+//response
+{
+  "amount": 10,
+  "chanId": "111",
+  "chanUserId": "123",
+  "createAt": "2019-10-03",
+  "memo": "My memo",
+  "outerOrderId": "10001",
+  "productId": "001",
+  "updateAt": "2019-10-03"
+}
+//response
+{
+  "orderId": "1129759aefbb4a4ea551e050e6f622ea",
+  "chanId": "111",
+  "chanUserId": "123",
+  "orderType": "APPLY",
+  "productId": "001",
+  "amount": 10,
+  "outerOrderId": "10001",
+  "orderStatus": "SUCCESS",
+  "memo": "My memo",
+  "createAt": "2019-10-03",
+  "updateAt": "2019-10-03"
+}
+```
