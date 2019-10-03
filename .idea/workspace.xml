@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68a8a196-bef1-42b7-9407-b01095dfe345" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notesimage/duizhangcaozuo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/service/VerifyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/service/VerifyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -138,7 +137,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/VerificationOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="315">
               <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -182,6 +181,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/Order.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="59" column="31" lean-forward="true" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+              <folding>
+                <element signature="e#1424#1425#0" expanded="true" />
+                <element signature="e#1462#1463#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositories/VerifyRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -196,8 +208,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/service/VerifyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+            <state relative-caret-position="207">
+              <caret line="106" column="37" lean-forward="true" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -206,10 +218,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/enums/ChanEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+              <folding>
+                <element signature="e#261#262#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#325#326#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#390#391#0" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+                <element signature="e#454#455#0" expanded="true" />
+                <element signature="e#484#485#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#546#547#0" expanded="true" />
+                <element signature="e#580#581#0" expanded="true" />
+                <element signature="e#610#611#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+            <state relative-caret-position="269">
+              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -222,27 +257,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
               <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="61" column="55" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/src/test/java/com/imooc/util/RSAUtilTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -281,6 +295,7 @@
       <find>chan_id</find>
       <find>ReflectionToStringBuilder</find>
       <find>rootdir</find>
+      <find>OUTERorderid</find>
     </findStrings>
     <dirStrings>
       <dir>F:\J2EElinkedin\STS-workspace\financial\seller\src\main\resources\static</dir>
@@ -292,7 +307,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/swagger/build.gradle" />
         <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/configurations/SwaggerConfiguration.java" />
         <option value="$PROJECT_DIR$/entity/build.gradle" />
         <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/ManagerApp.java" />
@@ -341,6 +355,7 @@
         <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/params/OrderParam.java" />
         <option value="$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/VerificationOrder.java" />
         <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositories/VerifyRepository.java" />
+        <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/enums/ChanEnum.java" />
         <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/service/VerifyService.java" />
         <option value="$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java" />
       </list>
@@ -761,27 +776,7 @@
     </option>
     <option name="contentProportion" value="0.16894665" />
   </component>
-  <component name="RunManager" selected="Gradle.VerifyTest.makeVerificationTest">
-    <configuration name="ProductControllerTest.createException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.imooc.manager.controller.ProductControllerTest.createException&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":manager:cleanTest" />
-            <option value=":manager:test" />
-          </list>
-        </option>
-        <option name="vmOptions" value="-Dfile.encoding=UTF-8" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.VerifyTest.saveVerificationOrders">
     <configuration name="ProductControllerTest.findOne" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -842,6 +837,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="VerifyTest.saveVerificationOrders" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.imooc.seller.VerifyTest.saveVerificationOrders&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":seller:cleanTest" />
+            <option value=":seller:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="financial:manager [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -877,21 +892,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.ProductControllerTest.createException" />
       <item itemvalue="Gradle.ProductControllerTest.findOne" />
       <item itemvalue="Gradle.financial:manager [build]" />
       <item itemvalue="Spring Boot.ManagerApp" />
       <item itemvalue="Spring Boot.SellerApp" />
       <item itemvalue="Gradle.RSAUtilTest.signTest" />
       <item itemvalue="Gradle.VerifyTest.makeVerificationTest" />
+      <item itemvalue="Gradle.VerifyTest.saveVerificationOrders" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.VerifyTest.saveVerificationOrders" />
         <item itemvalue="Gradle.VerifyTest.makeVerificationTest" />
         <item itemvalue="Gradle.RSAUtilTest.signTest" />
         <item itemvalue="Gradle.financial:manager [build]" />
         <item itemvalue="Gradle.ProductControllerTest.findOne" />
-        <item itemvalue="Gradle.ProductControllerTest.createException" />
       </list>
     </recent_temporary>
   </component>
@@ -917,17 +932,11 @@
       <workItem from="1569501457591" duration="9175000" />
       <workItem from="1569865579079" duration="41050000" />
       <workItem from="1570022305226" duration="5452000" />
-      <workItem from="1570030814498" duration="39548000" />
+      <workItem from="1570030814498" duration="41316000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProductControllerTest_findOne - 2019.10.01 at 12h 23m 13s.xml">
-      <configuration name="ProductControllerTest.findOne" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="ProductControllerTest_findOne - 2019.10.01 at 12h 24m 38s.xml">
-      <configuration name="ProductControllerTest.findOne" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="ProductControllerTest_findOne - 2019.10.01 at 12h 27m 47s.xml">
       <configuration name="ProductControllerTest.findOne" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -952,12 +961,19 @@
     <history-entry file="VerifyTest_makeVerificationTest - 2019.10.03 at 16h 30m 15s.xml">
       <configuration name="VerifyTest.makeVerificationTest" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="VerifyTest_makeVerificationTest - 2019.10.03 at 16h 52m 48s.xml">
+      <configuration name="VerifyTest.makeVerificationTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="VerifyTest_saveVerificationOrders - 2019.10.03 at 16h 53m 26s.xml">
+      <configuration name="VerifyTest.saveVerificationOrders" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108039000" />
+    <option name="totallyTimeSpent" value="109807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2442953" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -969,7 +985,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4036827" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15155807" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1001,13 +1017,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/util/src/main/resources/META-INF/spring.factories">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="112" selection-start-column="112" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
@@ -1318,21 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="20" selection-start-line="20" selection-end-line="42" />
-          <folding>
-            <element signature="e#1297#1298#0" expanded="true" />
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1424#1425#0" expanded="true" />
-            <element signature="e#1470#1471#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/src/main/java/com/imooc/util/RSAUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-346">
@@ -1496,7 +1490,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/VerificationOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="315">
           <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1538,10 +1532,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="59" column="31" lean-forward="true" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+          <folding>
+            <element signature="e#1424#1425#0" expanded="true" />
+            <element signature="e#1462#1463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/service/VerifyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+        <state relative-caret-position="207">
+          <caret line="106" column="37" lean-forward="true" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1550,10 +1555,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+        <state relative-caret-position="269">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/enums/ChanEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <folding>
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
           </folding>
         </state>
       </provider>
