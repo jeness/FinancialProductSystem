@@ -348,21 +348,21 @@ See in swagger `http://localhost:8082/seller/swagger-ui.html`, remember to add `
 ```
 + Java8 new feature: use default keyword to implement interface  
 + When validation fails, the swagger ui shows `Validation failure` error, which is from our AOP.
-![validation failure1](notesimage\validation-sign-failure1.PNG)
-![validation failure2](notesimage\validation-sign-failure2.PNG)
+![validation failure1](notesimage/validation-sign-failure1.PNG)
+![validation failure2](notesimage/validation-sign-failure2.PNG)
 In intellij console, it shows `java.lang.IllegalArgumentException: Validation failure`
 + Use the RSAUtilTest.java in utils to generate the signature for the request.
-![validation success1](notesimage\validation-sign-success1.PNG)
-![validation success2](notesimage\validation-sign-success1.PNG)
+![validation success1](notesimage/validation-sign-success1.PNG)
+![validation success2](notesimage/validation-sign-success1.PNG)
 ## Reconciliation - account checking 
 ### 主要内容：对账和定时任务
 + Shell company/third party payment company: paypal, alipay
 + Fund flow
-![fund-flow](notesimage\how-money-goes.png)
+![fund-flow](notesimage/how-money-goes.png)
 In bank, there are three types of accounts: User A, shell company, financial company. The accounts of shell company and financial company are supervised by bank, which is regulated by law.
 ### Reconsiliation对账：
 Compare to two parties'(shell company and financial company) record, 确保shell company和financial company 的 A buy $100 products记录一致。在互联网金融行业或者电商行业中，对账其实就是确认在固定周期内核支付提供方（银行和第三方支付）的交易、资金的正确性，保证双方的交易、资金一致正确。
-![Reconsiliation-operation](notesimage\duizhang-operation.png)
+![Reconsiliation-operation](notesimage/duizhang-operation.png)
 Account system is used to record user account's updates.
 Business system is used to record user's purchase request and redemption request.
 图里有箭头就要对账。
@@ -381,9 +381,9 @@ To decide: Shell company owns financial company money. Or financial company owns
 + 长款
 + 漏单
 + 不一致
-![Reconsiliation-process](notesimage\duizhang-process.png)
+![Reconsiliation-process](notesimage/duizhang-process.png)
 + 对账流程是定时执行的，一般三次，防止因为网络原因对账失败。如果第一次成功了，那么第二次就不会再执行了。用定时任务的framework进行执行。
-![testresult](notesimage\ExcessMissingDiff.PNG)
+![testresult](notesimage/ExcessMissingDiff.PNG)
 ### Optimization
 + Create and Parse reconsiliation file in batches(divided by channel id or by different time intervals). Do not run at one time.
 + Do not run SQL in master db or write db. Do not run SQL in rush hour of data operations. Execuate SQL in backup db or execuate when reading db
@@ -391,7 +391,7 @@ To decide: Shell company owns financial company money. Or financial company owns
 ## JPA multiple data source
 + master\backup db, write\read db sperate
 + springboot autoconfig
-![autoconfig](notesimage\jpa-autoconfig-process.png)
+![autoconfig](notesimage/jpa-autoconfig-process.png)
 + 数据库同步工具：mysql 主从复制，alibaba/otter
 ### In project
 + seller (primary db): empty order table. use for create order 
@@ -421,12 +421,12 @@ An API Gateway sits in front of your application(s) and manages the heavy liftin
 ### Access right control
 - Use Authentication token
 No auth id, then refused access
-![noauthid](notesimage\auth.PNG)
+![noauthid](notesimage/auth.PNG)
 - Auth id management
 Set auth id by url/by header
-![](notesimage\send-auth-id-via-url.PNG)
+![](notesimage/send-auth-id-via-url.PNG)
 Shows
-![](notesimage\data-shows.PNG)
+![](notesimage/data-shows.PNG)
 Can open an developer protal let user to register and get auth id key to access the api.
 Api call user can apply for an auth token key.
 ### Rate limit
@@ -434,18 +434,18 @@ Api call user can apply for an auth token key.
 When first request comes, record timestamp. From the start of second request, compare the arriving time o f request and the earliest request time. If larger than 1s, then clean previous record, record the current request timestamp; If smaller than 1s, then see if the record is larger than 10 times. If smaller than 10 times, grant the access normally, otherwise, return a rate limit error.
 ### Quota
 1000 times/day: total saving time, current left times, reset cycle, the next time of reset. 
-![rate-limit-and-quota](notesimage\rate-limit-quota.PNG)
+![rate-limit-and-quota](notesimage/rate-limit-quota.PNG)
 ### Webhooks
 - trigger events by some operations: quota reaches the limit or access rate reaches the limit
 ## HTTPS config
 - HTTP
 - SSL/TLS
 - HTTPS = HTTP + SSL/TLS
-![https](notesimage\https.PNG)
+![https](notesimage/https.PNG)
 ### Springboot https
 More secure than http
 Use java's keytool to generate key pair
-![keytool](notes\notesimage\keytool.PNG)
+![keytool](notes/notesimage/keytool.PNG)
 Setting change in manager's `application.yml`
 ```
 server:
