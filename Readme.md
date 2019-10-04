@@ -6,7 +6,7 @@ Financial Products trading platform, backend data transformation and interactivi
 + JUnit to test function
 + Swagger to write docs
 + Spring Boot
-+ Spring Data JPA: multi data sources and read/write splitting
++ Spring Data JPA: multi data sources and read/write seperation
 + Automation test
 2. Effective: high concurrency, fast response
 + Multi-node sale side: JSON-RPC

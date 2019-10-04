@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68a8a196-bef1-42b7-9407-b01095dfe345" name="Default Changelist" comment="" />
+    <list default="true" id="68a8a196-bef1-42b7-9407-b01095dfe345" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seller/bin/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seller/bin/com/imooc/seller/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/com/imooc/seller/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seller/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seller/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -144,8 +151,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seller/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+            <state relative-caret-position="96">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/SellerApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#500#501#0" expanded="true" />
+                <element signature="e#554#555#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/controller/ProductController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,29 +194,6 @@
                 <element signature="e#500#501#0" expanded="true" />
                 <element signature="e#702#703#0" expanded="true" />
                 <element signature="e#759#760#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/enums/ChanEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#261#262#0" expanded="true" />
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#325#326#0" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
-                <element signature="e#390#391#0" expanded="true" />
-                <element signature="e#420#421#0" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-                <element signature="e#484#485#0" expanded="true" />
-                <element signature="e#517#518#0" expanded="true" />
-                <element signature="e#546#547#0" expanded="true" />
-                <element signature="e#580#581#0" expanded="true" />
-                <element signature="e#610#611#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,7 +220,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositoriesbackup/BackupOrderRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
@@ -280,7 +290,6 @@
         <option value="$PROJECT_DIR$/api/src/main/java/com/imooc/api/domain/ProductRpcReq.java" />
         <option value="$PROJECT_DIR$/dependencies.gradle" />
         <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/service/HazelcastMapTest.java" />
-        <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/imooc/api/events/ProductStatus.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/imooc/api/events/ProductStatusEvent.java" />
         <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/service/ProductStatusManager.java" />
@@ -311,12 +320,13 @@
         <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/enums/ChanEnum.java" />
         <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositories/VerifyRepository.java" />
         <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/service/VerifyService.java" />
-        <option value="$PROJECT_DIR$/seller/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositoriesbackup/BackupOrderRepository.java" />
         <option value="$PROJECT_DIR$/seller/src/main/java/org/springframework/data/repository/config/RepositoryBeanNamePrefix.java" />
         <option value="$PROJECT_DIR$/seller/src/main/java/org/springframework/data/repository/config/RepositoryConfigurationDelegate.java" />
         <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/configuration/DataAccessConfiguration.java" />
         <option value="$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java" />
+        <option value="$PROJECT_DIR$/seller/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/controller/ProductController.java" />
       </list>
     </option>
   </component>
@@ -765,7 +775,7 @@
     </option>
     <option name="contentProportion" value="0.16894665" />
   </component>
-  <component name="RunManager" selected="Gradle.VerifyTest.queryOrder">
+  <component name="RunManager" selected="Spring Boot.SellerApp">
     <configuration name="RSAUtilTest.signTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -922,7 +932,7 @@
       <workItem from="1569501457591" duration="9175000" />
       <workItem from="1569865579079" duration="41050000" />
       <workItem from="1570022305226" duration="5452000" />
-      <workItem from="1570030814498" duration="52429000" />
+      <workItem from="1570030814498" duration="53791000" />
     </task>
     <servers />
   </component>
@@ -959,13 +969,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120920000" />
+    <option name="totallyTimeSpent" value="122282000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2637584" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2637584" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -975,7 +985,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42776203" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.04249292" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -989,7 +999,7 @@
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="bottom" id="Messages" order="15" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.47308782" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.47308782" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24966443" />
@@ -1137,16 +1147,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/controller/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seller/src/main/resources/static/css/print.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1184,16 +1184,6 @@
           <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
           <folding>
             <element signature="e#3451#3457#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/SellerApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1503,13 +1493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seller/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/service/VerifyService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1579,6 +1562,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seller/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/SellerApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
