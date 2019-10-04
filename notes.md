@@ -1,5 +1,5 @@
 # Financial product system
-Financial Products trading platform, backend data transformation and interactivity iwth outer products provider.
+Financial Products trading platform, backend data transformation and interactivity with outer products provider.
 ## Feature
 1. Agile: development, iteration
 + Sale & Management
