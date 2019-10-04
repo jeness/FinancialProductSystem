@@ -251,7 +251,7 @@ When the cluster has more members, then Hazelcast moves some of the primary and 
 In cmd, use `startManCenter.bat` to run on port 8080. Or add port to change the default port. 
 To enter management center ui, use in browser: `localhost:8080/mancenter/login.html`
 初次登陆需要设置密码：root，Root123123
-![mancenter](notesimage\hazelcast-console.png)
+![mancenter](notesimage/hazelcast-console.png)
 - About HazelcastMapTest  
 为什么test不写在test下面？因为test执行完了就直接关闭了，我们再hazelcast management center里看不到这个node run的状况
 #### hazelcast caching
