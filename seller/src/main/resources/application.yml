@@ -25,7 +25,13 @@ spring:
     packages:
       trust-all: true
   datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://localhost:3306/seller?useUnicode=true&characterEncoding=UTF-8&user=root&password=123456";
-    driver-class-name: com.mysql.jdbc.Driver
+    primary:
+      url: jdbc:mysql://localhost:3306/seller?useUnicode=true&characterEncoding=UTF-8&user=root&password=123456";
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: 123456
+    backup:
+      url: jdbc:mysql://localhost:3306/seller-backup?useUnicode=true&characterEncoding=UTF-8&user=root&password=123456";
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: 123456

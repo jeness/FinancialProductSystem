@@ -388,24 +388,43 @@ In intellij console, it shows `java.lang.IllegalArgumentException: Validation fa
 + Fund flow
 ![fund-flow](notesimage\how-money-goes.png)
 In bank, there are three types of accounts: User A, shell company, financial company. The accounts of shell company and financial company are supervised by bank, which is regulated by law.
-+ Reconsiliation对账：
+### Reconsiliation对账：
 Compare to two parties'(shell company and financial company) record, 确保shell company和financial company 的 A buy $100 products记录一致。在互联网金融行业或者电商行业中，对账其实就是确认在固定周期内核支付提供方（银行和第三方支付）的交易、资金的正确性，保证双方的交易、资金一致正确。
 ![Reconsiliation-operation](notesimage\duizhang-operation.png)
 Account system is used to record user account's updates.
 Business system is used to record user's purchase request and redemption request.
 图里有箭头就要对账。
-+ Settlement Netting轧差
-To decide: Shell company owns financial company money. Or financial company owns shell company money. And then make the payment happen.
-+ 轧账和平账
-轧账就是确保各个参与方的记录相对吻合，for each party, we need to compare the records to make sure security of fund.
-平账就是把有差异的记录make it right.
-+ 长款和漏单
-Financial company的长款就是shell company的漏单。我们的漏单就是对方的长款。长款是很常见的，一方记录下操作的时间是23点59分59秒，另一方第二天收到，那么就会出现漏单，一方是今天的交易，另一方是明天的交易。解决方案是：以某一方的时间为准，把请求时间传递过去。漏单是很少出现的，一般都需要人工处理。
-![Reconsiliation-process](notesimage\duizhang-process.png)
-+ 对账流程是定时执行的，一般三次，防止因为网络原因对账失败。如果第一次成功了，那么第二次就不会再执行了。用定时任务的framework进行执行。
-### Account Reconsiliation File
+#### Account Reconsiliation File
 + txt /opt/verification/{yyyy-MM-dd-chanId}.txt
 + native sql
 + verification_order 
+### Settlement Netting轧差
+To decide: Shell company owns financial company money. Or financial company owns shell company money. And then make the payment happen.
+### 轧账和平账
++ 轧账就是确保各个参与方的记录相对吻合，for each party, we need to compare the records to make sure security of fund.
++ 平账就是把有差异的记录make it right。流程：收到异常对账结果，通知人工by email or text msg，轧差（申购的金额和赎回的金额求差，然后把差值进行转账，使得账目可以平账）
+### 长款和漏单
++ Financial company的长款就是shell company的漏单。我们的漏单就是对方的长款。长款是我们有，对方那边没有。漏单是我们没有，对方那边有。不一致是说订单金额和product数量不一致。
++ 长款是很常见的，一方记录下操作的时间是23点59分59秒，另一方第二天收到，那么就会出现漏单，一方是今天的交易，另一方是明天的交易。解决方案是：以某一方的时间为准，把请求时间传递过去。漏单是很少出现的，一般都需要人工处理。
++ 长款
++ 漏单
++ 不一致
+![Reconsiliation-process](notesimage\duizhang-process.png)
++ 对账流程是定时执行的，一般三次，防止因为网络原因对账失败。如果第一次成功了，那么第二次就不会再执行了。用定时任务的framework进行执行。
+![testresult](notesimage\ExcessMissingDiff.PNG)
+### Optimization
++ Create and Parse reconsiliation file in batches(divided by channel id or by different time intervals). Do not run at one time.
++ Do not run SQL in master db or write db. Do not run SQL in rush hour of data operations. Execuate SQL in backup db or execuate when reading db
++ Use java program to read reconsiliation file to compare the difference. / Use noSQL to compare the difference. / Use some algorithm to compare the difference.
+## JPA multiple data source
++ master\backup db, write\read db sperate
++ springboot autoconfig
++ 数据库同步工具：mysql 主从复制，alibaba/otter
+### In project
++ seller (primary db): empty order table. use for create order 
++ seller-backup db: keep order table and varivication table, use for backup order data and keep the third party order info
++ @Primary 可以设置主bean，主data source，和副数据源做区分
++ 不同数据源分包：Repository scan, it doesn't sure about which one got scanned first, see source code. From source code and observation of test, we can know the scan result will be from the last one data source we scan. solution：put primary and backup in different packages
+
 
 

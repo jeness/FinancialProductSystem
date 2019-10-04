@@ -2,7 +2,7 @@ package com.imooc.seller.service;
 
 import com.imooc.entity.VerificationOrder;
 import com.imooc.seller.enums.ChanEnum;
-import com.imooc.seller.repositories.VerifyRepository;
+import com.imooc.seller.repositoriesbackup.VerifyRepository;
 import org.aspectj.util.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,7 +27,7 @@ public class VerifyService {
     @Autowired
     private VerifyRepository verifyRepository;
 
-    @Value("${verification.rootdir:rootDir/opt/verification}")
+    @Value("${verification.rootdir:/opt/verification}")
     private String rootDir;
 
     private static String END_LINE = System.getProperty("line.separator", "\n");
@@ -51,6 +51,20 @@ public class VerifyService {
             e.printStackTrace();
         }
         //Construct start time and end time
+        Date start = getStartOfDay(day);
+
+        Date end = add24Hours(start);
+        List<String> orders = verifyRepository.queryVerificationOrders(chanId, start, end);
+        String content = String.join(END_LINE, orders);
+        FileUtil.writeAsString(path,content);
+        return path;
+    }
+
+    private Date add24Hours(Date start) {
+        return new Date(start.getTime() + 1000 * 60 * 60 * 24);
+    }
+
+    private Date getStartOfDay(Date day) {
         String start_str = DAY_FORMAT.format(day);
         Date start = null;
         try {
@@ -58,13 +72,9 @@ public class VerifyService {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
-        Date end = new Date(start.getTime() + 1000 * 60 * 60 * 24);
-        List<String> orders = verifyRepository.queryVerificationOrders(chanId, start, end);
-        String content = String.join(END_LINE, orders);
-        FileUtil.writeAsString(path,content);
-        return path;
+        return start;
     }
+
     //get varification file path
     public File getPath(String rootDir, String chanId, Date day){
         String name = DAY_FORMAT.format(day) + "-" + chanId + ".txt";
@@ -120,6 +130,22 @@ public class VerifyService {
             orders.add(parseLine(line));
         }
         verifyRepository.save(orders);
+    }
+
+    public List<String> verifyOrder(String chanId, Date day){
+        List<String> errors = new ArrayList<>();
+        Date start = getStartOfDay(day);
+        Date end = add24Hours(start);
+
+        List<String> excessOrders = verifyRepository.queryExcessOrders(chanId, start, end);
+        List<String> missOrders = verifyRepository.queryMissOrders(chanId, start, end);
+        List<String> differentOrders = verifyRepository.queryDifferentOrders(chanId, start, end);
+
+        errors.add("Excess order number:" + String.join(",", excessOrders));
+        errors.add("Miss order number:" + String.join(",", missOrders));
+        errors.add("Different order number:" + String.join(",", differentOrders));
+
+        return errors;
     }
 
 }

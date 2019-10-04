@@ -1,14 +1,37 @@
 server:
   context-path: /seller
   port: 8082
+swagger:
+  groupName: seller
+  basePackage: com.imooc.seller.controller
 
-rpc.manager.url: http://localhost:8081/manager/
+
+#rpc.manager.url: http://localhost:8081/manager/
 
 logging:
   level:
     com.googlecode.jsonrpc4j: debug
 
-# rpc:
-#   client;
-#     url: http://localhost:8081/manager
-#     basePackage: com.imooc.api
+rpc:
+  client:
+    url: http://localhost:8081/manager
+    basePackage: com.imooc.api
+
+spring:
+  cache:
+    type: hazelcast
+  activemq:
+    broker-url: tcp://localhost:61616
+    packages:
+      trust-all: true
+  datasource:
+    primary:
+      url: jdbc:mysql://localhost:3306/seller?useUnicode=true&characterEncoding=UTF-8&user=root&password=123456";
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: 123456
+    backup:
+      url: jdbc:mysql://localhost:3306/seller-backup?useUnicode=true&characterEncoding=UTF-8&user=root&password=123456";
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: 123456

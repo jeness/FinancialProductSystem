@@ -3,6 +3,7 @@ package com.imooc.seller;
 * 对账测试
 * */
 
+import com.imooc.seller.repositories.OrderRepository;
 import com.imooc.seller.service.VerifyService;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -23,8 +24,11 @@ public class VerifyTest {
     @Autowired
     private VerifyService verifyService;
 
+    @Autowired
+    private OrderRepository orderRepository;
+
     @Test
-    public void makeVerificationTest(){
+    public void makeVerificationTest(){  //主库
         Date day = new GregorianCalendar(2019, 9, 2).getTime();
         File file = verifyService.makeVerificationFile("111", day);
         System.out.println(file.getAbsolutePath());
@@ -34,5 +38,16 @@ public class VerifyTest {
     public void saveVerificationOrders(){
         Date day = new GregorianCalendar(2019, 9, 2).getTime();
         verifyService.saveChanOrders("111", day);
+    }
+
+    @Test
+    public void verifyTest(){
+        Date day = new GregorianCalendar(2019, 9, 2).getTime();
+        System.out.println(String.join(";", verifyService.verifyOrder("111", day)));
+    }
+
+    @Test
+    public void queryOrder(){ //备份库
+        System.out.println(orderRepository.findAll());
     }
 }
