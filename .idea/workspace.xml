@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68a8a196-bef1-42b7-9407-b01095dfe345" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/bin/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/bin/com/imooc/seller/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/com/imooc/seller/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seller/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="68a8a196-bef1-42b7-9407-b01095dfe345" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -973,7 +966,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2637584" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
