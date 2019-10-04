@@ -419,6 +419,7 @@ To decide: Shell company owns financial company money. Or financial company owns
 ## JPA multiple data source
 + master\backup db, write\read db sperate
 + springboot autoconfig
+![autoconfig](notesimage\jpa-autoconfig-process.png)
 + 数据库同步工具：mysql 主从复制，alibaba/otter
 ### In project
 + seller (primary db): empty order table. use for create order 
