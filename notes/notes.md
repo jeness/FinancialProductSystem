@@ -482,4 +482,6 @@ server:
     key-store: file: D:\tomcat.keystore
     key-password: root123123
 ```
-## WebFlux update
+## springboot 2.0 update
+### completed auto testing code through function updated
+### todo: webflux update
