@@ -2,25 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68a8a196-bef1-42b7-9407-b01095dfe345" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositoriesbackup/VerifyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/bin/com/imooc/api/ProductRpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/bin/com/imooc/api/ProductRpc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/bin/com/imooc/entity/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/entity/bin/com/imooc/entity/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/bin/com/imooc/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/entity/bin/com/imooc/entity/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/bin/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manager/bin/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/bin/com/imooc/manager/rpc/ProductRpcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/manager/bin/com/imooc/manager/rpc/ProductRpcImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/bin/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/bin/com/imooc/seller/SellerApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/com/imooc/seller/SellerApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/bin/com/imooc/seller/service/ProductRpcService.class" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/com/imooc/seller/service/ProductRpcService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/rootDir/opt/ABC/2019-10-02-111.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/rootDir/opt/verification/2017-01-01-111.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/rootDir/opt/verification/2019-10-02-111.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositories/VerifyRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/service/VerifyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/service/VerifyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seller/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seller/bin/com/imooc/seller/VerifyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/com/imooc/seller/VerifyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seller/bin/com/imooc/seller/configuration/DataAccessConfiguration$BackupConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/com/imooc/seller/configuration/DataAccessConfiguration$BackupConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seller/bin/com/imooc/seller/configuration/DataAccessConfiguration$PrimaryConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/com/imooc/seller/configuration/DataAccessConfiguration$PrimaryConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seller/bin/com/imooc/seller/configuration/DataAccessConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/com/imooc/seller/configuration/DataAccessConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/configuration/DataAccessConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/configuration/DataAccessConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/bin/com/imooc/util/configuration/JSONRpcConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/util/bin/com/imooc/util/configuration/JSONRpcConfiguration.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -122,77 +110,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositories/OrderRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="133" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="133" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/VerificationOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#735#736#0" expanded="true" />
-                <element signature="e#798#799#0" expanded="true" />
-                <element signature="e#832#833#0" expanded="true" />
-                <element signature="e#862#863#0" expanded="true" />
-                <element signature="e#908#909#0" expanded="true" />
-                <element signature="e#946#947#0" expanded="true" />
-                <element signature="e#979#980#0" expanded="true" />
-                <element signature="e#1008#1009#0" expanded="true" />
-                <element signature="e#1052#1053#0" expanded="true" />
-                <element signature="e#1088#1089#0" expanded="true" />
-                <element signature="e#1125#1126#0" expanded="true" />
-                <element signature="e#1158#1159#0" expanded="true" />
-                <element signature="e#1210#1211#0" expanded="true" />
-                <element signature="e#1254#1255#0" expanded="true" />
-                <element signature="e#1290#1291#0" expanded="true" />
-                <element signature="e#1322#1323#0" expanded="true" />
-                <element signature="e#1372#1373#0" expanded="true" />
-                <element signature="e#1414#1415#0" expanded="true" />
-                <element signature="e#1450#1451#0" expanded="true" />
-                <element signature="e#1482#1483#0" expanded="true" />
-                <element signature="e#1532#1533#0" expanded="true" />
-                <element signature="e#1574#1575#0" expanded="true" />
-                <element signature="e#1611#1612#0" expanded="true" />
-                <element signature="e#1640#1641#0" expanded="true" />
-                <element signature="e#1688#1689#0" expanded="true" />
-                <element signature="e#1724#1725#0" expanded="true" />
-                <element signature="e#1763#1764#0" expanded="true" />
-                <element signature="e#1798#1799#0" expanded="true" />
-                <element signature="e#1854#1855#0" expanded="true" />
-                <element signature="e#1902#1903#0" expanded="true" />
-                <element signature="e#1936#1937#0" expanded="true" />
-                <element signature="e#1967#1968#0" expanded="true" />
-                <element signature="e#2013#2014#0" expanded="true" />
-                <element signature="e#2053#2054#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/imooc/entity/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
-              <folding>
-                <element signature="e#1424#1425#0" expanded="true" />
-                <element signature="e#1462#1463#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositoriesbackup/VerifyRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
@@ -244,8 +161,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/configuration/DataAccessConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="77" column="64" selection-start-line="77" selection-end-line="78" />
+            <state relative-caret-position="1057">
+              <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#455#456#0" expanded="true" />
@@ -280,15 +197,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+            <state relative-caret-position="177">
+              <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1525#1526#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seller/src/main/java/org/springframework/data/repository/config/RepositoryBeanNamePrefix.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositoriesbackup/BackupOrderRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -328,6 +262,7 @@
       <find>ReflectionToStringBuilder</find>
       <find>OUTERorderid</find>
       <find>rootdir</find>
+      <find>readOrderRepository</find>
     </findStrings>
     <dirStrings>
       <dir>F:\J2EElinkedin\STS-workspace\financial\seller\src\main\resources\static</dir>
@@ -339,9 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/entity/build.gradle" />
-        <option value="$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/ManagerApp.java" />
-        <option value="$PROJECT_DIR$/swagger/src/main/resources/META-INF/resource/spring.factories" />
         <option value="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/EnableMySwagger.java" />
         <option value="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerInfo.java" />
         <option value="$PROJECT_DIR$/swagger/src/main/java/com/imooc/swagger/SwaggerConfiguration.java" />
@@ -387,13 +319,16 @@
         <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/enums/ChanEnum.java" />
         <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositories/VerifyRepository.java" />
         <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/service/VerifyService.java" />
-        <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/configuration/DataAccessConfiguration.java" />
         <option value="$PROJECT_DIR$/seller/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositoriesbackup/BackupOrderRepository.java" />
+        <option value="$PROJECT_DIR$/seller/src/main/java/org/springframework/data/repository/config/RepositoryBeanNamePrefix.java" />
+        <option value="$PROJECT_DIR$/seller/src/main/java/org/springframework/data/repository/config/RepositoryConfigurationDelegate.java" />
+        <option value="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/configuration/DataAccessConfiguration.java" />
         <option value="$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="910" />
@@ -599,6 +534,16 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="seller" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="financial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="financial" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="seller" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="seller" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -619,6 +564,16 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="seller" type="462c0819:PsiDirectoryNode" />
+              <item name="repositoriesbackup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="financial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="financial" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="seller" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="seller" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -630,6 +585,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="seller" type="462c0819:PsiDirectoryNode" />
               <item name="sign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="financial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="financial" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="seller" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="financial" type="b2602c69:ProjectViewProjectNode" />
@@ -809,7 +773,7 @@
     </option>
     <option name="contentProportion" value="0.16894665" />
   </component>
-  <component name="RunManager" selected="Gradle.VerifyTest.makeVerificationTest">
+  <component name="RunManager" selected="Gradle.VerifyTest.queryOrder">
     <configuration name="RSAUtilTest.signTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -936,8 +900,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.VerifyTest.makeVerificationTest" />
         <item itemvalue="Gradle.VerifyTest.queryOrder" />
+        <item itemvalue="Gradle.VerifyTest.makeVerificationTest" />
         <item itemvalue="Gradle.VerifyTest.verifyTest" />
         <item itemvalue="Gradle.VerifyTest.saveVerificationOrders" />
         <item itemvalue="Gradle.RSAUtilTest.signTest" />
@@ -966,20 +930,11 @@
       <workItem from="1569501457591" duration="9175000" />
       <workItem from="1569865579079" duration="41050000" />
       <workItem from="1570022305226" duration="5452000" />
-      <workItem from="1570030814498" duration="49444000" />
+      <workItem from="1570030814498" duration="52429000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VerifyTest_makeVerificationTest - 2019.10.03 at 20h 26m 06s.xml">
-      <configuration name="VerifyTest.makeVerificationTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="VerifyTest_makeVerificationTest - 2019.10.03 at 20h 27m 48s.xml">
-      <configuration name="VerifyTest.makeVerificationTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="VerifyTest_makeVerificationTest - 2019.10.03 at 20h 29m 13s.xml">
-      <configuration name="VerifyTest.makeVerificationTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="VerifyTest_saveVerificationOrders - 2019.10.03 at 20h 30m 45s.xml">
       <configuration name="VerifyTest.saveVerificationOrders" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -1001,15 +956,24 @@
     <history-entry file="VerifyTest_makeVerificationTest - 2019.10.03 at 21h 43m 07s.xml">
       <configuration name="VerifyTest.makeVerificationTest" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="VerifyTest_queryOrder - 2019.10.03 at 22h 03m 43s.xml">
+      <configuration name="VerifyTest.queryOrder" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="VerifyTest_queryOrder - 2019.10.03 at 22h 05m 43s.xml">
+      <configuration name="VerifyTest.queryOrder" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="VerifyTest_queryOrder - 2019.10.03 at 22h 25m 11s.xml">
+      <configuration name="VerifyTest.queryOrder" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117935000" />
+    <option name="totallyTimeSpent" value="120920000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2442953" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2637584" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1019,7 +983,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17705382" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42776203" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1051,33 +1015,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/util/src/main/java/com/imooc/util/configuration/JSONRpcConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="29" column="80" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seller/src/main/resources/hazelcast.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3808">
-          <caret line="259" column="12" selection-start-line="259" selection-start-column="12" selection-end-line="259" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manager/src/main/java/com/imooc/manager/configuration/RpcConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manager/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -1574,20 +1511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/configuration/DataAccessConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="77" column="64" selection-start-line="77" selection-end-line="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seller/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -1619,12 +1542,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+        <state relative-caret-position="177">
+          <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seller/src/main/java/org/springframework/data/repository/config/RepositoryConfigurationDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2341">
+          <caret line="185" column="1" selection-start-line="185" selection-start-column="1" selection-end-line="185" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#8439#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#5678#5703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/configuration/DataAccessConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1057">
+          <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seller/src/main/java/org/springframework/data/repository/config/RepositoryBeanNamePrefix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/repositoriesbackup/BackupOrderRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>

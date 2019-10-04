@@ -426,6 +426,21 @@ To decide: Shell company owns financial company money. Or financial company owns
 + seller-backup db: keep order table and varivication table, use for backup order data and keep the third party order info
 + @Primary 可以设置主bean，主data source，和副数据源做区分
 + 不同数据源分包：Repository scan, it doesn't sure about which one got scanned first, see source code. From source code and observation of test, we can know the scan result will be from the last one data source we scan. solution：put primary and backup in different packages
-
+## JPA write and read speration
+Why sperate to write db and read db? To improve the application performance and lower down the pressure of db. 
+### Different data sources, same repositories. 
++ Use the same repository to connect to write db or read db.
++ 只有一个repository，有两个不同的data source，and then we can scan directly for data source。we don't need additional interface. 在configuration class 中新建一个config annotation，然后添加上self-defined annotation to set prefix.
++ Same repository, add prefix to register two different beans in same type to the container. We add `@primary` annotation to one of the bean, so that in default condition, we can use the primary bean when primary db scans. 
+When we want to use the `prefix+default name` to register into the container. We will change the source code to make it done. 
+![change source code](notesimage/read-write-seperate.png)
+### Use interface inheritence: 
++ Add additional interface in different packages, inheritance from original repository.
++ use a interface to extend repository，不同package, multiple data sources
++ 一个repository被scan 两次，并且连接到不同的data source：同一个repository注册到container中两次，一定是相同类型，那么就需要用`@Primary`标注primary data source，and use different Bean names for different repository, 修改bean名称的生成规则
++ Change source code 
+### Small tip when change source code:
+黑科技：当前应用下有对应类时不会使用依赖包内的。When current application has the relative class, then java will not use the class in the dependency package.
+So add the source code class into our own package.
 
 

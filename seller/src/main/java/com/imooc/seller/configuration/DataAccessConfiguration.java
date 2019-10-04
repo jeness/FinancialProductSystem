@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.repository.config.RepositoryBeanNamePrefix;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -78,7 +79,14 @@ public class DataAccessConfiguration {
     //repository scan, it doesn't sure about which one got scanned first, see source code. solution：put primary and backup in different packages
     @EnableJpaRepositories(basePackageClasses = OrderRepository.class,
             entityManagerFactoryRef = "primaryEntityManagerFactory", transactionManagerRef = "primaryTransactionManager")
+    @Primary
     public class PrimaryConfiguration{
+    }
+//从backup db 读取数据
+    @EnableJpaRepositories(basePackageClasses = OrderRepository.class,
+            entityManagerFactoryRef = "backupEntityManagerFactory", transactionManagerRef = "backupTransactionManager")
+    @RepositoryBeanNamePrefix("read")
+    public class ReadConfiguration{
     }
 
     @EnableJpaRepositories(basePackageClasses = VerifyRepository.class,
