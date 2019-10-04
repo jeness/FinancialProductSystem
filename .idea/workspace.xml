@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68a8a196-bef1-42b7-9407-b01095dfe345" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/bin/com/imooc/seller/VerifyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/com/imooc/seller/VerifyTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/bin/com/imooc/seller/configuration/DataAccessConfiguration$BackupConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/com/imooc/seller/configuration/DataAccessConfiguration$BackupConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/bin/com/imooc/seller/configuration/DataAccessConfiguration$PrimaryConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/com/imooc/seller/configuration/DataAccessConfiguration$PrimaryConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/bin/com/imooc/seller/configuration/DataAccessConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/seller/bin/com/imooc/seller/configuration/DataAccessConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/configuration/DataAccessConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/seller/src/main/java/com/imooc/seller/configuration/DataAccessConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/seller/src/test/java/com/imooc/seller/VerifyTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="68a8a196-bef1-42b7-9407-b01095dfe345" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -328,7 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="910" />
