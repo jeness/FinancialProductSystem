@@ -117,9 +117,9 @@ Then add `@EnableMySwagger` to import my swagger configuration into Main functio
 #### Swagger tools
 1. swagger ui: render api description documentation
 直接用文件形式打开会出现跨域问题，可以把swagger ui deploy 到 server上，可以是nginx，node，apache的web server，或者直接用工程部署swagger ui
-![swagger-ui-cross-region](notesimage\swagger-ui-cross-region.png)
+![swagger-ui-cross-region](notesimage/swagger-ui-cross-region.png)
 在`http://localhost:8081/manager/index.html` 中的搜索栏中，填入`http://localhost:8081/manager/v2/api-docs?group=manager`.
-![swagger-ui](notesimage\swagger-ui.png)
+![swagger-ui](notesimage/swagger-ui.png)
 swagger ui是一个静态资源文件，用js的方式是解析我们的接口描述文件，然后显示出来。
 Swagger ui is a static resource file, use js to parse our interface description file and then render and show as web page.
 2. swagger editor: edit api description documentation
